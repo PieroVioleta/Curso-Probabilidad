@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Conjuntos. Espacio muestral, eventos. Funci\'on de probabilidad. Propiedades \par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Lista de ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+\item  Define un espacio muestral para el experimento de elegir un n\'umero del intervalo $(0,20)$. Describe el evento de que dicho n\'umero es un entero.
+\item Se lanzan dos dados. Sea $E$ el evento en  que la suma de las salidad es impar y $F$ el evento de que al menos salga un  $1$. Interpretar los eventos $E\cap F, E^c \cap F$ y $E^cF^c$.
+\item Prueba que el evento $B$ es imposible  si y s\'olo si para cada evento $A$,
+
+\[
+A = (B \cap A^c) \cup (B^c \cap A).
+\]
+\item Define un espacio  muestral para el experimento de poner en orden aleatorio siete libros diferentes en un estante. Si tres de estos siete libros son un diccionario de tres vol\'umenes, describe el hecho de que estos vol\'umenes est\'en en orden ascendente lado a lado (es decir, el volumen I precede al volumen II y el volumen II precede al volumen III).
+\item Resuelve
+
+\begin{enumerate}
+\item Sea $\{A_1, A_2, A_3, \dots \}$ una secuencia de eventos. Encuentra una expresi\'on para el evento que infinitamente muchos de los $A_i$ se producen.
+
+\item Sea $\{A_1, A_2, A_3, \dots \}$ una secuencia de eventos de un espacio muestral $S$. Encuentra una secuencia $\{ B_1, B_2, B_3, \dots \}$ de eventos mutualmente exclusivos tal que para todo $n \geq 1, \bigcup_{i=1}^{n}A_i = \bigcup_{i=1}^{n}B_i$.
+\end{enumerate}
+\item Gottfried Wilhelm Leibniz (1646-1716), el matem\'atico, fil\'osofo y estadista alem\'an  y uno de los intelectos m\'as importantes del siglo XVII, cre\'ia que en un lanzamiento de un par de dados, la probabilidad de obtener la suma $11$ es igual a la de obtener la suma $12$. ?Est\'as de acuerdo con Leibniz? Explica tu respuesta.
+\item  El coeficiente de la ecuaci\'on cuadr\'atica $ax^2 + bx + c = 0 $ se determina lanzando  un dado tres veces (el primer resultado es $a$, el segundo $b$ y el tercero $c$). Encuentra la probabilidad de que la ecuaci\'on no tenga ra\'ices reales.
+\item Se elige aleatoriamente un n\'umero del conjunto de enteros $\{1,2,\dots, 1000\}$.?`Cu\'al es la probabilidad de que sea divisible por 3 o 5 (es decir, 3 o 5 o ambos)?.
+\item  Supongamos que algunos individuos de una poblaci\'on producen descendientes del mismo tipo. Los descendientes de la poblaci\'on inicial son llamados de segunda generaci\'on, los descendientes de la segunda generaci\'on son llamados de tercera generaci\'on y as\'i sucesivamente. Si con probabilidad $\exp[-(2n^2 + 7)/(6n^2)]$ toda la poblaci\'on muere completamente en la n-\'esima generaci\'on  antes de producir cualquier descendencia ?`cu\'al es la probabilidad de que tal poblaci\'on sobreviva para siempre?.
+\item Se selecciona aleatoriamente un punto del intervalo $(0,1)$ . ?`Cu\'al es la probabilidad de que el punto sea racional? ?` Cu\'al es la probabilidad de que el punto sea irracional?.
+\item  Sea $\mathbb{P}$ una probabilidad definida en un espacio muestral $S$. Para eventos de $A$ de $S$ se define $\mathbb{Q}(A) = [\mathbb{P}(A)]^2$  y $\mathbb{R}(A) = \mathbb{P}(A)/2$. ?` Es $\mathbb{R}$ una probabilidad en S? ?` Por qu\'e si  o por qu\'e no?.
+\end{enumerate}
+\end{document} 
