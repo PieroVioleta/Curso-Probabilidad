@@ -34,6 +34,25 @@ Las anotaciones de este curso tienen como objetivo la preparación en temas como
 * Esperanza Matemática: Definición, propiedades. Ejemplos
 
 ### Clase 6
-* Cálculo de momentos (Varianza) y función generadora de momentos. Ejemplos.
+
+* Cálculo de momentos (Varianza)
+* Función generadora de momentos. Ejemplos.
 * Concepto de estimación.
 
+### Clase 7
+
+* Estimación del sesgo del lanzamiento de una moneda. 
+* Estimación de pi.
+* Consistencia de estimadores.
+
+### Clase 8
+
+* Distribuciones de Bernoulli y Binomial. 
+* Análisis de sus momentos. Ejemplos
+* Histogramas.
+
+### Clase 9
+
+* Distribuciones Binomial Negativa y de Poisson.
+* Análisis de sus momentos. Ejemplos
+* Histogramas.
