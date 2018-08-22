@@ -1,6 +1,6 @@
 # Curso básico de Probabilidad
 
-Curso elemental de Probabilidad y de ciertos aspectos básicos de la  estadística inferencial. Curso que  pertenece al  área de Probabilidad y Procesos Estocásticos y de naturaleza teórico-práctico.
+Curso elemental de probabilidad y de ciertos aspectos básicos de la  estadística inferencial. Curso que  pertenece al  área de Probabilidad y Procesos Estocásticos y de naturaleza teórico-práctico.
 
 Las anotaciones de este curso tienen como objetivo la preparación en temas como ciencia de datos o machine learning.
 
