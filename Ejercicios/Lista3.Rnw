@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Probabilidad condicional. Eventos independientes\par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Lista de ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+\item En una cierta regi\'on de Rusia, la probabilidad de que una persona viva por lo menos $80$ a\~nos es de $0.75$  y la probabilidad de que el o ella viva por lo menos $90$ a\~nos es de $0.63$.  ?` Cu\'al es la probabilidad de que una persona seleccionada al azar de $80$ a\~nos de edad de esta regi\'on sobreviva  hasta tener $90$ a\~nos?.
+
+\item En un peque\~no lago, se estima que hay aproximadamente $105$ peces, de los cuales $40$ son truchas y $65$ son salmones. Un pescador cogi\'o ocho peces. ?`Cu\'al es la probabilidad de que exactamente dos de ellos sean truchas si sabemos que al menos tres de ellos no lo son?.
+
+\item Prueba que si $\mathbb{P}(A) = a$ y $\mathbb{P}(B) = b$  entonces  $\mathbb{P}(A|B) \geq  (a + b -1)/b$.
+
+\item Se selecciona aleatoriamente un n\'umero del conjunto $\{1, 2,\dots, 10.000\}$ y se observa que es impar. ?`Cu\'al es la probabilidad de que sea  divisible por $3$  y  que no sea divisible por $3$ y $5$?.
+\item En una escuela internacional, $60$ estudiantes, de los cuales $15$ son coreanos, $20$ son franceses, $8$ son griegos y el resto son chinos, se dividen al azar en cuatro clases de $15$ estudiantes  cada una. Si hay un total de ocho estudiantes franceses y seis coreanos en las clases $A$ y $B$. ?`Cu\'al es la probabilidad de que la clase $C$ tenga $4$ de los $12$ restantes estudiantes  franceses y $3$ de los restantes $9$ estudiantes coreanos?.
+\item Supongamos que se han mezclado cinco fusibles buenos y dos defectuosos. Para encontrar los defectuosos, los probamos uno por uno al azar y sin reemplazo. ?` Cu\'al es la probabilidad de que encontremos ambos fusibles defectuosos en exactamente tres pruebas?.
+\item En un juicio, el juez est\'a $65\%$ seguro de que Susana  ha cometido un crimen. Roberto es un testigo que sabe si Susan es inocente o culpable. Sin embargo, Robert es el amigo de Susan y mentiria con una  probabilidad de  $0.25$ si Susan es culpable. El dir\'a la verdad si ella  es inocente. ?` Cu\'al es la probabilidad de que Roberto cometa perjurio?.
+\item Hay $14$ empresas de mercadotecnia que contratan a nuevos graduados. Jessica encontr\'o al azar los anuncios de reclutamiento de seis de estas empresas y les envi\'o su curriculum vitae. Si tres de estas empresas de mercadotecnia  est\'an en Lima. ?`Cu\'al es la probabilidad de que Jessica no se aplicar\'a a una empresa de marcadotecnia en Lima?.
+\item Supongamos que el $75\%$ de todas las personas con un historial de cr\'edito mejoraran sus calificaciones de cr\'edito dentro de los tres a\~nos. Supongamos que el $18\%$ de la poblaci\'on en general tiene registros de cr\'edito deficientes y de ellos s\'olo el $30\%$ mejorar\'a su calificaci\'on crediticia dentro de tres a\~nos.
+\item En una serie de juegos, el n\'umero ganador del n-\'esimo juego  $n = 1, 2, 3,\dots$  es un n\'umero seleccionado al azar del conjunto de enteros $\{1, 2,\dots, n + 2\}$. Clau apuesta en $1$ en cada juego y dice que el dejar\'a  de jugar tan pronto como gane. ?` Cu\'al es la probabilidad de que tenga que jugar indefinidamente?.
+\end{enumerate}
+\end{document} 
