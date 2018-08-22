@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Conteo \par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Lista de ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+\item  ?`Cu\'antos n\'umeros de seis d\'igitos hay?. ?`Cu\'antos de ellos contienen el d\'igito 5?. Ten en cuenta que el primer d\'igito de un n\'umero de $n$ d\'igitos es distinto de cero.
+
+\item La poblaci\'on de una ciudad es de $20.000$ habitantes. Si cada residente tiene tres iniciales, ?` es cierto que al menos dos personas tienen las mismas iniciales?.
+
+\item ?` Cu\'antas matrices $n \times m$  con entradas $0$ o $1$ hay?.
+
+\item Se selecciona aleatoriamente un entero del conjunto $\{1, 2,\dots , 1,000, 000\}$. ?` Cu\'al es la probabilidad de que contenga el d\'igito 5?.
+\item En el popular programa de televisi\'on \texttt{Who Wants to Be a Millionaire} se pide a los concursantes que clasifiquen   cuatro elementos de acuerdo con alguna norma: por ejemplo, puntos de referencia en  orden geogr\'afico, pel\'iculas en el orden de la fecha de lanzamiento, cantantes en el orden de fecha de nacimiento . ?` Cu\'al es la probabilidad de que un concursante pueda obtener la respuesta correcta s\'olo con adivinar?.
+\item ?` Cuantas permutaciones del conjunto $\{a, b, c, d, e \}$ inicia con $a$ y termina en con $c$.
+\item Robert tiene ocho invitados, dos de los cuales son Jim y John. Si llegan los invitados en un orden aleatorio, ?`cu\'al es la probabilidad de que John no llegue justo despu\'es de Jim?.
+
+\item Un concurso de baile tiene $11$ competidores, de los cuales tres son estadounidenses, dos son mexicanos, tres rusos y tres italianos. Si el resultado del concurso s\'olo enumera la nacionalidad de los bailarines, ?` cu\'antos resultados son posibles?.
+
+\item Se tiran seis dados. ?` Cu\'al es la probabilidad de que al menos dos de ellos muestren la misma cara?.
+\item Un dado  se lanza ocho veces. ?` Cu\'al es la probabilidad de obtener  exactamente dos $3$, tres $1$ y tres $6$?.
+\item En una fiesta, $15$ parejas casadas est\'an sentadas al azar en una mesa redonda. ?`Cu\'al es la probabilidad de que todos los hombres est\'en sentados junto a sus esposas? Supongamos que de estas parejas casadas, cinco esposos y sus esposas tienen m\'as de $50$ a\~nos y los restantes maridos y esposas son todos menores de $50$ a\~nos. ?`Cu\'al es la probabilidad de que todos los hombres mayores de $50$ a\~nos est\'en sentados junto a sus esposas? Tenga en cuenta que cuando la gente est\'a sentada alrededor de una mesa redonda, s\'olo sus asientos en relativos  entre si importan. La posici\'on exacta de una persona no es importante. 
+\item Una caja contiene cinco azules y ocho bolas rojas. Jim y Jack comienzan a sacar bolas de la caja, respectivamente, una a la vez, al azar y sin reemplazo hasta que se saque una bola azul. ?`Cu\'al es la probabilidad de que Jack saque la pelota azul?.
+\item  En una peque\~na ciudad, $11$ de los $25$ profesores tiene una opini\'on  en contra el aborto, ocho est\'an a favor  del aborto,y el resto son indiferentes. Se selecciona una muestra aleatoria de cinco profesores para una entrevista. 
+
+\begin{enumerate}
+	\item ?`Cu\'al es la probabilidad de que todos ellos esten a favor  del aborto?.
+	\item ?`Cu\'al es la probabilidad de que todos ellos tengan  la misma opini\'on?.
+\end{enumerate}
+\item Sea $x$ un n\'umero positivo y sea $x_1 + x_2 + \cdots + x_k = n$ una ecuaci\'on. Un vector $(x_1, x_2, \dots, x_k)$ satisfaciendo  $x_1 + x_2 + \cdots + x_k = n$  se dice que es \texttt{una soluci\'on entera no negativa} de la ecuaci\'on si para cada $i, 1 \leq i \leq k$, $x_i$ es un entero no negativo. Se dice que es una \texttt{soluci\'on entera positiva} de la ecuaci\'on  si para cada $i, 1\leq i \leq k$, $x_i$ es un entero positivo. 
+
+\begin{enumerate}
+	\item ?` Cu\'antas soluciones enteras no negativas distintas tiene la ecuaci\'on $x_1 + x_2 + \cdots + x_k = n$?.
+	\item ?` Cu\'antas soluciones enteras positivas distintas tiene la ecuaci\'on $x_1 + x_2 + \cdots  + x_k  = n$?.
+\end{enumerate}
+\item Un profesor distra\'ido escribi\'o $n$  cartas y las sell\'o en sobres antes de escribir las direcciones en los sobres. Luego escribi\'o las $n$ direcciones en los sobres al azar. ?` Cu\'al es la probabilidad de que por lo menos una carta fue dirigida correctamente?.
+
+\item Jim tiene $20$ amigos. Si decide invitar a seis de ellos a su fiesta de cumplea\~nos, ?` cu\'antas opciones tiene?.
+
+\item Una muestra aleatoria de $n$ elementos se toma de una poblaci\'on de tama\~no $N$ sin reemplazo. ?` Cu\'al es la probabilidad de que se incluya un elemento fijo de la poblaci\'on? Simplifique tu respuesta. 
+
+\item Frente a la oficina de Jeff hay un estacionamiento con $13$ plazas de aparcamiento en una fila. Cuando los coches llegan a este aparcamiento, se estacionan aleatoriamente en uno de los lugares vac\'ios. Jeff estaciona su coche en el \'unico lugar vac\'io que queda, luego se va a su oficina. A su regreso encuentra que hay siete plazas vac\'ias. Si no ha estacionado su coche en un  extremo del  estacionamiento, ?` cu\'al es la probabilidad de que ambos espacios de estacionamiento que est\'an al lado del auto de Jeff est\'en vac\'ios?.
+
+\item Lili tiene $20$ amigos. Entre ellos est\'an Karen y Claude , que son marido y mujer. Lili quiere invitar a seis de sus amigos a su fiesta de cumplea\~nos. Si ni Karen ni Claude iran  a la fiesta si es que no van  con su pareja. ?` cu\'antas opciones tiene Lili?.
+
+
+\item Prueba que 
+
+\[
+\binom{n}{0} - \binom{n}{1} + \binom{n}{2} - \cdots + (-1)^k\binom{n}{k}+ \cdots + (-1)^n\binom{n}{n} = 0.
+\]
+
+\item Sea $n$ un entero positivo. Una muestra aleatoria de cuatro elementos es escogida del conjunto  $ \{0, 1, 2, \dots,  N\}$, uno a la vez y con reemplazo. ?` Cu\'al es la probabilidad de que la suma de los dos primeros elementos sea igual a la suma de los dos \'ultimos elementos?.
+
+\end{enumerate}
+\end{document} 
