@@ -31,7 +31,10 @@ Las anotaciones de este curso tienen como objetivo la preparación en temas como
 
 ### Clase 1
 
+*[Notas de clase 1](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/probabilidad/probabilidad.pdf).
 * Repaso-->[Probability Spaces: An Illustrated Introduction](https://www.countbayesie.com/blog/2015/8/30/picture-guide-to-probability-spaces).
+
+### Clase 2
 
 
 
