@@ -27,13 +27,11 @@ Las anotaciones de este curso tienen como objetivo la preparación en temas como
 | 16(del 10/12 al 14/12) |   **EXAMENES FINALES**  |
 | 17(del 17/12 al 21/12) |   **EXAMENES SUSTITUTORIOS** |
 
-## Clases
+## Notas de clases
 
 ### Clase 1
 
-* Definición de experimento aleatorio, eventos y
-* Álgebras de conjuntos.
-* Definición y propiedades de la probabilidad. Ejemplos.
+* Repaso-->[Probability Spaces: An Illustrated Introduction](https://www.countbayesie.com/blog/2015/8/30/picture-guide-to-probability-spaces).
 
 ### Clase 2
 
