@@ -33,7 +33,8 @@ Las anotaciones de este curso tienen como objetivo la preparación en temas como
 En esta sección se presentan algunas notas de temas que son importantes para el curso:
 
 - [Conjuntos](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/conjuntos.pdf).
-- [Funciones]().
+- [Funciones](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/funciones.pdf).
+- [Sumas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/sumas.pdf).
 - [Cálculo integral]().
 
 ## Notas de clases
