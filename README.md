@@ -27,6 +27,15 @@ Las anotaciones de este curso tienen como objetivo la preparación en temas como
 | 16(del 10/12 al 14/12) |   **EXAMENES FINALES**  |
 | 17(del 17/12 al 21/12) |   **EXAMENES SUSTITUTORIOS** |
 
+
+## Repaso
+
+En esta sección se presentan algunas notas de temas que son importantes para el curso:
+
+- [Conjuntos](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/conjuntos.pdf).
+- [Funciones]().
+- [Cálculo integral]().
+
 ## Notas de clases
 
 ### Clase 1
