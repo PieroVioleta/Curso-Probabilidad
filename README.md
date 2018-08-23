@@ -42,6 +42,7 @@ Las anotaciones de este curso tienen como objetivo la preparación en temas como
 ### Clase 3
 
 * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista3.pdf).
+ * Repaso -->[Conditional probability: A Visual explanation by Victor Powell ](http://setosa.io/conditional/)
 
 
 
