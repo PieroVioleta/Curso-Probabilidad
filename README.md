@@ -37,12 +37,18 @@ Las anotaciones de este curso tienen como objetivo la preparación en temas como
 
 ### Clase 2
 
+* [Notas de clase 2](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/enumeracion/enumeracion.pdf).
 * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista2.pdf).
 
 ### Clase 3
 
+* [Notas de clase 3](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/probabilidad_condicional/condicionalidad-independencia.pdf).
 * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista3.pdf).
  * Repaso -->[Conditional probability: A Visual explanation by Victor Powell ](http://setosa.io/conditional/)
+ 
+ ### Clase 4
+ 
+ * [Notas de clase 4](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/bayes-probabilidad_total/bayes_probabilidad-total.pdf).
 
 
 
