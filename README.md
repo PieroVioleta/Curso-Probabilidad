@@ -53,6 +53,6 @@ Las anotaciones de este curso tienen como objetivo la preparación en temas como
 ## Libros de referencia
 
 - Steven J. Miller The Probability Lifesaver: All the tools you need to understand chance. Princeton University Press 2017.
-- Introducción a la Teoría de la Probabilidad: Paul G. Hoel, Sidney Port, Charles Stone, traducido al español  porCristhian Emmanuel Garay López 2003. El libro se puede leer y descargado [aquí](https://kupdf.net/download/introducci-oacute-n-a-la-teor-iacute-a-de-la-probabilidad-paul-g-hoel-sidney-port-charles-stone_58d145cbdc0d604323c34665_pdf).
+- Introducción a la Teoría de la Probabilidad: Paul G. Hoel, Sidney Port, Charles Stone, traducido al español  por Cristhian Emmanuel Garay López 2003. El libro se puede leer y descargado [aquí](https://kupdf.net/download/introducci-oacute-n-a-la-teor-iacute-a-de-la-probabilidad-paul-g-hoel-sidney-port-charles-stone_58d145cbdc0d604323c34665_pdf).
 
 
