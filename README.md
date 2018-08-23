@@ -137,8 +137,6 @@ El informe debe incluir la siguiente información:
 
 - Bibliografía o Referencias.
 
-
-
 ### **Código y/o scripts (Jupyter Notebooks )**
 
 - El código será trabajado en equipo utilizando  GitHub como plataforma (opcional), de manera que se pueda verificar los aportes hechos por cada uno de los integrantes del curso.
@@ -154,14 +152,14 @@ El trabajo final, tendrá exposiciones. Se recomienda seguir las guías indicada
 
 ### **Recursos**
 
-- Git y Github | Curso Práctico de Git y Github Desde Cero:  [https://www.youtube.com/watch](https://www.youtube.com/watch)[v=HiXLkL42tMU](https://www.youtube.com/watch?v=HiXLkL42tMU)
-- Editor colaborativo LaTeX en línea:[**https://www.overleaf.com/**](https://www.overleaf.com/).
+- Git y Github | Curso Práctico de Git y Github Desde Cero:  [https://www.youtube.com/watch](https://www.youtube.com/watch)[v=HiXLkL42tMU](https://www.youtube.com/watch?v=HiXLkL42tMU).
+- Editor colaborativo LaTeX en línea-->[**https://www.overleaf.com/**](https://www.overleaf.com/).
 
-- **Formato IEEE (MS Word y LaTeX)**:[**https://www.ieee.org/conferences/publishing/templates.html**](https://www.ieee.org/conferences/publishing/templates.html)
+- **Formato IEEE (MS Word y LaTeX)**-->[**https://www.ieee.org/conferences/publishing/templates.html**](https://www.ieee.org/conferences/publishing/templates.html).
 
-- Buscador de literatura académica:[**https://scholar.google.com.pe/**](https://scholar.google.com.pe/)
+- Buscador de literatura académica-->[**https://scholar.google.com.pe/**](https://scholar.google.com.pe/).
 
-- Jupyter Notebook Tutorial: The Definitive Guide:[**https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook**](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook)
+- Jupyter Notebook Tutorial: The Definitive Guide-->[**https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook**](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook).
 
-- Notebooks With R: ** ** [**https://www.datacamp.com/community/blog/jupyter-notebook-r**](https://www.datacamp.com/community/blog/jupyter-notebook-r)
+- Notebooks With R--> [**https://www.datacamp.com/community/blog/jupyter-notebook-r**](https://www.datacamp.com/community/blog/jupyter-notebook-r).
 
