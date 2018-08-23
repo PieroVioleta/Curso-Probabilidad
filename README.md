@@ -35,7 +35,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 - [Conjuntos](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/conjuntos.pdf).
 - [Funciones](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/funciones.pdf).
 - [Sumas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/sumas.pdf).
-- [Cálculo integral]().
+- [Cálculo integral](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/Integracion/integracion.pdf).
 
 ## Notas de clases
 
