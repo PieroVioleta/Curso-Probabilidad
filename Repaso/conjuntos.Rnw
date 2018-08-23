@@ -30,7 +30,6 @@
 library(knitr)
 library(ggplot2)
 library(grid)
-library(animation)
 # set global chunk options
 opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
 options(formatR.arrow=TRUE,width=90)
@@ -41,7 +40,7 @@ options(formatR.arrow=TRUE,width=90)
 %\maketitle
 \hspace*{0.5\linewidth}
 \begin{minipage}{0.6\linewidth}
-Curso: Introducci\'on a la Probabilidad y Estad\'istica CM -274\par
+Curso: C\'alculo de probabilidades CM-1H2\par
 Notas de matem\'aticas \par
 \end{minipage}
 \vspace{0.5cm}
