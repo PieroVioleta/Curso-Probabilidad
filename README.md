@@ -39,6 +39,7 @@ Las anotaciones de este curso tienen como objetivo la preparación en temas como
 
 * [Notas de clase 2](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/enumeracion/enumeracion.pdf).
 * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista2.pdf).
+* Lectura -->[Basic Combinatorics for Probability- Guy Lebanon](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.185.1470&rep=rep1&type=pdf)
 
 ### Clase 3
 
@@ -49,10 +50,118 @@ Las anotaciones de este curso tienen como objetivo la preparación en temas como
  ### Clase 4
  
  * [Notas de clase 4](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/bayes-probabilidad_total/bayes_probabilidad-total.pdf).
+ * Repaso -->[Bayes Rule with Lego](https://www.countbayesie.com/blog/2015/2/18/bayes-theorem-with-lego)
 
 ## Libros de referencia
 
 - Steven J. Miller The Probability Lifesaver: All the tools you need to understand chance. Princeton University Press 2017.
 - Introducción a la Teoría de la Probabilidad: Paul G. Hoel, Sidney Port, Charles Stone, traducido al español  por Cristhian Emmanuel Garay López 2003. El libro se puede leer y descargado [aquí](https://kupdf.net/download/introducci-oacute-n-a-la-teor-iacute-a-de-la-probabilidad-paul-g-hoel-sidney-port-charles-stone_58d145cbdc0d604323c34665_pdf).
+- Elementary Probability with Applications: Larry Rabinowitz CRC Press 2016.
 
+## **Esquema de trabajo grupal para el curso CM-1H2**
+
+- Equipos de 4 a 5 estudiantes.
+- Entregable:
+  - Archivo PDF (Informe) utilizando la plantilla IEE.
+  - Cuaderno de Jupyter con el código y un resumen del proyecto.
+  - Presentación en Beamer o Power Point para su exposición.
+
+### **Lista de temas:**
+
+- Aproximaciones Gaussianas: Binomial, Poisson y Normal.
+- El tiempo de valor esperado en los algoritmos de ordenación.
+- Un algoritmo aleatorizado para calcular la mediana.
+- Generación de valores aleatorios distribuidos normalmente.
+- El teorema de Shanon.
+- Aprendizaje PAC.
+- Heavy hitter en secuencia de datos.
+- ...
+
+### **Evaluación**
+
+La evaluación serán 5 entregables, lo cuales se detallan a continuación, que serán parte de las calificaciones de sus prácticas calificadas.
+
+| **Entregable** | **Fecha límite de entrega** |
+| --- | --- |
+| 1.  Propuesta de proyecto | 3 de setiembre |
+| 2. (Introducción, estado del arte y diseño del experimento), en formato IEEE, tamaño A4, máximo 3 páginas de extensión. | 24 de setiembre |
+| 3. Código y/o scripts (jupyter notebooks) con la experimentación realizada | 5 de noviembre |
+| 4. Informe final, en formato IEEE, tamaño A4, máximo 8 páginas de extensión | 26 de noviembre |
+| 5. Exposición de presentación de trabajo | 3 de diciembre |
+
+Se tomará más énfasis en  lo siguiente  para las evaluaciones:
+
+- Contenido del Informe.
+- La solución al problema a realizar y la mención de las variantes.
+- Exposición y presentación de posters.
+
+### **Propuesta de proyecto**
+
+La propuesta de proyecto deberá incluir lo siguiente (máximo una hoja A4):
+
+- Nombre del proyecto
+- Miembros del equipo
+- Proyecto a utilizar (dependiendo del orden de trabajos se hará las asignaciones repetidas).
+- Objetivo del proyecto
+- Artículos científicos relevantes
+-  Propuesta tentativa de modelos de clasificación a utilizar
+- **Declaración de trabajo grupal.**
+
+### **Informe del trabajo grupal:**
+
+El informe del proyecto deberá explicar claramente el objetivo del estudio, trabajos previos sobre el problema, código de solución (el más simple) del problema en cuestión, pruebas, conclusiones, etc.  Para la mayoría de los problemas los paquetes de software de R, están disponibles como dominio público. No hay restricción para usarlos.
+
+El informe debe incluir la siguiente información:
+
+- Introducción
+  - Presentación del problema general sobre el que versará el trabajo y cómo se integra dentro del uso del lenguaje R y del curso.
+  - Objetivo del estudio
+  - Organización del informe (secciones).
+-  Estado del arte
+  - Breve mención del aporte que otros artículos científicos han realizado para este problema.
+  - Mención de al menos 3 artículos científicos que mencionen el problema y las variantes realizadas.
+
+- Diseño del experimento
+  - Descripción de los objetos, funciones y técnicas a utilizar.
+
+- Experimentos y resultados
+  - Línea base: Reproducción de resultados reportados en un artículo científico anterior.
+  - Evaluación del rendimiento de los modelos ensayados.
+  - Comparación de línea base y resultados propios.
+
+- Discusión
+  - Interpretación de los resultados obtenidos.
+  - ¿Cómo podría ser mejorado sus resultados?
+
+- Conclusiones y trabajos futuros.
+
+- Bibliografía o Referencias.
+
+
+
+### **Código y/o scripts (Jupyter Notebooks )**
+
+- El código será trabajado en equipo utilizando  GitHub como plataforma (opcional), de manera que se pueda verificar los aportes hechos por cada uno de los integrantes del curso.
+- Se recomienda trabajar con jupyter notebooks o Jupyter lab en R o Python. Si el equipo desea trabajar en otro entorno, o en un lenguaje de programación diferente, consultarlo previamente con el profesor.
+- Se deberá asignar nombres representativos a los archivos, de manera que se pueda identificar su orden relativo y el propósito de cada uno. No hay restricciones para tomar como base código tomado de otras fuentes, siempre y cuando se cite debidamente la fuente y se realice las adaptaciones que requiera el propio trabajo.
+- El código deberá estar mínimamente comentado, siempre en español. Se ignorará cualquier comentario en otro idioma.
+- Asimismo, se ignorará cualquier código simplemente copiado cuya fuente no haya sido citada, y se asignará el puntaje mínimo al grupo.
+- Subir los archivos de código fuente y el notebook de jupyter del informe a un repositorio común del grupo, de manera que se puede revisar los aportes de todos los estudiantes.
+
+### **Exposición**
+
+El trabajo final, tendrá exposiciones. Se recomienda seguir las guías indicadas abajo:
+
+### **Recursos**
+
+- Git y Github | Curso Práctico de Git y Github Desde Cero:  [https://www.youtube.com/watch](https://www.youtube.com/watch)[v=HiXLkL42tMU](https://www.youtube.com/watch?v=HiXLkL42tMU)
+- Editor colaborativo LaTeX en línea:[**https://www.overleaf.com/**](https://www.overleaf.com/).
+
+- **Formato IEEE (MS Word y LaTeX)**:[**https://www.ieee.org/conferences/publishing/templates.html**](https://www.ieee.org/conferences/publishing/templates.html)
+
+- Buscador de literatura académica:[**https://scholar.google.com.pe/**](https://scholar.google.com.pe/)
+
+- Jupyter Notebook Tutorial: The Definitive Guide:[**https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook**](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook)
+
+- Notebooks With R: ** ** [**https://www.datacamp.com/community/blog/jupyter-notebook-r**](https://www.datacamp.com/community/blog/jupyter-notebook-r)
 
