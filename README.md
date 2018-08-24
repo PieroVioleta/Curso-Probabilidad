@@ -60,7 +60,8 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  ### Clase 4
  
  * [Notas de clase 4](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/bayes-probabilidad_total/bayes_probabilidad-total.pdf).
- * Repaso -->[Bayes Rule with Lego](https://www.countbayesie.com/blog/2015/2/18/bayes-theorem-with-lego)
+ * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista4.pdf).
+ * Repaso -->[Bayes Rule with Lego](https://www.countbayesie.com/blog/2015/2/18/bayes-theorem-with-lego).
 
 ## Libros de referencia
 
