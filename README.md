@@ -12,7 +12,7 @@ Las anotaciones de este curso tienen como objetivo la preparación en temas como
 | 2 (del 27/08 al 31/08)  | Métodos de enumeración: Principio de adición y multiplicación. Permutación, combinatoria. Coeficiente multinomial. Lectura 2  | Probabilidad Condicional. Eventos Independientes |
 | 3 (del 03/09 al 07/09)  | 1ra dirigida  (semanas 1 Y 2)  | Teorema de Bayes: Definición de probabilidad apriori y posteriori. Ley de Probabilidad total. Lectura 3. |
 | 4 (del 10/09 al 14/09) |  1ra calificada    | Variables aleatorias de tipo discreto. Función de masa de probabilidad y de  distribución. Esperanza Matemática. Propiedades. Ejemplos.|
-| 5 (del 17/09 al 21/09) | Cálculo de momentos (Varianza) y función generadora de momentos. Idea de estimación. Lectura 4:| Estimación del sesgo del lanzamiento de una moneda. Estimación de pi. Consistencia de estimadores.|
+| 5 (del 17/09 al 21/09) | Cálculo de momentos (varianza) y función generadora de momentos. Idea de estimación. Lectura 4:| Estimación del sesgo del lanzamiento de una moneda. Estimación de pi. Consistencia de estimadores.|
 | 6 (del 24/09 al 28/09) |   2da Dirigida (semanas 3, 4 y 5)   | Distribuciones de Bernoulli y binomial. Análisis de momentos.  Histogramas.|
 | 7 (del 01/10 al 05/10) |  2da Calificada   | Distribuciones binomial negativa y de Poisson. Análisis de momentos. Histogramas. Lectura 5 |
 | 8(del 08/10 al 12/10) |   **EXAMENES PARCIALES**  |
