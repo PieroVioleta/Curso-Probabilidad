@@ -64,6 +64,26 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * Repaso -->[Bayes Rule with Lego](https://www.countbayesie.com/blog/2015/2/18/bayes-theorem-with-lego).
  
  ###  [**Lectura repaso: ¿Cómo funciona la inferencia bayesiana?**](https://datascience.com.co/c%C3%B3mo-funciona-la-inferencia-bayesiana-dc4ad29d4697).
+ 
+ ### Clase 5
+ 
+ * [Notas de clase 5](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_discretas/variables_discretas.pdf).
+ 
+ ### Clase 6
+
+ * [Notas de clase 6](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/esperanza/esperanza.pdf).
+ 
+ ### Clase 7
+ 
+ * [Notas de clase 7](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/funciones-generadoras/funcion_generadora_probabilidad.pdf).
+ 
+ ### Clase 8
+ 
+ * [Notas de clase 8](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/Estimacion.pdf).
+ 
+ ### Clase 9
+ 
+ * [Notas de clase 9](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/distribuciones_discretas/distribuciones_discretas.pdf).
 
 ## Libros de referencia
 
