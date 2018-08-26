@@ -44,12 +44,14 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 * [Notas de clase 1](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/probabilidad/probabilidad.pdf).
 * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista1.pdf).
 * Repaso-->[Probability Spaces: An Illustrated Introduction](https://www.countbayesie.com/blog/2015/8/30/picture-guide-to-probability-spaces).
+* Repaso-->[The Monty Hall Problem A visual explanation by: Victor Powell](http://blog.vctr.me/monty-hall/).
 
 ### Clase 2
 
 * [Notas de clase 2](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/enumeracion/enumeracion.pdf).
 * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista2.pdf).
 * Lectura -->[Basic Combinatorics for Probability- Guy Lebanon](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.185.1470&rep=rep1&type=pdf)
+* [Combinatorics problems](https://brilliant.org/math/combinatorics/).
 
 ### Clase 3
 
@@ -68,6 +70,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  ### Clase 5
  
  * [Notas de clase 5](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_discretas/variables_discretas.pdf).
+ * Repaso -->[Random Variables and Expectation with Robots and Stuff!](https://www.countbayesie.com/blog/2015/2/20/random-variables-and-expectation).
  
  ### Clase 6
 
