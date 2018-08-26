@@ -42,22 +42,22 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 ### Clase 1
 
 * [Notas de clase 1](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/probabilidad/probabilidad.pdf).
-* [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista1.pdf).
 * Repaso-->[Probability Spaces: An Illustrated Introduction](https://www.countbayesie.com/blog/2015/8/30/picture-guide-to-probability-spaces).
+* [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista1.pdf).
 * Repaso-->[The Monty Hall Problem A visual explanation by: Victor Powell](http://blog.vctr.me/monty-hall/).
 
 ### Clase 2
 
 * [Notas de clase 2](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/enumeracion/enumeracion.pdf).
 * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista2.pdf).
-* Lectura -->[Basic Combinatorics for Probability- Guy Lebanon](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.185.1470&rep=rep1&type=pdf)
+* Lectura -->[Basic Combinatorics for Probability- Guy Lebanon](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.185.1470&rep=rep1&type=pdf).
 * [Combinatorics problems](https://brilliant.org/math/combinatorics/).
 
 ### Clase 3
 
 * [Notas de clase 3](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/probabilidad_condicional/condicionalidad-independencia.pdf).
 * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista3.pdf).
- * Repaso -->[Conditional probability: A Visual explanation by Victor Powell ](http://setosa.io/conditional/)
+ * Repaso -->[Conditional probability: A Visual explanation by Victor Powell ](http://setosa.io/conditional/).
  
  ### Clase 4
  
@@ -69,16 +69,19 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  
  ### Clase 5
  
- * [Notas de clase 5](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_discretas/variables_discretas.pdf).
  * Repaso -->[Random Variables and Expectation with Robots and Stuff!](https://www.countbayesie.com/blog/2015/2/20/random-variables-and-expectation).
+ * [Notas de clase 5](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_discretas/variables_discretas.pdf).
+ *  Repaso-->[Interrogating Probability Distributions](https://www.countbayesie.com/blog/2015/3/17/interrogating-probability-distributions).
  
  ### Clase 6
 
  * [Notas de clase 6](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/esperanza/esperanza.pdf).
+ * Repaso-->[Expectation and Variance from High School to Grad School](https://www.countbayesie.com/blog/2015/3/19/expectation-and-variance-from-high-school-to-grad-school).
  
  ### Clase 7
  
  * [Notas de clase 7](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/funciones-generadoras/funcion_generadora_probabilidad.pdf).
+ * Repaso-->[Moments of a Random Variable Explained](https://www.countbayesie.com/blog/2015/4/23/why-so-square-jensens-inequality-and-moments-of-a-random-variable).
  
  ### Clase 8
  
@@ -87,6 +90,8 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  ### Clase 9
  
  * [Notas de clase 9](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/distribuciones_discretas/distribuciones_discretas.pdf).
+ * Repaso-->[The 4 Characteristics of a Binomial Experiment](http://www.oxfordmathcenter.com/drupal7/node/256).
+ * Lectura-->[What is a Poisson distribution? ](https://www.quora.com/What-is-a-Poisson-distribution-As-a-Poisson-distribution-essentially-predicts-the-outcome-of-events-from-the-past-data-of-events-can-any-random-past-data-that-overall-exhibits-a-weak-congruence-be-considered-a-Poisson-distribution).
 
 ## Libros de referencia
 
