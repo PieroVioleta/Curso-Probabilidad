@@ -71,11 +71,13 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  
  * Repaso -->[Random Variables and Expectation with Robots and Stuff!](https://www.countbayesie.com/blog/2015/2/20/random-variables-and-expectation).
  * [Notas de clase 5](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_discretas/variables_discretas.pdf).
+ * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista5.pdf).
  *  Repaso-->[Interrogating Probability Distributions](https://www.countbayesie.com/blog/2015/3/17/interrogating-probability-distributions).
  
  ### Clase 6
 
  * [Notas de clase 6](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/esperanza/esperanza.pdf).
+ * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista6.pdf).
  * Repaso-->[Expectation and Variance from High School to Grad School](https://www.countbayesie.com/blog/2015/3/19/expectation-and-variance-from-high-school-to-grad-school).
  
  ### Clase 7
@@ -104,8 +106,8 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 - Equipos de 4 a 5 estudiantes.
 - Entregable:
   - Archivo PDF (Informe) utilizando la plantilla IEE.
-  - Cuaderno de Jupyter con el código y un resumen del proyecto.
-  - Presentación en Beamer o Power Point para su exposición.
+  - Cuaderno de Jupyter con el código y un resumen del proyecto (opcional).
+  - Presentación en Beamer o Power Point por exposición.
 
 ### **Lista de temas:**
 
