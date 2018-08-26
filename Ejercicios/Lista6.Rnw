@@ -1,0 +1,112 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Esperanza, varianza y desviaci\'on est\'andar.\par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Lista de ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+\item Un dado  se lanza sucesivamente. Sea $X$ el n\'umero de lanzamientos hasta que cada uno de los seis posibles resultados ocurran al menos una vez. Encuentra la funci\'on de masa de probabilidad de $X$.
+
+\item Lanzamos  una moneda  dos veces y sea  $X$  el n\'umero de caras obtenidas. ?` Cu\'al es la esperanza o el valor esperado  de X?.
+\item Escribimos los n\'umeros $a_1, a_2, \dots $ , para  bolas id\'enticas y las mezclamos  en una caja. ?`Cu\'al es el valor esperado de una bola seleccionada al azar?.
+\item En la loteria de un determinado estado, los jugadores eligen seis enteros diferentes entre el $1$ y $49$, siendo el orden de selecci\'on irrelevante. La comisi\'on de la loteria entonces selecciona seis de estos n\'umeros al azar como los n\'umeros que deberian ser los ganadores. Un jugador gana el gran premio de $1,200,000$ soles, si los seis n\'umeros que ha seleccionado coinciden con los n\'umeros ganadores. Gana el segundo y tercer premio de $800$ y $35$ soles, respectivamente, si exactamente cinco y cuatro de sus seis n\'umeros seleccionados coinciden con los n\'umeros ganadores. ?` Cu\'al es la  esperanza  de la cantidad que un jugador gana en un juego?.
+\item Sea $X_0$,  la cantidad de lluvia que caer\'a en los Estados Unidos el pr\'oximo dia de Navidad. Para $n>0$, sea $X_n$ la cantidad de lluvia que caer\'a en los Estados Unidos en Navidad, $n$ a\~nos despu\'es. Sea $N$ el menor n\'umero de a\~nos que transcurren antes de una lluvia de Navidad mayor que $X_0$. Supongamos que $P(X_i = X_j) = 0$ si $i \neq j$, los sucesos relativos a la cantidad de lluvia en dias de Navidad de diferentes a\~nos son independientes y los $X_n$ son id\'enticamente distribuidos. Hallar el valor esperado de $N$.
+
+\item Se sabe que $\displaystyle\sum_{x =1}^{\infty}1/x^2 =\pi^2/6$.
+
+\begin{enumerate}
+	\item Muestra que $p(x) = 6/(\pi x)^2,\ x = 1, 2, 3, \dots$, es la funci\'on de masa de probabilidad de una variable aleatoria $X$.
+	\item Prueba que $\mathbb{E}(X)$ no existe.
+	\item Muestra que $p(x) = (\vert x \vert + 1)^2/27,\ x = -2, -1, 0, 1, 2$ es la funci\'on de masa de probabilidad de la variable aleatoria $X$.
+	\item Calcula $\mathbb{E}(X), \mathbb{E}(\vert X \vert$ y $\mathbb{E}(2X^2 -5X + 7)$.
+\end{enumerate}
+\item La funci\'on distribuci\'on de una variable aleatoria $X$ es dado por:
+
+\[
+F(x) = \begin{cases}
+0 & \ x < -3 \\
+3/8 & \ -3 \leq x < 0 \\
+1/2 & \ 0 \leq x < 3 \\
+3/4 & \ 3 \leq x < 4 \\
+1 & \ x \geq 4
+\end{cases}
+\]
+
+Calcula $\mathbb{E}(X), \mathbb{E}(X^2 - 2\vert X \vert )$ y $\mathbb{E}(X\vert X \vert)$.
+\item Supongamos que, para una variable aleatoria discreta $X$, $\mathbb{E}(X) = 2$ y $\mathbb{E}[X(X -4)] = 5$. Encuentra la varianza y la desviaci\'on est\'andar de $-4X + 12$.
+
+\item Encuentra la varianza y la desviaci\'on est\'andar de una variable aleatoria $X$ con funci\'on distribuci\'on:
+
+\[
+F(x) = \begin{cases}
+0 &  \ x < -3 \\
+3/8 & \ -3 \leq x < 0 \\
+3/4 & \ 0 \leq x < 6 \\
+1 & \ x \geq 6.
+\end{cases}
+\]
+\item Sea $X$ un entero aleatorio, del conjunto $\{1, 2, \dots, N \}$. Encuentra $\mathbb{E}(X), \mathbb{V}(X)$ y la desviaci\'on est\'andar de $X$.
+\item Para $n = 1, 2, 3, \dots$, sea $x_n = (-1)^n\sqrt{n}$. Sea $X$ una variable aleatoria discreta con un conjunto positivo de valores $A = \{x_n: n = 1, 2, 3, \dots \}$  y una funci \'on de masa de probabilidad 
+
+\[
+p(X_n) = \mathbb{P}(X = x_n) = \frac{6}{(\pi n)^2}.
+\]
+
+Muestra que inclusive si $\displaystyle \sum_{n =1}^{\infty}x_n^3p(x_n) < \infty$, $\mathbb{E}(X^3)$ no existe.
+
+\end{enumerate}
+\end{document} 
