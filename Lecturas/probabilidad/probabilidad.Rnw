@@ -336,7 +336,7 @@ En general el principio de inclusi\'on-exclusi\'on  se puede escribir como
                                             &  -\sum_{i < j}\mathbb{P}(A_i \cap A_j)\\
                                             &  + \sum_{i < j < k}\mathbb{P}(A_i \cap A_j \cap A_k)\\
                                             &  \vdots \\
-                                            & + (-1)^n\mathbb{P}(A_i \cap A_2 \dots A_n)
+                                            & + (-1)^{n +1}\mathbb{P}(A_i \cap A_2 \dots A_n)
 \end{align*}
 
 
@@ -415,7 +415,6 @@ esto significa que hay un $80\%$ de posibilidad de seleccionar un passwords inic
 \end{ejemplo}
 
 
-
 \vspace{0.3cm}
 
 \begin{defi}
@@ -437,7 +436,7 @@ Esta probabilidad se define para eventos arbitrarios a trav\'es de la propiedad 
 
 \vspace{0.2cm}
 
-Un similar se cumple para espacios muestrales que son finitos contables.
+Un caso similar se cumple para espacios muestrales que son finitos contables.
 \end{defi}
 
 \vspace{0.5cm}
