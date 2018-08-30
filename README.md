@@ -95,8 +95,8 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * Repaso-->[The 4 Characteristics of a Binomial Experiment](http://www.oxfordmathcenter.com/drupal7/node/256).
  * Lectura-->[What is a Poisson distribution? ](https://www.quora.com/What-is-a-Poisson-distribution-As-a-Poisson-distribution-essentially-predicts-the-outcome-of-events-from-the-past-data-of-events-can-any-random-past-data-that-overall-exhibits-a-weak-congruence-be-considered-a-Poisson-distribution).
  
-###  [**Cuaderno jupyter de  repaso](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/probabilidad.ipynb).
-
+###  [Cuaderno jupyter de  repaso](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/probabilidad.ipynb).
+El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlado en su [blog relacionado a Python](https://relopezbriega.github.io/).
 
 ## Libros de referencia
 
