@@ -370,7 +370,7 @@ Sea $g(X) = \sqrt{X}$, la siguiente figura muestra que $g(X)$ es la composici\'o
 \vspace{0.2cm}
 
 
-Consideremos ahora el caso de una variable aleatoria discreta $X$ cuya funci\'on de masa de probabilidad es $p_X(x)$. Dada una funci?n $g(X)$ de $X$, nos gustar\'ia encontrar la funci\'on de masa de probabilidad de la variable aleatoria $Y = g(X)$, es decir, buscamos encontrar $p_Y(y)$.
+Consideremos ahora el caso de una variable aleatoria discreta $X$ cuya funci\'on de masa de probabilidad es $p_X(x)$. Dada una funci\'on $g(X)$ de $X$, nos gustar\'ia encontrar la funci\'on de masa de probabilidad de la variable aleatoria $Y = g(X)$, es decir, buscamos encontrar $p_Y(y)$.
 
 \vspace{0.3cm}
 
@@ -520,11 +520,11 @@ p_Y(y) = \begin{cases}
 \end{ejemplo}
 
 \begin{ejemplo}
-\normalfont Continuando con el \texttt{Ejemplo 1.2}, sea $D$ la distancia de la part\'icula, desde el origen despu\'es de $n$ pasos. Asumiendo  que $n$ es par. Encontremos el PMF de $D$.
+\normalfont Continuando con el \texttt{Ejemplo 2.2}, sea $D$ la distancia de la part\'icula, desde el origen despu\'es de $n$ pasos. Asumiendo  que $n$ es par. Encontremos el PMF de $D$.
 
 \vspace{0.2cm}
 
-Podemos es escribir $D = \vert Y \vert$, esta es una funci\'on de $Y$, pero no es inyectiva. El evento $D =0$, es el mismo que el evento $Y = 0$. Para $k = 2, 4,\dots, n$, el evento $D = k$ es el mismo evento $\{ Y = k\} \cup \{Y = -k\}$. 
+Podemos escribir $D = \vert Y \vert$, esta es una funci\'on de $Y$, pero no es inyectiva. El evento $D =0$, es el mismo que el evento $Y = 0$. Para $k = 2, 4,\dots, n$, el evento $D = k$ es el mismo evento $\{ Y = k\} \cup \{Y = -k\}$. 
 
 
 \vspace{0.2cm}
@@ -557,7 +557,7 @@ Entonces podemos diferenciar con respecto a $y$ para obtener el PDF de $g(X)$. E
 \vspace{0.2cm}
 
 \begin{teo}
-\normalfont (Cambio de variable en una dimensi\'on) Sea $X$ una variable aleatoria continua con PDF $f_X$ y sea $Y = g(X)$, donde $g$ es diferenciable y estrictamente creciente (o estrictamente creciente). Entonces el PDF de $Y$ es dado por:
+\normalfont Sea $X$ una variable aleatoria continua con PDF $f_X$ y sea $Y = g(X)$, donde $g$ es diferenciable y estrictamente creciente (o estrictamente creciente). Entonces el PDF de $Y$ es dado por:
 
 \[
 f_Y(y) = f_X(x)\biggl\vert\frac{dx}{dy} \biggr\vert,
