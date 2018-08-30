@@ -103,6 +103,7 @@ El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlad
  * [Notas de clase 10](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_continuas/variables_continuas.pdf).
 
 ### Clase 11
+ * [Notas de clase 11](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/momentos/momentos.pdf). 
 
 ### Clase 12
 
