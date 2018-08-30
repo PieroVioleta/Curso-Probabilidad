@@ -23,7 +23,7 @@ Las anotaciones de este curso tienen como objetivo la preparación en temas como
 | 12 (del 12/11 al 16/11) | 3ra calificada   | Distribuciones bivariadas de tipo discreto. Probabilidad conjunta. Probabilidad marginal.|
 | 13 (del 19/11 al 23/11) | Variables aleatorias independientes y dependientes. Cálculo de momentos.| Coeficiente de correlación. Covarianza. Independencia vs Correlación cero. Lectura 8.  |
 | 14 (del 26/11 al 30/11) | 4ta dirigida (semanas 11, 12 y 13) | Distribuciones condicionales. Media condicional. Varianza condicional.|
-| 15 (del 03/12 al 07/12) | **Exposición y presentación del proyecto.**   | Distribuciones bivariadas de tipo continuo. Función de densidad de probabilidad conjunta. Función marginal de densidad de aleatorias dependientes e independientes.  Ejemplo: Distribución normal bivariada. |
+| 15 (del 03/12 al 07/12) | **Exposición y presentación del proyecto.**   | Distribuciones bivariadas de tipo continuo. Función de densidad de probabilidad conjunta. Función marginal de densidad de aleatorias dependientes e independientes. Distribución normal bivariada. |
 | 16(del 10/12 al 14/12) |   **EXAMENES FINALES**  |
 | 17(del 17/12 al 21/12) |   **EXAMENES SUSTITUTORIOS** |
 
@@ -66,6 +66,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * Repaso -->[Bayes Rule with Lego](https://www.countbayesie.com/blog/2015/2/18/bayes-theorem-with-lego).
  
  ###  [**Lectura repaso: ¿Cómo funciona la inferencia bayesiana?**](https://datascience.com.co/c%C3%B3mo-funciona-la-inferencia-bayesiana-dc4ad29d4697).
+ * [Seminario 1](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Seminarios/Seminario1/Seminario1.pdf).
  
  ### Clase 5
  
@@ -97,6 +98,12 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  
 ###  [Cuaderno jupyter de  repaso](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/probabilidad.ipynb).
 El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlado en su [blog relacionado a Python](https://relopezbriega.github.io/).
+
+### Clase 10
+
+### Clase 11
+
+### Clase 12
 
 ## Libros de referencia
 
