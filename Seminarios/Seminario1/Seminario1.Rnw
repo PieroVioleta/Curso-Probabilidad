@@ -1,0 +1,166 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Seminario 1\par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Lista de ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+\item  Si recibimos el correo de cuatro personas diferentes, cu\'antos elementos tendr\'ia el espacio muestral \mbox{correspondiente}?.
+\item Sea $J$ el evento 'Juan tiene la culpa' y $M$ el evento 'Mar\'ia tiene la culpa' Expresa las dos declaraciones 'Ciertamente, no es cierto que ni Juan ni Mar\'ia tienen la culpa' y 'Juan o Mar\'ia tienen la culpa, o ambos' en t\'erminos de  los eventos $J$, $J^{c}$, $M$ y $M^c$, y comprueba la equivalencia de los estados por medio de las leyes de De Morgan.
+\item Si deseas anotar  los a\~nos bisiestos, suponiendo que uno de cada cuatro a\~nos es un a\~no bisiesto (que a su vez es una aproximaci\'on a la realidad!), ?`C\'omo se puede asignar una probabilidad a cada mes?.
+\item Considera el espacio muestral $\{ a_1, a_2, a_3, a_4, a_5, a_6\}$ de alg\'un experimento, donde la salida $a_i$ tiene la probabilidad $p_i$ para $i = 1, \dots, 6$. Llevamos a cabo este experimento dos veces de  manera  que las probabilidades asociadas son
+
+\vspace{0.3cm}
+
+$P((a_i, a_i)) =p_i$, \quad y \quad  $P((a_i, a_j)) = 0$ \quad si \quad  $i \neq j$, \quad para \quad $i,j = 1,\dots, 6$.
+
+\vspace{0.2cm}
+
+Comprueba que $P$ es una funci\'on probabilidad del espacio muestral $\Omega = \{a_1, \dots, a_6\} \times \{a_1, \dots, a_6\} $ del experimento combinado. ?` Cu\'al es la relaci\'on entre el primer experimento y el segundo experimento que est\'a determinado por esta funci\'on de probabilidad?.
+
+\item Supongamos un experimento en un laboratorio se repite cada d\'ia de la semana hasta que tiene \'exito, la probabilidad de \'exito es $p$. El primer experimento se inicia el lunes. ?`Cu\'al es la probabilidad de que la serie termine el pr\'oximo domingo?.
+\item Supongamos que los eventos  $D_1$ y $D_2$ representan desastres, que son raros: $P(D_1) \leq 10^{-6}$ y $P(D_2) \leq 10^{-6}$.?` Qu\'e se puede decir acerca de la probabilidad de que ocurra al menos uno de  los dos desastres?. ?`Qu\'e pasa con la probabilidad de que ambos se produzcan?.
+\item Tres eventos $E$, $F$ y $G$ pueden no ocurrir simult\'aneamente. Adem\'as se sabe que $P (E\cap F) = P(F \cap G) = P(E \cap G ) = 1/3$. Puedes determinar $P(E)$.
+\item Muestra que $P (A|C) + P(A^{c}|C) = 1$.
+\item Considera un recipiente  de un reactor cont\'inuamente agitado en donde una reacci\'on qu\'imica tiene lugar. En un lado el  gas fluye y se mezcla con el gas  que est\'a presente en el recipiente, y eventualmente fluye hacia fuera por el otro lado del recipiento. Una de las caracter\'isticas de cada  reacci\'on particular es la llamada \texttt{distribuci\'on de tiempo de residencia}, lo que nos dice c\'omo las part\'iculas  permanecen dentro del recipiente antes de continuar. Consideramos un reactor  agitado continuamente: los contenidos del recipiente se mezclaron perfectamente en todo momento. Sea $R_t$ el evento 'la part\'icula tiene un tiempo de residencia mayor que t segundos' con una probabilidad de $e^{-t}$. Calcula $P(R_3|R^{c}_4)$.
+\item En un grupo de $n$ personas elegidas arbitrariamente, cu\'al es la probabilidad de que no haya coincidencia de cumplea\~nos?. Calcula tambi\'en la probabilidad de que tres personas elegidas de forma  arbitraria hayan nacido en diferentes meses. Puedes  dar una  f\'ormula para n personas?.
+\item A principios de 2001, la Comisi\'on Europea introdujo pruebas masivas al  ganado para determinar la infecci\'on \textit{Bovine Spongiform Encephalopathy} (BSE) o 'mal de las vacas locas'. Como ninguna prueba es fiable al $100\%$, la mayor\'ia de las pruebas tienen el problema de  falsos positivos y falsos negativos. 
+
+Un \textit{falso positivo} significa que de acuerdo con la prueba de la vaca est\'a infectada, pero en realidad no lo est\'a, por otro lado un \textit{falso negativo} significa una vaca est\'a infectada  pero no es detectado por la prueba. 
+
+Imaginemos que hacemos una prueba a una vaca. Sea $B$ el evento 'la vaca tiene BSE' y $T$ denota  el evento 'la prueba surge positiva' (seg\'un la prueba  debemos creer que la vaca est\'a infectada con BSE). Uno puede 'probar la prueba' mediante el an\'alisis de muestras de vacas que se sabe que est\'an infectados o  sanas y as\'i determinar la efectividad de la prueba. La Comisi\'on Europea hab\'ia hecho esto durante cuatro pruebas en $1999$  y para varios m\'as tarde. Los resultados para lo que el informe llama la \texttt{Prueba A}  se puede resumir de la siguiente manera: una vaca infectada tiene una probabilidad del $70\%$ de dar positivo, y una vaca sana s\'olo el $10\%$; en  f\'ormulas:
+
+\begin{align*}
+P(T | B) =0.70 \\
+P(T | B^{c}) = 0.10
+\end{align*}
+
+Supongamos que queremos determinar la probabilidad $P(T)$ de que una para unavaca arbitraria la prueba de positivo. La vaca que ha hecho la prueba est\'a  infectada o no lo est\'a: $T$  se produce en combinaci\'on con $B$ o con $B^{c}$ (no hay otras posibilidades). En t\'erminos de eventos
+
+\vspace{0.2cm}
+
+\[
+	T = (T \cap B) \cup (T \cap B^{c}),
+\]
+
+as\'i que:
+
+
+\[
+	P(T) = P(T \cap B) +  P(T \cap B^{c}),
+\]
+
+ya que $T \cap B$ y $T \cap B^{c}$ son disjuntos. Aplicamos la siguiente f\'ormula llamada, algunas veces \texttt{regla de la multiplicaci\'on}
+
+\vspace{0.2cm}
+
+\begin{align}
+P(T \cap B) =P(T|B)\cdot P(B)\\
+P(T \cap B^{c}) = P(T| B^{c})\cdot P(B^{c})
+\end{align}
+
+
+\vspace{0.2cm}
+
+As\'i, que tenemos $P(T) = P(T|B)\cdot P(B) +  P(T| B^{c})\cdot P(B^{c})$.
+
+\vspace{0.3cm}
+
+Esta es una aplicaci\'on de la Ley de la Probabilidad Total: calcula la probabilidad a trav\'es del condicionamiento de varios eventos disjuntos que componen todo el espacio muestral (en este caso dos). Sea $P(B) = 0.02$, calcula el valor de $P(T)$. Si $P(T|B) = 0.99$ y $P(T|B^{c}) = 0.05$, hallar $P(T)$.
+\item Otra, quiz\'a m\'as pertinente pregunta sobre la prueba BSE es la siguiente: supongamos que una vaca da positivo en la prueba, ?`cu\'al es la probabilidad de que realmente tiene BSE?.
+\item 	Calcula $P(B | T)$ y $P(B|T^{c})$ si $P(T|B) = 0.99$ y $P(T|B^{c}) = 0.05$.
+
+\item Un dado justo se lanza dos veces. $A$ es el evento 'suma de los lanzamientos  es igual a $4$'
+y $B$ denota al evento, 'al menos uno de los lanzamientos  es un 3'.
+
+\begin{itemize}
+\item Calcula $P(A|B)$.
+\item $A$ y $B$ son eventos independientes?.
+\end{itemize}
+
+\item Extraemos  dos cartas de una baraja de $52$. Let $S_1$ el evento  'el primero es una espada', y $S_2$ 'el segundo es una espada'.
+
+\begin{itemize}
+\item Calcula $P(S_1), P(S_2|S_1)$ y $P(S_2|S^{c}_1)$.
+\item Calcula $P(S_2)$ por el condicionamiento de que si la primera carta es una espada.
+\end{itemize}
+
+\item Su profesor quiere caminar desde $A$ a $B$ (v\'ease el mapa). Para ello, selecciona primero al azar una de las rutas de acceso a $C$, $D$ o $E$. A continuaci\'on  selecciona al azar uno de los caminos posibles en ese momento (por lo que si se selecciona por primera vez el camino a $E$, se puede seleccionar la ruta de acceso a $A$ o la ruta de acceso a  $F$), etc.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.40]{F1.png}
+\end{figure}
+
+ ?`Cu\'al es la probabilidad de que llegar\'a a B despu\'es de dos selecciones?.
+ 
+ \item Calcula
+ 
+ \begin{itemize}
+ \item $P(A \cup B)$ si es dado que $P(A) = 1/3$ y $P(B|A^{c}) = 1/4$.
+ \item $P(B)$ si es dado que $P(A \cup B) = 2/3$ y $P(A^{c}|B^{c}) = 1/2$.
+ \end{itemize}
+ 
+ \item La nave espacial del astronauta Spiff tiene una luz de advertencia que se supone que
+ encienda cuando se sobrecalienta los desintegradores. Sea el evento $W$ 'la luz de advertencia est\'a encendida' y $F$ 'los desintegradores est\'an sobrecalentados'. Supongase que la probabilidad de los desintegradores sobrecalentados es $P(F) = 0.1$ y que la luz se enciende cuando ellos se recalienta es $0.99$ y que hay  un $2\%$ de probabilidad de que se enciende cuando no hay nada malo:$P(W|F^{c} ) = 0.02$.
+ 
+ \begin{itemize}
+ \item Determina la probabilidad de que la luz de advertencia se encienda.
+ \item Determina la probabilidad condicional de que los desintegradores est\'en recalentado, dado que la luz de advertencia est\'a encendida.
+ \end{itemize}
+\end{enumerate}
+\end{document} 
