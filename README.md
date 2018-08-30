@@ -107,6 +107,14 @@ El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlad
 
 ### Clase 12
 
+### Clase 13
+
+### Clase 14
+
+### Clase 15
+
+### Clase 16
+
 ## Libros de referencia
 
 - Steven J. Miller The Probability Lifesaver: All the tools you need to understand chance. Princeton University Press 2017.
@@ -128,8 +136,6 @@ El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlad
 - Un algoritmo aleatorizado para calcular la mediana.
 - Generación de valores aleatorios distribuidos normalmente.
 - El teorema de Shanon.
-- Aprendizaje PAC.
-- Heavy hitter en secuencia de datos.
 - ...
 
 ### **Evaluación**
