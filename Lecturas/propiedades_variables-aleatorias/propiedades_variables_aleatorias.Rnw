@@ -1,0 +1,347 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{subfig}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\bb}[1]{\textbf{#1}}
+\DeclareMathOperator{\rank}{\textbf{rango}}
+\DeclareMathOperator{\proy}{\textbf{proy}}
+\DeclareMathOperator{\nulll}{\textbf{nul}}
+\DeclareMathOperator{\diag}{\textbf{diag}}
+\DeclareMathOperator{\col}{\textbf{col}}
+\DeclareMathOperator{\fila}{\textbf{fila}}
+\DeclareMathOperator{\dimm}{dim}
+\DeclareMathOperator{\Traz}{Tr}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{teo}{{Teorema}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.5\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Propiedades de las variables aleatorias \par
+\end{minipage}
+
+
+\vspace {0.5cm}
+
+\section{Independencia de variables aleatorias}
+
+\vspace{0.2cm}
+
+As\'i como tuvimos la noci\'on de independencia de  eventos, podemos definir la independencia de las variables aleatorias. Intuitivamente, si dos variables aleatorias $X$ e $Y$ son independientes, entonces conocer el valor de $X$ no da ninguna informaci\'on sobre el valor de $Y$ y viceversa. La siguiente definici\'on, formaliza esta idea.
+
+\vspace{0.2cm}
+
+\begin{defi}
+\normalfont La variables aleatorias $X$ e $Y$ se dice que son independientes si:
+
+\[
+\mathbb{P}(X \leq x, Y \leq y) = \mathbb{P}(X \leq x)\mathbb{P}(Y \leq y),
+\]
+
+\vspace{0.2cm}
+
+para todo $y \in \mathbb{R}$. En el caso discreto, este caso es equivalente a la condici\'on:
+
+\vspace{0.2cm}
+
+\[
+\mathbb{P}(X = x, Y = y) = \mathbb{P}(X = x)\mathbb{P}(Y = y),
+\]
+
+para todo $x, y$ con $x$ en el soporte de $X$ y $y$ en el soporte de $Y$.
+\end{defi}
+
+\vspace{0.2cm}
+
+La definici\'on para m\'as variables aleatorias es an\'alogo:
+
+\vspace{0.2cm}
+
+\begin{defi}
+\normalfont La variables aleatorias $X_1,\dots X_n$ son independientes si:
+
+\[
+\mathbb{P}(X_1 \leq x_1, \dots, X_n \leq x_n) = \mathbb{P}(X_1 \leq x_1)\dots \mathbb{P}(X_n \leq x_n )
+\]
+
+\vspace{0.2cm}
+
+para todo $x_1, \dots, x_n \in \mathbb{R}$. Para infinitas variables aleatorias, decimos que son independientes si cada subconjunto finito de las variables aleatorias es independiente.
+\end{defi}
+
+\vspace{0.2cm}
+
+Comparando esto con el criterio de independencia de $n$ eventos, puede parecer extra\~o que la independencia de $X_1,\dots, X _n$  variables aleatorias requiera s\'olo una igualdad, mientras que para la independencia de  eventos necesitamos verificar la independencia de pares para todos los $\binom{n}{2}$ pares, independencia de a tres paras las $\binom{n}{3}$  triples y as\'i sucesivamente.
+
+\vspace{0.2cm}
+
+Sin embargo, al examinar m\'as detenidamente la definici\'on, vemos que la independencia de variables aleatorias requiere que la igualdad se cumpla para  todos los posibles $x_1,\dots, x_n$ infinitamente muchas condiciones.Si podemos encontrar una \'unica lista de valores $x_1, \dots, x_n$ para el cu\'al la igualdad falla, entonces $X_1,\dots, X_n$ no son independientes.
+
+\vspace{0.2cm}
+
+\begin{ejemplo}
+\normalfont En el lanzamiento de dos dados, si $X$ es el n\'umero del primer dado y $Y$ es el n\'umero del segundo dado, entonces $X +Y$ no es independiente de $X- Y$. Para ver esto, debes notar  que:
+
+\[
+0 = \mathbb{P}(X + Y =12, X -Y =-1) \neq \mathbb{P}(X + Y  =12)\mathbb{P}(X - Y = 1) = \frac{1}{36}\cdot\frac{5}{36}.
+\]
+
+\vspace{0.2cm}
+
+Desde que hemos encontrado un par de valores $(s,d)$, para el cual:
+
+\[
+\mathbb{P}(X + Y =s, X -Y =-d) \neq \mathbb{P}(X + Y =s)\mathbb{P}(X - Y = d)
+\]
+
+\vspace{0.2cm}
+
+$X +Y$ y $X- Y$ son dependientes. Esto tambi\'en tiene sentido intuitivamente: sabiendo que la  suma de los dados es $12$ nos dice que su diferencia debe ser $0$, por lo que los variables aleatorias  proporcionan informaci\'on de cada una de ellas.
+\end{ejemplo}
+
+\vspace{0.2cm}
+
+\begin{defi}
+\normalfont Las variables que son independientes y tienen las misma distribuci\'on, se les llama independientes y id\'enticamente distribuidas o \texttt{i.i.d} o \texttt{I.I.D}.
+
+\vspace{0.2cm}
+
+"Independiente" e "id\'enticamente distribuidos"   son dos conceptos a menudo confundidos pero completamente diferentes. Las variables aleatorias son independientes si no proporcionan informaci?n entre s\'i; se distribuyen de forma id\'entica si tienen el mismo PMF (o equivalentemente, el mismo CDF). Si dos variables aleatorias son independientes no tiene nada que ver con que  si tienen o no la misma distribuci\'on. Podemos tener variables aleatorias:
+
+\begin{itemize}
+\item Independientes e id\'enticamente distribuidas: Sea $X$ el resultado del lanzamiento de un dado, y sea $Y$ el resultado del lanzamiento independiente de un segundo de dado . Entonces $X$ e $Y$ son \texttt{i.i.d}.
+
+\item Independientes y no id\'enticamente distribuidas: Sea $X$ el resultado del lanzamiento de  un dado y sea $Y$ el precio de cierre de la bolsa de valores de Lima  (un \'indice burs\'atil) en un mes a partir de ahora. Entonces $X$ e $Y$ no proporcionan ninguna informaci\'on sobre cada una   y $X$ e $Y$ no tienen la misma distribuci\'on.
+
+\item Dependientes e id\'enticamente distribuidas: Sea $X$ el n\'umero de caras en $n$  lanzamientos independientes de una moneda y sea $Y$ el n\'umero de sellos en esos mismos $n$ lanzamientos. Entonces $X$ e $Y$ son ambas distribuidas por  $\texttt{Binomial}(n, 1/2)$, pero son altamente dependientes: si sabemos $X$, entonces conocemos $Y$  perfectamente.
+
+\item Dependientes y no id\'enticamente distribuidas: Sea $X$ el indicador de si el partido mayoritario retiene el control de la c\'amara de Representantes en los Estados Unidos despu?s de las pr\'oximas elecciones y sea $Y$ la calificaci\'on de favorabilidad promedio del partido mayoritario en las encuestas tomadas  a un mes de la elecci\'on. Entonces $X$ e $Y$ son dependientes y $X$ e $Y$ no tienen la misma distribuci\'on.
+\end{itemize}
+\end{defi}
+
+\section{Variable aleatoria condicionada}
+
+\vspace{0.2cm}
+
+Un evento $A$ puede ser condicionado por un evento $B$ diferente y  la probabilidad asignada a $A$ puede cambiar, permanecer igual o incluso llegar a cero como resultado de saber que el evento $B$ ocurre. Escribimos anteriormento $\mathbb{P}(A|B)$ como la probabilidad del evento $A$ dado el evento $B$. Debido a que una variable aleatoria $X$ define eventos en un espacio muestral, se sigue que las probabilidades asignadas a variables aleatorias tambi\'en pueden cambiar al saber que un cierto evento $B$ ha ocurrido.
+
+\vspace{0.2cm}
+
+El evento $[X = x]$ contiene todos los resultados que son asignados por la variable aleatoria $X$ al n\'umero real $x$ y su probabilidad, $\mathbb{P}(X =x)$, es igual a la suma de las probabilidades de estos resultados. Sabiendo que un evento $B$ ha ocurrido se puede alterar $\mathbb{P}(X =x)$,  para todos los valores posibles de $x$. La probabilidad condicional $\mathbb{P}(X =x|B)$,  se define cuando $\mathbb{P}(B) > 0$. 
+
+\vspace{0.2cm}
+
+Cuando la variable aleatoria $X$ es discreta, $\mathbb{P}(X =x|B)$  se denomina funci\'on de masa de probabilidad condicional de $X$ y se denota como $p_{X|B}(x)$. De nuestra definici\'on previa de probabilidad condicional para dos eventos, podemos escribir:
+
+\vspace{0.2cm}
+
+\[
+p_{X|B}(x) = \frac{\mathbb{P}([X =x] \cap B)}{\mathbb{P}(B)}
+\]
+
+\vspace{0.2cm}
+
+En muchos ejemplos, el evento $[X =x]$ est\'a contenido en el evento $B$ o su intersecci\'on de $[X=x]$ y $B$ es el evento nulo. En el primer caso tenemos:
+
+\vspace{0.2cm}
+
+\[
+p_{X|B}(x) = \frac{p_X(x)}{\mathbb{P}(B)}\ \text{si}\ [X =x]\subset B
+\]
+
+\vspace{0.2cm}
+
+Mientras que el segundo caso tenemos : $[X =x] \cap B = \emptyset$ y as\'i $p_{X|B}(x) = 0$.
+
+\vspace{0.3cm}
+
+Estos conceptos se trasladan de manera natural a variables aleatorias que son continuas. Para una variable aleatoria continua $X$ y un evento $B$, podemos escribir:
+
+\vspace{0.2cm}
+
+\[
+f_{X|B}(x)dx = \mathbb{P}(x < X \leq x + dx| B) = \frac{\mathbb{P}([x< X \leq x +dx]\cap B)}{\mathbb{P}(B)}.
+\]
+
+
+\vspace{0.2cm}
+
+As\'i
+
+\vspace{0.2cm}
+
+
+\[
+f_{X|B}(x) = \begin{cases}
+f_X(x)/\mathbb{P}(B) & \ \text{si}\ [X =x] \subset B \\
+0 & \ \text{si}\ [X =x]\cap B = \emptyset
+\end{cases}
+\]
+
+\begin{ejemplo}
+\normalfont Sea $X$ la variable aleatoria que cuenta el n\'umero de puntos obtenidos cuando se lanzan dos dados. La funci\'on de masa de probabilidad para $X$ es:
+
+\vspace{0.3cm}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=13cm]{v1}
+\end{figure}
+
+
+\vspace{0.2cm}
+
+Sea $B$ el evento de que el lanzamiento da un n\'umero  par de puntos  en uno de los dados y un n\'umero impar  en el otro dado. Se sigue que el evento $B$ contiene $18$ resultados. Cada resultado es un par con la propiedad de que el primero puede ser cualquiera de los seis n\'umeros, pero el segundo debe ser uno de los tres n\'umeros pares (si el primero es impar) o uno de tres n\'umeros impares (si el primero es par). Como todos los resultados son igualmente probables, tenemos que  $\mathbb{P}(B)= 1/2$. 
+
+\vspace{0.2cm}
+
+Dado este evento calculamos la funci\'on de masa de probabilidad condicional $p_{X|B}$. Desde que la intersecci\'on de $B$ y $[X=x]$, cuando $x$ es un n\'umero par es vac\'io, se sigue que la probabilidad de que la suma siendo  un n\'umero par es cero.
+
+\vspace{0.2cm}
+
+Para valores impares de $x$, el evento $[X =x]$ est\'a enteramente contenido dentro del evento $B$. Por tanto si resumimos, todos estos resultados, tenemos que la funci\'on de masa de probabilidad condicional es obtenida como:
+
+
+\[
+p_{X|B}(x) = \begin{cases}
+p_X(x)/\mathbb{P}(B), & \ \ x = 3, 5, 7, 9, 11, \\
+0 &\ \ \text{en otros casos,}
+\end{cases}
+\]
+
+y es presentada en forma tabular de la siguiente manera:
+
+\vspace{0.3cm}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=13cm]{v2}
+\end{figure}
+\end{ejemplo}
+
+\vspace{0.2cm}
+
+Si $B_i, i =1, 2, \dots, n$ es un conjunto mutualmente exclusivos y colectivamente exhaustivos (espacio de eventos), entonces se cumple:
+
+\[
+p_X(x) = \sum_{i =1}^{n}p_{X|B_i}(x)\mathbb{P}(B_i)
+\]
+
+\vspace{0.2cm}
+
+El resultado se sigue, de aplicar la ley de Probabilidad de Total al evento $[X =x]$.
+
+\begin{ejemplo}
+\normalfont Sea $X$ una variable aleatoria con funci\'on densidad dada por:
+
+\[
+f_X(x) = \begin{cases}
+(1/2)e^{-x/2} & \ \text{si}\ x \geq 0 \\
+0 & \text{en otros casos.}
+\end{cases}
+\]
+
+\vspace{0.2cm}
+
+Sea $B$ el evento que $X < 1$ y deseamos encontrar $f_{X|X < 1}(x)$. Para ello, calculemos $\mathbb{P}(X < 1)$ como:
+
+\vspace{0.2cm}
+
+\[
+\mathbb{P}(X < 1) = \bigints_{0}^{1}(1/2)e^{-x/2}dx = -e^{-x/2}\biggl\vert_{0}^{1} = 1 -e^{-1/2}.
+\]
+
+\vspace{0.2cm}
+
+La funci\'on densidad de probabilidad condicional de $X$ es entonces dado por:
+
+\begin{align*}
+f_{X| X < 1}(x)& = \begin{cases}
+f_X(x)/\mathbb{P}(X < 1)& \ \text{para}\ 0\leq x < 1, \\
+0 &\ \text{en otro caso,}
+\end{cases} \\
+&= \begin{cases}
+(1/2)e^{-x/2}/(1 -e^{-1/2}) &\ \text{para}\ 0 \leq x < 1 \\
+0 &\ \text{en otro caso,}
+\end{cases}
+\end{align*}
+
+\vspace{0.2cm}
+
+La funci\'on  de distribuci\'on acumulativa condicional, $F_{X|B}(x|B)$, de una variable aleatoria $X$, dado que $B$ ha ocurrido, es definida como:
+
+\vspace{0.2cm}
+
+\[
+F_{X|B}(x|B) = \frac{\mathbb{P}(X \leq x, B)}{\mathbb{P}(B)}
+\]
+
+donde $(X \leq x, B)$ es la intersecci\'on de los eventos $[X \leq x]$ y $B$. Adem\'as se tiene que:
+
+\vspace{0.2cm}
+
+\[
+F_{X|B}(-\infty| B) = 0 \ \ \text{y}\ \ F_{X|B}(\infty| B) = 1 
+\]
+
+\vspace{0.2cm}
+
+Tambi\'en:
+
+\[
+\mathbb{P}(x_1 < X \leq x_2|B) = F_{X|B}(x_2|B) -F_{X|B}(x_1|B) = \frac{\mathbb{P}([x_1 < X \leq x_2], B)}{\mathbb{P}(B)}.
+\]
+
+\vspace{0.2cm}
+
+La funci\'on densidad condicional, puede ser obtenida como la derivada:
+
+\[
+f_{X|B}(x|B) = \frac{d}{dx}F_{X|B}(x|B)
+\]
+
+\vspace{0.2cm}
+
+que debe ser no negativa y debe tener un \'area igual a $1$.
+\end{ejemplo}
+
+
+\end{document}
