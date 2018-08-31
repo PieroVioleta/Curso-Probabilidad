@@ -41,27 +41,27 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 
 ### Clase 1
 
-* [Notas de clase 1](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/probabilidad/probabilidad.pdf).
+* [Notas de clase 1: Conceptos de probabilidad](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/probabilidad/probabilidad.pdf).
 * Repaso-->[Probability Spaces: An Illustrated Introduction](https://www.countbayesie.com/blog/2015/8/30/picture-guide-to-probability-spaces).
 * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista1.pdf).
 * Repaso-->[The Monty Hall Problem A visual explanation by: Victor Powell](http://blog.vctr.me/monty-hall/).
 
 ### Clase 2
 
-* [Notas de clase 2](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/enumeracion/enumeracion.pdf).
+* [Notas de clase 2: Enumeración en probabilidad](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/enumeracion/enumeracion.pdf).
 * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista2.pdf).
 * Lectura -->[Basic Combinatorics for Probability- Guy Lebanon](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.185.1470&rep=rep1&type=pdf).
 * [Combinatorics problems](https://brilliant.org/math/combinatorics/).
 
 ### Clase 3
 
-* [Notas de clase 3](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/probabilidad_condicional/condicionalidad-independencia.pdf).
+* [Notas de clase 3: Probabilidad condicional. Independencia](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/probabilidad_condicional/condicionalidad-independencia.pdf).
 * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista3.pdf).
  * Repaso -->[Conditional probability: A Visual explanation by Victor Powell ](http://setosa.io/conditional/).
  
  ### Clase 4
  
- * [Notas de clase 4](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/bayes-probabilidad_total/bayes_probabilidad-total.pdf).
+ * [Notas de clase 4: Ley de la probabilidad total. Teorema de Bayes](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/bayes-probabilidad_total/bayes_probabilidad-total.pdf).
  * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista4.pdf).
  * Repaso -->[Bayes Rule with Lego](https://www.countbayesie.com/blog/2015/2/18/bayes-theorem-with-lego).
  
@@ -71,28 +71,28 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  ### Clase 5
  
  * Repaso -->[Random Variables and Expectation with Robots and Stuff!](https://www.countbayesie.com/blog/2015/2/20/random-variables-and-expectation).
- * [Notas de clase 5](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_discretas/variables_discretas.pdf).
+ * [Notas de clase 5: Variables aleatorias discretas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_discretas/variables_discretas.pdf).
  * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista5.pdf).
  *  Repaso-->[Interrogating Probability Distributions](https://www.countbayesie.com/blog/2015/3/17/interrogating-probability-distributions).
  
  ### Clase 6
 
- * [Notas de clase 6](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/esperanza/esperanza.pdf).
+ * [Notas de clase 6: Esperanza matemática](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/esperanza/esperanza.pdf).
  * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista6.pdf).
  * Repaso-->[Expectation and Variance from High School to Grad School](https://www.countbayesie.com/blog/2015/3/19/expectation-and-variance-from-high-school-to-grad-school).
  
  ### Clase 7
  
- * [Notas de clase 7](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/funciones-generadoras/funcion_generadora_probabilidad.pdf).
+ * [Notas de clase 7: Funciones generadoras de probabilidad](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/funciones-generadoras/funcion_generadora_probabilidad.pdf).
  * Repaso-->[Moments of a Random Variable Explained](https://www.countbayesie.com/blog/2015/4/23/why-so-square-jensens-inequality-and-moments-of-a-random-variable).
  
  ### Clase 8
  
- * [Notas de clase 8](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/Estimacion.pdf).
+ * [Notas de clase 8: Estimación](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/Estimacion.pdf).
  
  ### Clase 9
  
- * [Notas de clase 9](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/distribuciones_discretas/distribuciones_discretas.pdf).
+ * [Notas de clase 9: Distribuciones discretas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/distribuciones_discretas/distribuciones_discretas.pdf).
  * Repaso-->[The 4 Characteristics of a Binomial Experiment](http://www.oxfordmathcenter.com/drupal7/node/256).
  * Lectura-->[What is a Poisson distribution? ](https://www.quora.com/What-is-a-Poisson-distribution-As-a-Poisson-distribution-essentially-predicts-the-outcome-of-events-from-the-past-data-of-events-can-any-random-past-data-that-overall-exhibits-a-weak-congruence-be-considered-a-Poisson-distribution).
  
@@ -100,20 +100,24 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlado en su [blog relacionado a Python](https://relopezbriega.github.io/).
 
 ### Clase 10
- * [Notas de clase 10](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_continuas/variables_continuas.pdf).
+ * [Notas de clase 10: Variables continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_continuas/variables_continuas.pdf).
 
 ### Clase 11
- * [Notas de clase 11](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/momentos/momentos.pdf). 
+ * [Notas de clase 11: Momentos](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/momentos/momentos.pdf). 
 
 ### Clase 12
+ * [Notas de clase 12: Distribuciones continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/distribuciones_continuas/distribuciones_continuas.pdf).
 
 ### Clase 13
 
 ### Clase 14
+ * [Notas de clase 14:Propiedades de las variables aleatorias continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/propiedades_variables-aleatorias/propiedades_variables_aleatorias.pdf).
 
 ### Clase 15
+ * Cuaderno -->[Ley de los grandes números y el teorema del límite central](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/GrandesNumeros_CLT.ipynb). Basado en las notas de Bugra Akyildiz, publicada en su [blog](http://bugra.github.io/) de Machine Learning.
 
 ### Clase 16
+ * [Notas de clase 16: Variables aleatorias multivariadas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_multivariadas/variables_multivariadas.pdf).
 
 ## Libros de referencia
 
