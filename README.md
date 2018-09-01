@@ -125,6 +125,15 @@ El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlad
 - Introducción a la Teoría de la Probabilidad: Paul G. Hoel, Sidney Port, Charles Stone, traducido al español  por Cristhian Emmanuel Garay López 2003. El libro se puede leer y descargado [aquí](https://kupdf.net/download/introducci-oacute-n-a-la-teor-iacute-a-de-la-probabilidad-paul-g-hoel-sidney-port-charles-stone_58d145cbdc0d604323c34665_pdf).
 - Elementary Probability with Applications: Larry Rabinowitz CRC Press 2016.
 
+## Prácticas calificadas.
+
+Se tomarán 4 prácticas calificadas, siendo la segunda y la cuarta  calificada  no anulables y serán evaluadas de la siguiente forma:
+
+PC2 =0.4.práctica + 0.6. Avance del trabajo de curso 1
+PC4 = 0.4.Avance del trabajo de curso 2 + 0.6. Exposición
+
+En cada evaluación (práctica calificada, exámenes parciales, final y sustitutorio) de manera OBLIGATORIA al menos una de las preguntas será formulada en INGLÉS.
+
 ## **Esquema de trabajo grupal para el curso CM-1H2**
 
 - Equipos de 3 a 4 estudiantes.
