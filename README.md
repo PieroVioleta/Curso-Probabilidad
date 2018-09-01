@@ -74,7 +74,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * [Notas de clase 5: Variables aleatorias discretas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_discretas/variables_discretas.pdf).
  * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista5.pdf).
  *  Repaso-->[Interrogating Probability Distributions](https://www.countbayesie.com/blog/2015/3/17/interrogating-probability-distributions).
- * Recetas de probabilidad-->[http://www.statisticsblog.com/2013/07/a-probability-cookbook/](http://www.statisticsblog.com/2013/07/a-probability-cookbook/).
+ * Recetas de probabilidad-->[A probability cookbook/](http://www.statisticsblog.com/2013/07/a-probability-cookbook/).
  
  ### Clase 6
 
@@ -124,7 +124,7 @@ El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlad
 ### Clase 16
  * [Notas de clase 16: Variables aleatorias multivariadas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_multivariadas/variables_multivariadas.pdf).
  
-###  [**https://www.datascience.com/blog/statistics-data-science-interview**](https://www.datascience.com/blog/statistics-data-science-interview).
+###  [**How to Dominate the Statistics Portion of Your Data Science Interview**](https://www.datascience.com/blog/statistics-data-science-interview).
 
 ## Libros de referencia
 
