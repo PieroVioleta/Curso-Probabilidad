@@ -100,8 +100,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * Lectura-->[What is a Poisson distribution? ](https://www.quora.com/What-is-a-Poisson-distribution-As-a-Poisson-distribution-essentially-predicts-the-outcome-of-events-from-the-past-data-of-events-can-any-random-past-data-that-overall-exhibits-a-weak-congruence-be-considered-a-Poisson-distribution).
  
 * [Cuaderno jupyter de  repaso: Conceptos de probabilidades con Python](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/probabilidad.ipynb).
-
-El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlado en su [blog relacionado a Python](https://relopezbriega.github.io/).
+  - El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlado en su [blog relacionado a Python](https://relopezbriega.github.io/).
 
 ### Clase 10
  * [Notas de clase 10: Variables continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_continuas/variables_continuas.pdf).
@@ -120,7 +119,8 @@ El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlad
  * [Notas de clase 14:Propiedades de las variables aleatorias continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/propiedades_variables-aleatorias/propiedades_variables_aleatorias.pdf).
 
 ### Clase 15
- * Cuaderno -->[Ley de los grandes números y el teorema del límite central](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/GrandesNumeros_CLT.ipynb). Basado en las notas de Bugra Akyildiz, publicada en su [blog](http://bugra.github.io/) de Machine Learning.
+ * Cuaderno -->[Ley de los grandes números y el teorema del límite central](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/GrandesNumeros_CLT.ipynb). 
+    - Cuadero basado en las notas de Bugra Akyildiz, publicada en su [blog](http://bugra.github.io/) de Machine Learning.
 
 ### Clase 16
  * [Notas de clase 16: Variables aleatorias multivariadas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_multivariadas/variables_multivariadas.pdf).
