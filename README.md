@@ -129,8 +129,8 @@ El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlad
 
 Se tomarán 4 prácticas calificadas, siendo la segunda y la cuarta  calificada  no anulables y serán evaluadas de la siguiente forma:
 
-PC2 =0.4.práctica + 0.6. Avance del trabajo de curso 1
-PC4 = 0.4.Avance del trabajo de curso 2 + 0.6. Exposición
+- PC2 =0.4.práctica + 0.6. Avance del trabajo de curso 1
+- PC4 = 0.4.Avance del trabajo de curso 2 + 0.6. Exposición
 
 En cada evaluación (práctica calificada, exámenes parciales, final y sustitutorio) de manera OBLIGATORIA al menos una de las preguntas será formulada en INGLÉS.
 
