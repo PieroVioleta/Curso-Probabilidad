@@ -1,0 +1,171 @@
+\documentclass[a4paper,11pt]{report}
+\usepackage{anysize} % Soporte para el comando \marginsize
+\marginsize{1.2cm}{1.2cm}{1cm}{1cm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathpazo}
+\usepackage[latin1]{inputenc}
+\usepackage[english,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{multicol} 
+\columnsep=7mm
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\usepackage{times}
+
+\setlength{\paperwidth}{216mm} \setlength{\paperheight}{219mm}
+\setlength{\textwidth}{39pc} \setlength{\textheight}{58.5pc}
+\setlength{\topmargin}{-1cm} \setlength{\oddsidemargin}{-0.5cm}
+\setlength{\evensidemargin}{-0.9cm}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\normal}{\triangleleft \,}
+\newcommand{\tx}{\textrm}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\e}{\rightarrow}
+\newcommand{\bi}{\Leftrightarrow}
+\newcommand{\com}{\mathbb{N} \bi}
+\newcommand{\fu}{f:\N \e \R}
+\newcommand{\ba}{\backslash}
+\newcommand{\Q}{\mathbb{Q}}
+
+
+\newcommand{\calP}{\mathcal{P}}
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calL}{\mathcal{L}}
+
+
+\newcommand{\ovl}{\overline}
+\newcommand{\ora}{\overrightarrow}
+\newcommand{\ola}{\overleftarrow}
+\newcommand{\olra}{\overleftrightarrow}
+\newcommand{\ula}{\underleftarrow}
+\newcommand{\ura}{\underrightarrow}
+
+
+\newcommand{\inner}[2]{\langle{#1},{#2}\rangle}
+
+\newcommand{\cabecera}[1]{\begin{figure}[h]
+ \begin{minipage}[c]{0.05\columnwidth}
+\centering\includegraphics[width=2cm]{escudo.pdf}
+\end{minipage}
+\hfill{}
+\begin{minipage}[c]{0.86\columnwidth}
+\centering\flushleft {Universidad Nacional de Ingenier\'ia\\
+Facultad de Ciencias\\
+Escuela Profesional de Matem\'atica \hfill #1}
+\end{minipage}
+\end{figure}\vspace{-0.5cm}
+}
+
+
+\pagestyle{empty}
+\begin{document}
+\cabecera{Ciclo 2018 - II}
+
+\begin{center}
+{\Large \textbf{Pr\'actica dirigida de C\'alculo de Probabilidades}}\\
+{\Large \textbf{CM-	1H2}}
+\end{center}
+
+\noindent
+\rule{\textwidth}{0.6pt}
+
+\vspace{0.5cm}
+
+\textbf{Probabilidades}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item  Define un espacio muestral para el experimento de elegir un n\'umero del intervalo $(0,20)$. Describe el evento de que dicho n\'umero es un entero.
+\item Se lanzan dos dados. Sea $E$ el evento en  que la suma de las salidad es impar y $F$ el evento de que al menos salga un  $1$. Interpretar los eventos $E\cap F, E^c \cap F$ y $E^cF^c$.
+\item Prueba que el evento $B$ es imposible  si y s\'olo si para cada evento $A$,
+
+\[
+A = (B \cap A^c) \cup (B^c \cap A).
+\]
+\item Define un espacio  muestral para el experimento de poner en orden aleatorio siete libros diferentes en un estante. Si tres de estos siete libros son un diccionario de tres vol\'umenes, describe el hecho de que estos vol\'umenes est\'en en orden ascendente lado a lado (es decir, el volumen I precede al volumen II y el volumen II precede al volumen III).
+\item En un lote de producci\'on que consta de 20 computadoras personales de cierta marca, se ha detectado que 4 tienen defectos de tipo operacional. 1. Si se selecciona al azar una computadora, a. Determina la probabilidad de que la computadora seleccionada tenga defectos de tipo operacional, b. ?`cu\'al es la probabilidad de que no tenga defectos de tipo operacional?. 2. Si se seleccionan al azar 4 computadoras de este lote, determina la probabilidad de que: a. Solo tres tengan defectos de tipo operacional, b. Por lo menos dos tengan defectos de tipo operacional, c. Como m\'aximo una tenga defectos de tipo operacional.
+\item Se seleccionan dos n\'umeros al azar de entre los d\'igitos del 1 al 9, a. Determina la probabilidad de que ambos n\'umeros seleccionados sean pares, b. Determina la probabilidad de que ambos n\'umeros sean impares.
+\item Gottfried Wilhelm Leibniz (1646-1716), el matem\'atico, fil\'osofo y estadista alem\'an  y uno de los intelectos m\'as importantes del siglo XVII, cre\'ia que en un lanzamiento de un par de dados, la probabilidad de obtener la suma $11$ es igual a la de obtener la suma $12$. ?Est\'as de acuerdo con Leibniz? Explica tu respuesta.
+\item Dada la tabla referente a la producci\'on de flechas para cami\'on de carga pesada. 
+\begin{table}[!h]
+	\centering{\begin{tabular}{|c|cccc|c|}\hline
+			&\multicolumn{4}{|c|}{Tipo de flecha}& \\\hline
+			Defecto &A& B& C& D&  Total\\\hline
+			I &54& 23& 40& 15&  132\\\hline
+			II &28& 12& 14& 5&  59\\\hline
+			Sin Defecto &118& 165& 246& 380&  909\\\hline
+			Total &200& 200& 300& 400&  1100\\\hline
+		\end{tabular}
+	}
+\end{table}
+Se inspeccionaron 200 flechas del tipo A y B, 300 del tipo C y 400 del tipo D. Luego, se selecciona una flecha al azar de las inspeccionadas, determina la probabilidad de que: a. La flecha seleccionada sea del tipo B, b. La flecha seleccionada no tenga defectos, c. La flecha seleccionada tenga defectos del tipo II, d. La flecha seleccionada tenga cualquier tipo de defecto.
+\item  El coeficiente de la ecuaci\'on cuadr\'atica $ax^2 + bx + c = 0 $ se determina lanzando  un dado tres veces (el primer resultado es $a$, el segundo $b$ y el tercero $c$). Encuentra la probabilidad de que la ecuaci\'on no tenga ra\'ices reales.
+
+\item  Sea $\mathbb{P}$ una probabilidad definida en un espacio muestral $S$. Para eventos de $A$ de $S$ se define $\mathbb{Q}(A) = [\mathbb{P}(A)]^2$  y $\mathbb{R}(A) = \mathbb{P}(A)/2$. ?` Es $\mathbb{R}$ una probabilidad en S? ?` Por qu\'e si  o por qu\'e no?.
+
+\item Se lanza al aire un dado normal dos veces, a. ?`cu\'al es la probabilidad de que la suma de los n\'umeros que aparecen sea de por lo menos siete?, b. ?`cu\'al es la probabilidad de que la suma de los n\'umeros que aparecen sea mayor de siete?, c. ?`cu\'al es la probabilidad de que la suma de los n\'umeros que aparecen sea de c\'omo m\'aximo cinco?, d. ?`cu\'al es la probabilidad de que en el primer lanzamiento aparezca el n\'umero tres?.
+
+\item Sea $A_n=[0,\frac{n-1}{n}\rangle=\{x\in\mathbb{R}:0\leq x< \frac{n-1}{n} \}$ para todo $n\in\mathbb{N}\setminus\{1\}$. Se define 
+$$A=\bigcup_{n=1}^{\infty}A_n=A_1\cup A_2\cup A_3\cup \cdots$$
+Halla $A$.
+\item  Sea $A_n=[0,\frac{1}{n}\rangle=\{x\in\mathbb{R}:0\leq x< \frac{1}{n} \}$ para todo $n\in\mathbb{N}$. Se define 
+$$A=\bigcap_{n=1}^{\infty}A_n=A_1\cup A_2\cup A_3\cup \cdots$$
+Halla $A$.
+\item Lanzo un dado justo dos veces y obtengo dos n\'umeros: $X_1 =$resultado del primer lanzamiento, $X_2 =$ resultado del segundo lanzamiento. Calcula la probabilidad de que a. $X_2=4$, b. $X_1+X_2=7$ y c. $X_1\neq 2$ y $X_2\geq 4$.
+
+\item Se selecciona aleatoriamente un punto del intervalo $(0,1)$ . ?`Cu\'al es la probabilidad de que el punto sea racional? ?` Cu\'al es la probabilidad de que el punto sea irracional?.
+
+\item  Supongamos que algunos individuos de una poblaci\'on producen descendientes del mismo tipo. Los descendientes de la poblaci\'on inicial son llamados de segunda generaci\'on, los descendientes de la segunda generaci\'on son llamados de tercera generaci\'on y as\'i sucesivamente. Si con probabilidad $\exp[-(2n^2 + 7)/(6n^2)]$ toda la poblaci\'on muere completamente en la n-\'esima generaci\'on  antes de producir cualquier descendencia ?`cu\'al es la probabilidad de que tal poblaci\'on sobreviva para siempre?.
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\textbf{M\'etodos de enumeraci\'on}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Se selecciona aleatoriamente un entero del conjunto $\{1, 2,\dots , 1,000, 000\}$. ?` Cu\'al es la probabilidad de que contenga el d\'igito 5?.
+\item  Si una prueba se compone de 12 preguntas de verdadero-falso, a. ?`de cuantas maneras diferentes un estudiante puede dar una respuesta para cada pregunta?, b. S\'i de antemano el maestro le dice que la primera pregunta es verdadera, ?`cu\'antas maneras tiene de contestar esta prueba?.
+\item En el popular programa de televisi\'on \texttt{Who Wants to Be a Millionaire} se pide a los concursantes que clasifiquen   cuatro elementos de acuerdo con alguna norma: por ejemplo, puntos de referencia en  orden geogr\'afico, pel\'iculas en el orden de la fecha de lanzamiento, cantantes en el orden de fecha de nacimiento . ?` Cu\'al es la probabilidad de que un concursante pueda obtener la respuesta correcta s\'olo con adivinar?.
+\item  Si los cinco finalistas de un torneo internacional de golf son Espa\~na, Estados Unidos, Portugal, Uruguay y Jap\'on, a. Diga de cuantas maneras es posible que se otorgue un primero, segundo lugar y tercer lugar, b. Considerando que el primer lugar lo gana Portugal y el segundo lo gana Estados Unidos, ?`cu\'antas maneras hay de que se otorguen los lugares antes mencionados?.  
+
+\item Una computadora de prop\'osito especial contiene tres conmutadores, cada uno de los cu\'ales puede instalarse de tres maneras diferentes. ?`De cu\'antas maneras diferentes puede instalarse el banco de conmutadores de la computadora?.   
+
+\item Un testigo de un accidente de tr\'ansito en el que el causante huy\'o, le indica al polic\'ia que el n\'umero de matr\'icula del autom\'ovil ten\'ia las letras DUH seguidas por tres d\'igitos, el primero de los cuales era un cinco. S\'i el testigo no puede recordar los otros dos d\'igitos, pero est\'a seguro de que los tres eran diferentes, encuentra el n\'umero m\'aximo de  registros de autom\'ovil que debe verificar la polic\'ia.
+
+\item En una fiesta, $15$ parejas casadas est\'an sentadas al azar en una mesa redonda. ?`Cu\'al es la probabilidad de que todos los hombres est\'en sentados junto a sus esposas? Supongamos que de estas parejas casadas, cinco esposos y sus esposas tienen m\'as de $50$ a\~nos y los restantes maridos y esposas son todos menores de $50$ a\~nos. ?`Cu\'al es la probabilidad de que todos los hombres mayores de $50$ a\~nos est\'en sentados junto a sus esposas? Tenga en cuenta que cuando la gente est\'a sentada alrededor de una mesa redonda, s\'olo sus asientos en relativos  entre si importan. La posici\'on exacta de una persona no es importante. 
+\item Una caja contiene cinco azules y ocho bolas rojas. Jim y Jack comienzan a sacar bolas de la caja, respectivamente, una a la vez, al azar y sin reemplazo hasta que se saque una bola azul. ?`Cu\'al es la probabilidad de que Jack saque la pelota azul?.             
+
+\item ?`De cu\'antas maneras pueden formarse 6 personas para subir a un autob\'us?, b.si tres de ellas insisten en seguirse una a la otra, ?`en cu\'antas formas es esto posible?,c.Si dos personas se reh\'usan a seguirse una a la otra?
+
+\item ?`Cu\'antos n\'umeros de tres d\'igitos pueden formarse con los d\'igitos 0, 1, 2, 3, 4, 5, y 6, si cada uno solo puede usarse solo una vez?, b) ?`cu\'antos de estos n\'umeros son no v\'alidos?, c) ?`cu\'antos son mayores que 330?.    
+
+\item En un estudio que realizaron en California, el decano Lester Breslow y el doctor James Enstrom de la School of  Public Health de la University of California en los Angeles, se concluy\'o que al seguir 7 sencillas reglas de salud, la vida de un hombre puede alargarse, en promedio 11 a\~nos, y la de las mujeres siete. Estas 7 reglas son: no fumar, hacer ejercicio regularmente, tomar alcohol solo en forma moderada, dormir siete u ocho horas, conservar un peso apropiado, desayunar y no comer entre alimentos. ?`En cu\'antas formas puede una persona adoptar cinco de estas reglas, a. S\'i actualmente sino cumple  todas?, b. Si nunca toma bebidas alcoh\'olicas y siempre desayuna?.   
+
+\item Sea $x$ un n\'umero positivo y sea $x_1 + x_2 + \cdots + x_k = n$ una ecuaci\'on. Un vector $(x_1, x_2, \dots, x_k)$ satisfaciendo  $x_1 + x_2 + \cdots + x_k = n$  se dice que es \texttt{una soluci\'on entera no negativa} de la ecuaci\'on si para cada $i, 1 \leq i \leq k$, $x_i$ es un entero no negativo. Se dice que es una \texttt{soluci\'on entera positiva} de la ecuaci\'on  si para cada $i, 1\leq i \leq k$, $x_i$ es un entero positivo. 
+
+
+\item Una muestra aleatoria de $n$ elementos se toma de una poblaci\'on de tama\~no $N$ sin reemplazo. ?` Cu\'al es la probabilidad de que se incluya un elemento fijo de la poblaci\'on? Simplifique tu respuesta. 
+
+\item Frente a la oficina de Jeff hay un estacionamiento con $13$ plazas de aparcamiento en una fila. Cuando los coches llegan a este aparcamiento, se estacionan aleatoriamente en uno de los lugares vac\'ios. Jeff estaciona su coche en el \'unico lugar vac\'io que queda, luego se va a su oficina. A su regreso encuentra que hay siete plazas vac\'ias. Si no ha estacionado su coche en un  extremo del  estacionamiento, ?` cu\'al es la probabilidad de que ambos espacios de estacionamiento que est\'an al lado del auto de Jeff est\'en vac\'ios?.
+
+\item Lili tiene $20$ amigos. Entre ellos est\'an Karen y Claude , que son marido y mujer. Lili quiere invitar a seis de sus amigos a su fiesta de cumplea\~nos. Si ni Karen ni Claude iran  a la fiesta si es que no van  con su pareja. ?` cu\'antas opciones tiene Lili?.
+
+\end{enumerate}
+
+\begin{flushright}
+{\bfseries Los profesores.}
+%\footnote{Hecho en \LaTeX}
+\end{flushright}
+\end{document}
