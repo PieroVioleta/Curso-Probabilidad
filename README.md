@@ -124,7 +124,7 @@ El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlad
 ### Clase 16
  * [Notas de clase 16: Variables aleatorias multivariadas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_multivariadas/variables_multivariadas.pdf).
  
-###  [**How to Dominate the Statistics Portion of Your Data Science Interview**](https://www.datascience.com/blog/statistics-data-science-interview).
+###  [**Lectura de repaso: How to Dominate the Statistics Portion of Your Data Science Interview**](https://www.datascience.com/blog/statistics-data-science-interview).
 
 ## Libros de referencia
 
