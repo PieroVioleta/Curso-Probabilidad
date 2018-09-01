@@ -74,12 +74,14 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * [Notas de clase 5: Variables aleatorias discretas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_discretas/variables_discretas.pdf).
  * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista5.pdf).
  *  Repaso-->[Interrogating Probability Distributions](https://www.countbayesie.com/blog/2015/3/17/interrogating-probability-distributions).
+ * Recetas de probabilidad-->[http://www.statisticsblog.com/2013/07/a-probability-cookbook/](http://www.statisticsblog.com/2013/07/a-probability-cookbook/).
  
  ### Clase 6
 
  * [Notas de clase 6: Esperanza matemática](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/esperanza/esperanza.pdf).
  * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista6.pdf).
  * Repaso-->[Expectation and Variance from High School to Grad School](https://www.countbayesie.com/blog/2015/3/19/expectation-and-variance-from-high-school-to-grad-school).
+ * Lectura-->[Should You Get Started in Data Science?](http://treycausey.com/getting_started.html).
  
  ### Clase 7
  
@@ -89,6 +91,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  ### Clase 8
  
  * [Notas de clase 8: Estimación](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/Estimacion.pdf).
+ * Juego en probabilidad y R-->[Word games in probability and R](http://www.statisticsblog.com/2010/07/word-games-in-probability-and-r/).
  
  ### Clase 9
  
@@ -101,6 +104,7 @@ El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlad
 
 ### Clase 10
  * [Notas de clase 10: Variables continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_continuas/variables_continuas.pdf).
+ * Lectura-->[A different way to view probability densities](http://www.statisticsblog.com/2010/06/a-different-way-to-view-probability-densities/).
 
 ### Clase 11
  * [Notas de clase 11: Momentos](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/momentos/momentos.pdf). 
@@ -109,6 +113,7 @@ El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlad
  * [Notas de clase 12: Distribuciones continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/distribuciones_continuas/distribuciones_continuas.pdf).
 
 ### Clase 13
+ * Lectura-->[A classification scheme for types of randomness](http://www.statisticsblog.com/2012/02/a-classification-scheme-for-types-of-randomness/).
 
 ### Clase 14
  * [Notas de clase 14:Propiedades de las variables aleatorias continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/propiedades_variables-aleatorias/propiedades_variables_aleatorias.pdf).
@@ -118,6 +123,8 @@ El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlad
 
 ### Clase 16
  * [Notas de clase 16: Variables aleatorias multivariadas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_multivariadas/variables_multivariadas.pdf).
+ 
+###  [**https://www.datascience.com/blog/statistics-data-science-interview**](https://www.datascience.com/blog/statistics-data-science-interview).
 
 ## Libros de referencia
 
