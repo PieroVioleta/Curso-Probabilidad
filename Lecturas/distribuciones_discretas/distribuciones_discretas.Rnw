@@ -52,7 +52,7 @@ options(formatR.arrow=TRUE,width=90)
 %\maketitle
 \hspace*{0.5\linewidth}
 \begin{minipage}{0.6\linewidth}
-Curso: Introducci\'on a la Probabilidad y Estad\'istica CM -274\par
+Curso: C\'alculo de probabilidades CM-1H2\par
 Distribuciones importantes \par
 \end{minipage}
 
