@@ -165,10 +165,17 @@ En cada evaluación (práctica calificada, exámenes parciales, final y sustitut
 
 - Aproximaciones Gaussianas: Binomial, Poisson y Normal.
 - El tiempo de valor esperado en los algoritmos de ordenación.
-- Un algoritmo aleatorizado para calcular la mediana.
+- Un algoritmo aleatorizado para calcular la mediana
+- Uso de números aleatorios para evaluar integrales.
 - Generación de valores aleatorios distribuidos normalmente.
-- El teorema de Shanon.
-- ...
+- El teorema de Shanon
+- Una introducción al Método de Montecarlo
+. Análisis de regresión. Regresión lineal, polinómica, Ridge y Lasso.
+- ¿Qué es el principio de máxima verosimilitud?
+- Valoración de opciones financieras con árboles binomiales. 
+- Teoría de Portafolio de Markowitz
+- Modelos Logit - Probit 
+- Modelo de fijación de precios de activos de capital (CAPM). 
 
 ### **Evaluación**
 
@@ -176,7 +183,7 @@ La evaluación serán 5 entregables, lo cuales se detallan a continuación, que 
 
 | **Entregable** | **Fecha límite de entrega** |
 | --- | --- |
-| 1.  Propuesta de proyecto | 3 de setiembre |
+| 1.  Propuesta de proyecto | 10 de setiembre |
 | 2. (Introducción, estado del arte y diseño del experimento), en formato IEEE, tamaño A4, máximo 3 páginas de extensión. | 24 de setiembre |
 | 3. Código y/o scripts (jupyter notebooks) con la experimentación realizada | 5 de noviembre |
 | 4. Informe final, en formato IEEE, tamaño A4, máximo 8 páginas de extensión | 26 de noviembre |
