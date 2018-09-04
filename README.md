@@ -151,9 +151,10 @@ Se tomarán 4 prácticas calificadas, siendo la segunda y la cuarta  calificada 
 - PC2 =0.4.PC2 + 0.6.Trabajo 1
 - PC4 = 0.4.Trabajo 2 + 0.6.Exposición
 
-- Trabajo 1 = Entregable 1 + Entregable 2
-- Trabajo 2 =  Entregable 3 + Entregable 4
-- Exposición.
+Donde:
+ - Trabajo 1 = Entregable 1 + Entregable 2
+ - Trabajo 2 =  Entregable 3 + Entregable 4
+ - Exposición.
 
 En cada evaluación (práctica calificada, exámenes parciales, final y sustitutorio) de manera OBLIGATORIA al menos una de las preguntas será formulada en INGLÉS.
 
