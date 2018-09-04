@@ -52,7 +52,7 @@ options(formatR.arrow=TRUE,width=90)
 %\maketitle
 \hspace*{0.5\linewidth}
 \begin{minipage}{0.6\linewidth}
-Curso: C\'alculo de probabilidad CM-1H2\par
+Curso: C\'alculo de probabilidades CM-1H2\par
 Probabilidad condicional, eventos independientes \par
 \end{minipage}
 
