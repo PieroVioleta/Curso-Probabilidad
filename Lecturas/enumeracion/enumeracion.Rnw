@@ -56,7 +56,6 @@ Curso: C\'alculo de probabilidades CM-1H2\par
 M\'etodos de conteo \par
 \end{minipage}
 
-
 \vspace {0.5cm}
 
 \section{M\'etodos de conteo en probabilidad}
