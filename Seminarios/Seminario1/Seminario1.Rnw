@@ -19,6 +19,7 @@
 \newtheorem{defi}{{Definici\'on}}[section]
 \newtheorem{pros}{{Proposici\'on}}[section]
 \newtheorem{cor}{{Corolario}}[section]
+\newcommand{\PR}{\mathbb{P}}
 \usepackage[unicode=true,pdfusetitle,
  bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
  breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
@@ -59,7 +60,6 @@ Seminario 1\par
 \vspace{0.5cm}
 
 \begin{enumerate}
-\item  Si recibimos el correo de cuatro personas diferentes, cu\'antos elementos tendr\'ia el espacio muestral \mbox{correspondiente}?.
 \item Sea $J$ el evento 'Juan tiene la culpa' y $M$ el evento 'Mar\'ia tiene la culpa' Expresa las dos declaraciones 'Ciertamente, no es cierto que ni Juan ni Mar\'ia tienen la culpa' y 'Juan o Mar\'ia tienen la culpa, o ambos' en t\'erminos de  los eventos $J$, $J^{c}$, $M$ y $M^c$, y comprueba la equivalencia de los estados por medio de las leyes de De Morgan.
 \item Si deseas anotar  los a\~nos bisiestos, suponiendo que uno de cada cuatro a\~nos es un a\~no bisiesto (que a su vez es una aproximaci\'on a la realidad!), ?`C\'omo se puede asignar una probabilidad a cada mes?.
 \item Considera el espacio muestral $\{ a_1, a_2, a_3, a_4, a_5, a_6\}$ de alg\'un experimento, donde la salida $a_i$ tiene la probabilidad $p_i$ para $i = 1, \dots, 6$. Llevamos a cabo este experimento dos veces de  manera  que las probabilidades asociadas son
@@ -78,6 +78,15 @@ Comprueba que $P$ es una funci\'on probabilidad del espacio muestral $\Omega = \
 \item Muestra que $P (A|C) + P(A^{c}|C) = 1$.
 \item Considera un recipiente  de un reactor cont\'inuamente agitado en donde una reacci\'on qu\'imica tiene lugar. En un lado el  gas fluye y se mezcla con el gas  que est\'a presente en el recipiente, y eventualmente fluye hacia fuera por el otro lado del recipiento. Una de las caracter\'isticas de cada  reacci\'on particular es la llamada \texttt{distribuci\'on de tiempo de residencia}, lo que nos dice c\'omo las part\'iculas  permanecen dentro del recipiente antes de continuar. Consideramos un reactor  agitado continuamente: los contenidos del recipiente se mezclaron perfectamente en todo momento. Sea $R_t$ el evento 'la part\'icula tiene un tiempo de residencia mayor que t segundos' con una probabilidad de $e^{-t}$. Calcula $P(R_3|R^{c}_4)$.
 \item En un grupo de $n$ personas elegidas arbitrariamente, cu\'al es la probabilidad de que no haya coincidencia de cumplea\~nos?. Calcula tambi\'en la probabilidad de que tres personas elegidas de forma  arbitraria hayan nacido en diferentes meses. Puedes  dar una  f\'ormula para n personas?.
+
+\item En un determinado pa\'is, la probabilidad es $49/50$ de que un avi\'on de combate seleccionado al azar regrese de una misi\'on sin percances. Jessica argumenta que esto significa que hay una misi\'on con un percance en cada $50$ vuelos consecutivos. Ella concluye que si un piloto de caza regresa con seguridad de $49$ misiones consecutivas, debe regresar a casa antes de su quincuag\'esima misi\'on. ?`Est\'a en lo correcto  Jessica? Explica por qu\'e si o por qu\'e no. Utiliza propiedades de la teoria de las probabilidades.
+\item  Sean $A$, $B$ y $C$ tres eventos. Muestra que:
+\[
+\mathbb{P}(A \cup B \cup C) = \mathbb{P}(A) + \mathbb{P}(B) + \mathbb{P}(C)
+\]
+
+si y s\'olo si $\mathbb{P}(A \cap B) = \mathbb{P}(A \cap C) = \mathbb{P}(B \cap C) = 0$
+
 \item A principios de 2001, la Comisi\'on Europea introdujo pruebas masivas al  ganado para determinar la infecci\'on \textit{Bovine Spongiform Encephalopathy} (BSE) o 'mal de las vacas locas'. Como ninguna prueba es fiable al $100\%$, la mayor\'ia de las pruebas tienen el problema de  falsos positivos y falsos negativos. 
 
 Un \textit{falso positivo} significa que de acuerdo con la prueba de la vaca est\'a infectada, pero en realidad no lo est\'a, por otro lado un \textit{falso negativo} significa una vaca est\'a infectada  pero no es detectado por la prueba. 
@@ -132,6 +141,12 @@ y $B$ denota al evento, 'al menos uno de los lanzamientos  es un 3'.
 \item $A$ y $B$ son eventos independientes?.
 \end{itemize}
 
+\item Se establece que al menos uno de los eventos $A_r,  1 \leq r \leq n$, es seguro que ocurra, pero ciertamente  no m\'as de dos ocurren. Si $\PR (A_r) = p$ y $\PR(A_r \cap A_s) = q, r \neq s$, muestra que 
+$p \geq 1/n$ y $q \leq 2/n$.
+\item Se establece que al menos uno, pero no m\'as que tres, de los eventos $A_r, 1\leq r \leq n$ ocurre, donde $n \geq 3$. La probabilidad de que al menos dos ocurran es $\frac{1}{2}$. Si $\PR(A_r) = p, \PR(A_r \cap A_s) = q, r \neq s$ 
+y $\PR(A_r \cap A_s \cap A_t) = x, r < s < t$, mostrar que $p \geq 3/ (2n)$ y $q\leq 4/n$.
+
+\item Prueba que $\PR(A|B) = \PR(B|A)\PR(A)/\PR(B)$, siempre que $\PR(A)\PR(B)\neq 0$. Muestra que, si $\PR (A|B) > \PR(A)$, entonces $\PR (B|A) > \PR(B)$.
 \item Extraemos  dos cartas de una baraja de $52$. Let $S_1$ el evento  'el primero es una espada', y $S_2$ 'el segundo es una espada'.
 
 \begin{itemize}
@@ -162,5 +177,6 @@ y $B$ denota al evento, 'al menos uno de los lanzamientos  es un 3'.
  \item Determina la probabilidad de que la luz de advertencia se encienda.
  \item Determina la probabilidad condicional de que los desintegradores est\'en recalentado, dado que la luz de advertencia est\'a encendida.
  \end{itemize}
+
 \end{enumerate}
 \end{document} 
