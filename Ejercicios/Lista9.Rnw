@@ -1,0 +1,157 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Variables aleatorias continuas\par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Lista de ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+\item Considera la funci\'on densidad de gamma con par\'ametros $\alpha$ y $\lambda$,
+
+\[
+\frac{\lambda e^{-\lambda t}(\lambda t)^{\alpha -1}}{\Gamma(\alpha)}.
+\]
+
+donde $\Gamma(\alpha)$ es de la forma $\Gamma(\alpha) = \bigintss_{0}^{\infty}e^{-x}x^{\alpha - 1}dx $. Prueba:
+
+\begin{itemize}
+	\item $\Gamma(1) =  1$
+	\item $\Gamma(\alpha ) = (\alpha - 1)\Gamma(\alpha - 1)$
+	\item $\Gamma(k) = (k - 1)!$ si $k$ es entero.
+	\item $\Gamma(\frac{1}{2}) = \sqrt{\pi}$.
+\end{itemize}
+\item Sea $\phi(z) = \frac{1}{\sqrt{2\pi}}e^{-z^2/2}, z \in \mathbb{R}$. Se puede usar las coordenadas polares para mostrar que $\bigintss_{-\infty}^{\infty} \phi(z) dz = 1$, realizando los siguientes pasos:
+
+\begin{enumerate}
+\item Muestra que es suficiente probar $\bigintss_{0}^{\infty}e^{-z^2/2} dz = \sqrt{\pi/2}$,
+\item Verifica que $\biggl[\bigintss_{0}^{\infty}e^{-z^2/2} dz\biggr]^2 = \bigintss_{0}^{\infty}e^{-u^2/2} du\bigintss_{0}^{\infty}e^{-v^2/2} dv$. As\'i muestra que $\bigintss_{t = 0}^{\infty}\bigintss_{s = 0}^{\infty}e^{-(u^2 + v^2)/2} dudv = \frac{1}{2}\pi$,
+\item En la doble integral encontrada en el \'item anterior, usa las sustituciones $ u = r\cos(\theta), v = r\sin(\theta), 0 < r < \infty$ y $0 < \theta < 2\pi$. Entonces reescribe $\bigintss_{t = 0}^{\infty}\bigintss_{s = 0}^{\infty}e^{-(u^2 + v^2)/2} dudv = \bigintss_{\theta = 0}^{2\pi}\biggl[\bigintss_{r = 0}^{\infty}e^{-r^2/2} rdr \biggr]d\theta$,
+\item Evalua para mostrar que $\bigintss_{r = 0}^{\infty}e^{-r^2/2} rdr  =1$,
+\item ?` La parte (c) implica   a la parte (b)?.
+\end{enumerate}
+\item En el campo de la ciencia actuarial, la estrategia del reaseguro proporcional ha sido ampliamente estudiada. En virtud del reaseguro proporcional, una compa\~n\'ia de seguros (llamada 'aseguradora') se asocia con una compa\~n\'ia de reaseguros (llamada 'reaseguradora'). El reasegurador se compromete a pagar el excedente de cualquier reclamo sobre un monto acordado $A$.
+
+M\'as espec\'ificamente, supongamos que la variable aleatoria $X$ denota la cantidad (en d\'olares) de un reclamo y  que adem\'as $X$ tiene una distribuci\'on $f_X(x), 0 <x < \infty$. Entonces, $U = \min(X, A)$ es la cantidad pagada por  la aseguradora y $V = \max(0, X-A)$ es la cantidad pagada por el reasegurador.
+
+\begin{enumerate}
+\item Muestra que 
+\[
+\mathbb{E}(U) = \mathbb{E}(X) = \bigint_{0}^{\infty}yf_X(y +A)dy,
+\]
+
+de modo que la cantidad esperada pagada por reclamo del asegurador se reduzca bajo una estrategia de reaseguro proporcional.
+
+\item Si
+
+\[
+f_X(x) = \frac{1}{\alpha}e^{-x/\alpha}, \qquad 0 < x < \infty, \ 0 < \alpha < \infty, 
+\]
+
+encuentra el valor de $A$,  $A^{*}$ que ser\'a una funci\'on de $\alpha$, de modo que el monto promedio de la reclamaci\'on pagado por la aseguradora se reduzca exactamente en un $20\%$ utilizando una estrategia de reaseguro proporcional.
+\end{enumerate}
+\item La variable aleatoria $X$ es llamada \texttt{doble exponencial distribuida} si su funci\'on densidad es dada por:
+
+\[
+f(x) =ce^{-\vert x\vert},\quad -\infty < x < \infty
+\]
+\begin{enumerate}
+\item Encuentra el valor de $c$.
+\item Prueba  que $\mathbb{E}(X^{2n}) = (2n)!$ y $\mathbb{E}(X^{2n +1}) = 0$.
+\end{enumerate}
+\item Sea $X$ una variable aleatoria positiva con funci\'on densidad $f$ y funci\'on distribuci\'on $F$. Definimos la funci\'on de Hazard $H(x) = -\log[1- F(x)$ y la raz\'on de Hazard como:
+
+\[
+r(x) = \lim_{h \rightarrow 0^{+}}\frac{1}{h}\mathbb{P}(X \leq x + h| X > x), \ \  x\geq 0.
+\]
+
+Muestra que:
+
+\begin{enumerate}
+\item $r(x) = H^{'}(x) = f(x)/[1 -F(x)]$.
+\item Si $r(x)$ aumenta con $x$, entonces $H(x)/x$ aumenta con $x$.
+\item $H(x)/x$ aumenta con $x$ si y s\'olo si  $[1 -F(x)]^{\alpha} \leq 1 -F(\alpha x)$ para todo $0 \leq \alpha \leq 1$,
+\item Si $H(x)/x$ aumenta con $x$, entonces $H(x + y) \geq H(x) + H(y)$, para todo $x, y \geq 0$.
+\end{enumerate}
+
+\item Sea $X$ una variable aleatoria con funci\'on densidad de probabilidad:
+
+\[
+f(x) = \frac{1}{2}e^{-\vert x \vert}, \ \ -\infty < x < \infty.
+\]
+
+Calcula $\text{Var}(X)$.
+
+\item  Una variable aleatoria $X$ con funci\'on densidad:
+
+\[
+f(x) = \frac{1}{1 +x^2}, \ \ -\infty < x < \infty,
+\]
+
+es llamada una variable aleatoria de Cauchy.
+
+\begin{enumerate}
+\item Encuentra el valor de $c$.
+\item Muestra que el valor de $\mathbb{E}(X)$ no existe.
+\end{enumerate}
+\item Sea $X$ una variable aleatoria con funci\'on densidad de probabilidad:
+
+\[
+f(x ) = \frac{1}{\pi(1 +x^2)}, \quad -\infty < x < \infty.
+\]
+
+Prueba que $\mathbb{E}(\vert X \vert^{\alpha})$ converge si $0 < \alpha < 1$ y diverge si $\alpha \geq 1$.
+\end{enumerate}
+\end{document} 
