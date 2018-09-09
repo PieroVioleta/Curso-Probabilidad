@@ -66,8 +66,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * Repaso -->[Bayes Rule with Lego](https://www.countbayesie.com/blog/2015/2/18/bayes-theorem-with-lego).
  
  * [**Lectura repaso: ¿Cómo funciona la inferencia bayesiana?**](https://datascience.com.co/c%C3%B3mo-funciona-la-inferencia-bayesiana-dc4ad29d4697).
- * [Seminario 1](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Seminarios/Seminario1/Seminario1.pdf).
- 
+ * [Seminario 1](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Seminarios/Seminario1/Seminario1.pdf)-->[Solución del seminario](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Seminarios/Seminario1/Solucionario-seminario1.pdf).
  ### Clase 5
  
  * Repaso -->[Random Variables and Expectation with Robots and Stuff!](https://www.countbayesie.com/blog/2015/2/20/random-variables-and-expectation).
