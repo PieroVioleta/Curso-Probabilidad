@@ -49,26 +49,26 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 
 * [Notas de clase 1: Conceptos de probabilidad](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/probabilidad/probabilidad.pdf).
 * Repaso-->[Probability Spaces: An Illustrated Introduction](https://www.countbayesie.com/blog/2015/8/30/picture-guide-to-probability-spaces).
-* [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista1.pdf).
+* [Lista de ejercicios 1](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista1.pdf).
 * Repaso-->[The Monty Hall Problem A visual explanation by: Victor Powell](http://blog.vctr.me/monty-hall/).
 
 ### Clase 2
 
 * [Notas de clase 2: Enumeración en probabilidad](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/enumeracion/enumeracion.pdf).
-* [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista2.pdf).
+* [Lista de ejercicios 2](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista2.pdf).
 * Lectura -->[Basic Combinatorics for Probability- Guy Lebanon](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.185.1470&rep=rep1&type=pdf).
 * [Combinatorics problems](https://brilliant.org/math/combinatorics/).
 
 ### Clase 3
 
 * [Notas de clase 3: Probabilidad condicional. Independencia](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/probabilidad_condicional/condicionalidad-independencia.pdf).
-* [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista3.pdf).
+* [Lista de ejercicios 3](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista3.pdf).
  * Repaso -->[Conditional probability: A Visual explanation by Victor Powell ](http://setosa.io/conditional/).
  
  ### Clase 4
  
  * [Notas de clase 4: Ley de la probabilidad total. Teorema de Bayes](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/bayes-probabilidad_total/bayes_probabilidad-total.pdf).
- * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista4.pdf).
+ * [Lista de ejercicios 4](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista4.pdf).
  * Repaso -->[Bayes Rule with Lego](https://www.countbayesie.com/blog/2015/2/18/bayes-theorem-with-lego).
  
  * [**Lectura repaso: ¿Cómo funciona la inferencia bayesiana?**](https://datascience.com.co/c%C3%B3mo-funciona-la-inferencia-bayesiana-dc4ad29d4697).
@@ -77,14 +77,14 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  
  * Repaso -->[Random Variables and Expectation with Robots and Stuff!](https://www.countbayesie.com/blog/2015/2/20/random-variables-and-expectation).
  * [Notas de clase 5: Variables aleatorias discretas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_discretas/variables_discretas.pdf).
- * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista5.pdf).
+ * [Lista de ejercicios 5](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista5.pdf).
  *  Repaso-->[Interrogating Probability Distributions](https://www.countbayesie.com/blog/2015/3/17/interrogating-probability-distributions).
  * Recetas de probabilidad-->[A probability cookbook/](http://www.statisticsblog.com/2013/07/a-probability-cookbook/).
  
  ### Clase 6
 
  * [Notas de clase 6: Esperanza matemática](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/esperanza/esperanza.pdf).
- * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista6.pdf).
+ * [Lista de ejercicios 6](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista6.pdf).
  * Repaso-->[Expectation and Variance from High School to Grad School](https://www.countbayesie.com/blog/2015/3/19/expectation-and-variance-from-high-school-to-grad-school).
  * Lectura-->[Should You Get Started in Data Science?](http://treycausey.com/getting_started.html).
  
@@ -92,7 +92,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  
  * [Notas de clase 7: Funciones generadoras de probabilidad](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/funciones-generadoras/funcion_generadora_probabilidad.pdf).
  * Repaso-->[Moments of a Random Variable Explained](https://www.countbayesie.com/blog/2015/4/23/why-so-square-jensens-inequality-and-moments-of-a-random-variable).
- * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista7.pdf).
+ * [Lista de ejercicios 7](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista7.pdf).
  
  
  ### Clase 8
@@ -105,24 +105,23 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * [Notas de clase 9: Distribuciones discretas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/distribuciones_discretas/distribuciones_discretas.pdf).
  * Repaso-->[The 4 Characteristics of a Binomial Experiment](http://www.oxfordmathcenter.com/drupal7/node/256).
  * Lectura-->[What is a Poisson distribution? ](https://www.quora.com/What-is-a-Poisson-distribution-As-a-Poisson-distribution-essentially-predicts-the-outcome-of-events-from-the-past-data-of-events-can-any-random-past-data-that-overall-exhibits-a-weak-congruence-be-considered-a-Poisson-distribution).
- * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista8.pdf).
+ * [Lista de ejercicios 8](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista8.pdf).
  
 * Cuaderno-->[Conceptos de probabilidades con Python](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/probabilidad.ipynb).
  
 ### Clase 10
  * [Notas de clase 10: Variables continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_continuas/variables_continuas.pdf).
  * Lectura-->[A different way to view probability densities](http://www.statisticsblog.com/2010/06/a-different-way-to-view-probability-densities/).
- * [Ejercicios]().
+ * [Lista de ejercicios 9](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista9.pdf).
 
 ### Clase 11
  * [Notas de clase 11: Momentos](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/momentos/momentos.pdf). 
  * Cuaderno-->[Análisis de datos categóricos](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/datos-categoricos.ipynb).
- * [Ejercicios]().
+ * [Lista de ejercicios 10](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista10.pdf).
 
 ### Clase 12
  * [Notas de clase 12: Distribuciones continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/distribuciones_continuas/distribuciones_continuas.pdf).
  * Cuaderno-->[Análisis de datos cuantitativos](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/datos-cuantitativos.ipynb).
- * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista9.pdf).
 
 ### Clase 13
  * Lectura-->[A classification scheme for types of randomness](http://www.statisticsblog.com/2012/02/a-classification-scheme-for-types-of-randomness/).
@@ -131,19 +130,14 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * [Notas de clase 14:Propiedades de las variables aleatorias continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/propiedades_variables-aleatorias/propiedades_variables_aleatorias.pdf).
  * Lectura opcional-->[Probabilistic Bounds — A Primer](https://jeremykun.com/2013/04/15/probabilistic-bounds-a-primer/).
  * Cuaderno-->[Distribuciones probabilísticas](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/Cuaderno-distribuciones/Distribuciones-probabilidad.ipynb).
- [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista10.pdf).
 
 ### Clase 15
  * Cuaderno -->[Ley de los grandes números y el teorema del límite central](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/GrandesNumeros_CLT.ipynb). 
   
- * [Ejercicios]().
-
 ### Clase 16
  * [Notas de clase 16: Variables aleatorias multivariadas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_multivariadas/variables_multivariadas.pdf).
  * Lectura opcional-->[Martingales and the Optional Stopping Theorem](https://jeremykun.com/2014/03/03/martingales-and-the-optional-stopping-theorem/).
- * [Ejercicios]().
- 
-* [**Lectura de repaso: How to Dominate the Statistics Portion of Your Data Science Interview**](https://www.datascience.com/blog/statistics-data-science-interview).
+ * [**Lectura de repaso: How to Dominate the Statistics Portion of Your Data Science Interview**](https://www.datascience.com/blog/statistics-data-science-interview).
 
 ## Libros de referencia
 
