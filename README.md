@@ -86,7 +86,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  
  * [Notas de clase 7: Funciones generadoras de probabilidad](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/funciones-generadoras/funcion_generadora_probabilidad.pdf).
  * Repaso-->[Moments of a Random Variable Explained](https://www.countbayesie.com/blog/2015/4/23/why-so-square-jensens-inequality-and-moments-of-a-random-variable).
- * [Ejercicios]().
+ * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista7.pdf).
  
  
  ### Clase 8
@@ -99,7 +99,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * [Notas de clase 9: Distribuciones discretas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/distribuciones_discretas/distribuciones_discretas.pdf).
  * Repaso-->[The 4 Characteristics of a Binomial Experiment](http://www.oxfordmathcenter.com/drupal7/node/256).
  * Lectura-->[What is a Poisson distribution? ](https://www.quora.com/What-is-a-Poisson-distribution-As-a-Poisson-distribution-essentially-predicts-the-outcome-of-events-from-the-past-data-of-events-can-any-random-past-data-that-overall-exhibits-a-weak-congruence-be-considered-a-Poisson-distribution).
- * [Ejercicios]().
+ * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista8.pdf).
  
 * [Cuaderno jupyter de  repaso: Conceptos de probabilidades con Python](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/probabilidad.ipynb).
   - El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlado en su [blog relacionado a Python](https://relopezbriega.github.io/).
@@ -115,7 +115,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 
 ### Clase 12
  * [Notas de clase 12: Distribuciones continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/distribuciones_continuas/distribuciones_continuas.pdf).
- * [Ejercicios]().
+ * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista9.pdf).
 
 ### Clase 13
  * Lectura-->[A classification scheme for types of randomness](http://www.statisticsblog.com/2012/02/a-classification-scheme-for-types-of-randomness/).
@@ -123,7 +123,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 ### Clase 14
  * [Notas de clase 14:Propiedades de las variables aleatorias continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/propiedades_variables-aleatorias/propiedades_variables_aleatorias.pdf).
  * Lectura opcional-->[Probabilistic Bounds — A Primer](https://jeremykun.com/2013/04/15/probabilistic-bounds-a-primer/).
- [Ejercicios]().
+ [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista10.pdf).
 
 ### Clase 15
  * Cuaderno -->[Ley de los grandes números y el teorema del límite central](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/GrandesNumeros_CLT.ipynb). 
