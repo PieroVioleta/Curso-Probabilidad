@@ -1,0 +1,129 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Distribuciones discretas\par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Lista de ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+\item  Un agente de bienes ra\'ices afirma que s\'olo el $30\%$ de las casas en un determinado vecindario se valoran en menos de $200.000$ soles. Una muestra aleatoria de $20$ casas de esa vecindad es seleccionada y evaluada. Los resultados en (miles de soles) son los siguientes:
+
+\begin{verbatim}
+                         285 156 202 306 276 562 415
+                         245 185 143 186 377 225 192
+                         510 222 264 198 168 363
+\end{verbatim}
+Bas\'andose en estos datos, ?`es aceptable la afirmaci\'on del agente inmobiliario?.
+\item Si en el lanzamiento  de un dado, el evento de obtener $4$ o $6$ se llama \'exito y el evento de obtener $1, 2, 3$, o $5$ se llama  fracaso, entonces:
+
+\[
+X = \begin{cases}
+1 &\ \text{si}\ 4, 6\ \text{es obtenido}\\
+0 &\ \text{en otros casos}
+\end{cases}
+\]
+ es una variable de Bernoulli con param\'etro $p =1/3$. Calcula la funci\'on de masa de probabilidad de $X$.
+\item Sea $X$ una variable binomial con param\'etros $n$ y $p$. Entonces $p_X(x)$, la funci\'on de masa de probabilidad de $X$ es:
+
+\[
+p_X(x) = \mathbb{P}(X =x) = \begin{cases}
+\binom{n}{x}p^x(1 -p)^{n -x} & \ \text{si}\ x = 0,1,2, \dots, n\\
+0 &\ \text{en otros casos.}
+\end{cases}
+\]
+\item Supongamos que, en una muestra aleatoria particular de $n$ personas, k est\'an contra el aborto. Demuestra que $\mathbb{P}(X = k)$ es el m\'aximo para $\hat{p} = k/n$. Es decir, $\hat{p}$ es el valor de $p$ que hace que el resultado $X = k$ m\'as probable.
+\item En el conjunto $\{x: 0 \leq x \leq 1\}$, $100$ n\'umeros son seleccionados aleatoriamente y redondeada a tres lugares decimales. ?` Cu\'al es la probabilidad de que al menos uno de ellos es $0.345$?.
+\item Sea un juego en el que  un jugador apuesta a cualquier n\'umero del $1$ al $6$. Entonces tres dados son lanzados. Si uno, dos o los tres coinciden con el   n\'umero que el jugador a escogido , entonces el o ella recibe una, dos o tres veces la apuesta original m\'as su apuesta original, respectivamente.
+
+De lo contrario, el jugador pierde su apuesta. Sea $X$ la ganancia neta del jugador por unidad de participaci\'on. Halle la funci\'on de masa de probabilidad de $X$ y  luego determine la cantidad esperada (esperanza) de que el jugador perder\'a por unidad de participaci\'on.
+
+\item Sea $X$ una variable aleatoria Binomial de param\'etros $n$ y $p$. Prueba que:
+
+\[
+\mathbb{E}(X^2) = \sum_{x =1}^{n}x^2\binom{n}{x}p^x(1 -p)^{n -x} = n^2p^2 -np^2 + np.
+\]
+
+
+\item Cada semana, el n\'umero promedio de llamadas err\'oneas recibidas por una tienda de pedidos por correo es de siete. ?` Cu\'al es la probabilidad de que reciban (a) dos llamadas incorrectas ma\~nana, (b) al menos una llamada equivocada ma\~nana?.
+\item Supongamos que, en promedio, en cada tres p\'aginas de un libro hay un error tipogr\'afico. Si el n\'umero de errores tipogr\'aficos en una sola p\'agina del libro es una variable aleatoria de Poisson. ?`Cu\'al es la probabilidad de que haya al menos un error en una p\'agina espec\'ifica del libro?.
+\item Los ni\~nos de una peque\~na ciudad tienen sus propios arcos y flechas. En un concurso reciente de tiro, el $4\%$ de ellos fueron  tiros que no golpearon el objetivo  ni siquiera una vez en $100$ disparos. Si el n\'umero de veces que un ni\~no seleccionado al azar ha alcanzado el objetivo es aproximadamente una variable aleatoria de Poisson, determina el porcentaje de ni\~nos que han alcanzado el objetivo al menos dos veces.
+
+\item Supongamos que $X$ es una variable de Poisson con $\mathbb{P}(X = 1) = \mathbb{P}(X = 3)$. Encuentra $\mathbb{P}(X =5)$.
+
+\item Supongamos que en una noche de verano, las estrellas fugaces se observan a una tasa de Poisson, una cada $12$ minutos. ?`Cu\'al es la probabilidad de que se observen tres estrellas fugaces en 30 minutos?.
+
+\item Supongamos que en Jap\'on los terremotos ocurren a una tasa de Poisson de tres por semana. ?` Cu\'al es la probabilidad de que el siguiente terremoto ocurra despu\'es de dos semanas?.
+\item Felipe y Ana juegan una serie de juegos de backgammon hasta que uno de ellos gana cinco juegos. Supongamos que los juegos son independientes y la probabilidad de que Felipe gane un juego es $0.58$.
+
+\begin{enumerate}
+\item Encuentra la probabilidad de que la serie termine en siete juegos.
+\item Si la serie termina en siete juegos, ?`cu\'al es la probabilidad de que Felipe gane?.
+\end{enumerate}
+\item En una comunidad de $a + b$ votantes potenciales, $a$ est\'an a favor del aborto y $b (b <a)$ est\'an en contra. Supongamos que se hace una votaci\'on para determinar la voluntad de la mayoria con respecto a la legalizaci\'on del aborto. Si $n (n <b)$ personas aleatorias de estas $a + b$ votantes potenciales no votan. ?`Cu\'al es la probabilidad de que aquellos que est\'an en contra del aborto ganen?.
+\item Supongamos que el $15\%$ de la poblaci\'on de una ciudad son ancianos. Sea $X$ el n\'umero de ciudadanos, no ancianos  que entran en un centro comercial antes de que llegue el d\'ecimo anciano. Encuentra la funci\'on de masa de probabilidad de $X$. Suponga que cada cliente que entra en el centro comercial es una persona aleatoria de toda la poblaci\'on.
+\item Sea $X$ una variable aleatoria  con param\'etro $p$ y sean $n$ y $m$ enteros no negativos.
+
+\begin{enumerate}
+\item ?` Para qu\'e valores de $n$, $\mathbb{P}(X = n)$ es m\'aximo?.
+\item ?`Cual es la probabilidad de que $X$ es par?.
+\item Muestra la siguiente propiedad para la distribuci\'on geom\'etrica: 
+\[
+\mathbb{P}(X > n +m|X > m) = \mathbb{P}(X > n).
+\]
+\end{enumerate}
+\item La experiencia pasada demuestra que el $30\%$ de los clientes que ingresan a la tienda ZETA har\'a una compra. De los clientes que realizan una compra, el $85\%$ utiliza tarjetas de cr\'edito. Sea $X$ el n\'umero de los siguientes seis clientes que entran en la tienda, realizan una compra y usan una tarjeta de cr\'edito. Encuentra la funci\'on de masa de probabilidad, el valor esperado y la varianza de $X$.
+\end{enumerate}
+\end{document} 
