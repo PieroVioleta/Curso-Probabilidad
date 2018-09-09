@@ -116,10 +116,12 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 
 ### Clase 11
  * [Notas de clase 11: Momentos](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/momentos/momentos.pdf). 
+ * Cuaderno-->[Análisis de datos categóricos](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/datos-categoricos.ipynb).
  * [Ejercicios]().
 
 ### Clase 12
  * [Notas de clase 12: Distribuciones continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/distribuciones_continuas/distribuciones_continuas.pdf).
+ * Cuaderno-->[Análisis de datos cuantitativos](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/datos-cuantitativos.ipynb).
  * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista9.pdf).
 
 ### Clase 13
@@ -128,6 +130,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 ### Clase 14
  * [Notas de clase 14:Propiedades de las variables aleatorias continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/propiedades_variables-aleatorias/propiedades_variables_aleatorias.pdf).
  * Lectura opcional-->[Probabilistic Bounds — A Primer](https://jeremykun.com/2013/04/15/probabilistic-bounds-a-primer/).
+ * Cuaderno-->[Distribuciones probabilísticas](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/Cuaderno-distribuciones/Distribuciones-probabilidad.ipynb).
  [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista10.pdf).
 
 ### Clase 15
