@@ -37,6 +37,12 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 - [Sumas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/sumas.pdf).
 - [Cálculo integral](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/Integracion/integracion.pdf).
 
+
+### Cuaderno de Jupyter 
+
+- Todos los cuadernos del curso son del trabajo del desarrollador Raul E. Lopez Briega alojlado en su [blog relacionado a Python](https://relopezbriega.github.io/).
+ - El cuaderno  sobre la ley de los grandes números y el teorema del límite central está basado en las notas de Bugra Akyildiz, publicada en su [blog](http://bugra.github.io/) de Machine Learning.
+
 ## Notas de clases
 
 ### Clase 1
@@ -102,8 +108,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista8.pdf).
  
 * [Cuaderno jupyter de  repaso: Conceptos de probabilidades con Python](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/probabilidad.ipynb).
-  - El cuaderno se basa en el trabajo del desarrollador Raul E. Lopez Briega alojlado en su [blog relacionado a Python](https://relopezbriega.github.io/).
-
+ 
 ### Clase 10
  * [Notas de clase 10: Variables continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_continuas/variables_continuas.pdf).
  * Lectura-->[A different way to view probability densities](http://www.statisticsblog.com/2010/06/a-different-way-to-view-probability-densities/).
@@ -127,7 +132,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 
 ### Clase 15
  * Cuaderno -->[Ley de los grandes números y el teorema del límite central](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/GrandesNumeros_CLT.ipynb). 
-    - Cuaderno basado en las notas de Bugra Akyildiz, publicada en su [blog](http://bugra.github.io/) de Machine Learning.
+  
  * [Ejercicios]().
 
 ### Clase 16
