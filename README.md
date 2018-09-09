@@ -40,7 +40,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 
 ### Cuaderno de Jupyter 
 
-- Todos los cuadernos del curso son del trabajo del desarrollador Raul E. Lopez Briega alojlado en su [blog relacionado a Python](https://relopezbriega.github.io/).
+- Todos los cuadernos del curso son del trabajo del desarrollador Raul E. Lopez Briega alojado en su [blog relacionado a Python](https://relopezbriega.github.io/).
  - El cuaderno  sobre la ley de los grandes números y el teorema del límite central está basado en las notas de Bugra Akyildiz, publicada en su [blog](http://bugra.github.io/) de Machine Learning.
 
 ## Notas de clases
@@ -107,7 +107,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * Lectura-->[What is a Poisson distribution? ](https://www.quora.com/What-is-a-Poisson-distribution-As-a-Poisson-distribution-essentially-predicts-the-outcome-of-events-from-the-past-data-of-events-can-any-random-past-data-that-overall-exhibits-a-weak-congruence-be-considered-a-Poisson-distribution).
  * [Ejercicios](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista8.pdf).
  
-* [Cuaderno jupyter de  repaso: Conceptos de probabilidades con Python](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/probabilidad.ipynb).
+* Cuaderno-->[Conceptos de probabilidades con Python](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/probabilidad.ipynb).
  
 ### Clase 10
  * [Notas de clase 10: Variables continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_continuas/variables_continuas.pdf).
