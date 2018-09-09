@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Momentos\par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Lista de ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+\item Sea $X$ una variable aleatoria con funci\'on de masa de probabilidad $p(i) = 1/5, i =1,2,\dots, 5$, cero en otros casos. Encuentra $\mathbb{M}_{X}(t)$.
+\item Sea $X$ una variable con funci\
+\item  Sea X una variable aleatoria discreta. Sea $0 < s < r$. Demuestra que si existe el r- \'esimo momento absoluto de $X$, entonces tambi\'en existe el momento absoluto de orden $s$ de $X$.
+
+\item Sea $X$ una variable aleatoria que toma valores enteros no negativos y es asociado con una transformada de la forma:
+
+\[
+M_X(s) = c\cdot\frac{3 + 4e^{2s} + 2e^{3s}}{3 -e^s},
+\]
+
+donde $c$ es un escalar. Encuentra $\mathbb{E}(X)$ y $p_X(1)$.
+\item Se define la funci\'on generadora de momentos  de una variable aleatoria $X$ a la funci\'on $M_X = G_X(e ^t)$.
+
+\begin{enumerate}
+	\item Prueba que para una variable aleatoria Poisson de param\'etro $\lambda$ se tiene:
+	
+	\[
+	M(t) = \exp(\lambda (e^t - 1)).
+	\]
+	
+	\item Sea $p_r > 0$ y $a_r \in \mathbb{R}$ para $1 \leq r \leq n$. ?` Cu\'al  de las siguientes expresiones es una funci\'on generadora de momentos y para que variable aleatoria?
+	
+	\[
+	M(t) = 1 + \sum_{r = 1}^{n}p_rt^r \quad M(t) = \sum_{r = 1}^{n}p_re^{a_rt}.
+	\]
+\item Sea $X$ una variable aleatoria geom\'etrica con param\'etro $p$. Muestra que la funci\'on generadora de momentos de $X$, es dada por:
+	
+	\[
+	M_X(t) = \frac{pe^t}{1 - qe^t}, \quad q =  1 -p, \ \ t < -\ln q
+	\]
+	
+	Usa $M_{X}(t)$ para encontrar $\mathbb{E}(X)$ y $\text{Var}(X)$.
+\end{enumerate}
+\item Sea $Z \sim N(0,1)$. Usa $M_Z(t) = e^{t^2/2}$ para calcular $\mathbb{E}(Z^N)$, donde $n$ es un n\'umero positivo.
+
+\item Sea $X_1, X_2, \dots $ una secuencia de variables aleatorias con funciones de distribuci\'on $F_1, F_2, \dots$ y las funciones generadoras de momentos $M_{X_1}(t), M_{X_2}(t), \dots$ respectivamente. Sea $X$ una variable aleatoria con funci\'on de distribuci\'on $F$ y funci\'on generadora de momentos $M_X(t)$.
+
+Si para todos los valores de $t$, $M_{X_n}(t)$ converge a $M_{X}(t)$ entonces en los puntos de continuidad de $F$, $F_n$ converge a $F$.
+\item Sea $X$ e $Y$ variables aleatorias independientes, con media $0$ y varianza $1$ y una funci\'on \mbox{generadora} de momentos $M(t)$. Si $X +Y$ y $X -Y$ son independientes, muestra que:
+	
+	\[
+	M(2t) = M(t)^3M(-t)
+	\]
+	
+	y deduce que $X$ e $Y$ tienen una distribuci\'on normal con  media $0$ y varianza $1$ .
+\end{enumerate}
+\end{document} 
