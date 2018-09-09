@@ -1,0 +1,251 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage{indentfirst}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\newcommand{\PR}{\mathbb{P}}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Soluciones del seminario 1\par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Soluciones a  los ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\vskip.25in
+
+\begin{enumerate}
+\item [Soluci\'on 1] La declaraci\'on 'Ciertamente, no es cierto que ni Juan ni Mar\'ia tienen la culpa' corresponde al evento $(J^{c} \cap M^{c})^{c}$. La declaraci\'on 'Juan o Mar\'ia tienen la culpa, o ambos' corresponde a evento $J \cup M$. La equivalencia se sigue de la ley de DeMorgan. 
+\item [Soluci\'on 2] En cuatro a\~nos tenemos $365 \times 3 +  366 = 1461$ dias. As\'i los meses de $31$ d\'ias tienen una probabilidad $ 4\times  31/1461 = 124/1461$ y los meses de $30$ d\'ias tienen una probabilidad $120/1461$ para ocurrir. Adem\'as, $\{Feb\}$ tiene una probabilidad de $113/1461$.
+\item [Soluci\'on 3] Verificar que $\PR$ es una funci\'on probabilidad $\Omega$ cuenta verificar que  $0 \leq \PR(\{a_i, a_j\}) \leq 0$ para todo $i$ y para todo $j$ y se\~nalando que:
+
+\[
+\PR(\Omega) = \sum_{i, j = 1}^{6}\PR(\{a_i, a_j\}) = \sum_{i = 1}^{6}\PR(\{a_i, a_i\}) = \sum_{i = 1}^{6}p_i = 1.
+\]
+Los dos experimentos est\'an totalmente acoplados: uno tiene resultado $a_i$ si y s\'olo si el otro tiene un resultado $a_i$.
+\item [Soluci\'on 4] Esto ocurre si y s\'olo si el experimento falla el lunes,\dots el s\'abado, y es un \'exito el domingo. Esto tiene \mbox{probabilidad} $p(1 - p)^6$ que  suceda.
+\item [Soluci\'on 5] Desde la propiedad de la regla de uni\'on en la probabilidad, obtenemos $\PR (D_1 \cup D_2) \leq \PR(D_1) + \PR(D_2) \leq 2\cdot 10^{-6}$. Desde que $D_1 \cap D_2$ est\'a contenido en ambos $D_1$ y $D_2$, obtenemos $\PR (D_1 \cap D_2) \leq \min\{\PR(D_1), \PR(D_2)\} \leq 2\cdot 10^{-6}$. La igualdad se puede cumplir  en los dos casos: para la uni\'on, tomamos  $D_1$ y $D_2$ disjuntos, para la intersecci\'on, tomamos $D_1$ y $D_2$ iguales entre s\'i.
+\item [S\'olucion 6] Desde que $E \cap F \cap G = \emptyset$, los tres conjuntos $E \cap F, F \cap G$ y $E \cap G$ son disjuntos. Desde cada uno de ellos tiene probabilidad $1/3$, ellos tienen una probabilidad de $1$ juntos. Desde esos dos hechos, tenemos $\PR(E) = \PR(E \cap F ) + \PR(E \cap G) = 2/3$
+\item [Soluci\'on 7] Por definici\'on.
+\item [Soluci\'on 8] Aqu\'i se pregunta por la probabilidad de que la part\'icula  permanezca   m\'as de 3 segundos, dado que no permanece  m\'as de $4$ segundos, por lo que  se queda $4$  o menos segundos. Desde la definici\'on: 
+
+\[
+\PR(R_3| R_4^{c}) = \frac{\PR(R_3 \cap R_4^{c})}{\PR(R_4^{c})}
+\]
+Los eventos $R_3 \cap R_4^{c}$ describe: m\'as de $3$, pero no mayor que $4$ segundos. Adem\'as $R_3$ es la uni\'on disjunta de los eventos $R_3 \cap R_4^{c}$ y $R_3 \cap R_4 = R_4$, as\'i $\PR(R_3 \cap R_4^{c}) = \PR(R_3) - \PR(R_4) = e^{-3} - e^{-4}$. Usando la regla del complemento: $\PR(R_4^{c }) = 1 - \PR(R_4) = 1 -e^{-4}$. Uniendo todo esto, tenemos:
+
+\[
+\PR(R_3| R_4^{c}) = \frac{e^{-3} - e^{-4}}{1 -e^{-4}} = \frac{0.0315}{0.9817}	= 0.0321
+\]
+
+\item [Soluci\'on 9] Tomemos un calendario con $12$ meses en lugar de uno con $365$ d\'ias. Sea $C_n$ el evento donde $n$ personas arbitrarias tienen diferentes meses de nacimiento. Entonces:
+
+\[
+\PR(C_3) = (1 -\frac{2}{12})\cdot (1 -\frac{1}{12}) = \frac{55}{72} = 0.7639.
+\]
+
+En general:
+
+\[
+\PR(C_n) = (1 -\frac{n - 1}{12})\cdots (1 -\frac{2}{12})\cdot(1 -\frac{2}{12}),
+\]
+
+
+
+\item [Soluci\'on 10] Jessica se equivoca. Considera los siguientes $50$ vuelos. Para $1 \leq i \leq 50$, sea $A_i$, el evento en que  $i$ \'esima misi\'on se completar\'a sin contratiempos. Entonces $\bigcap_{i=1}^{50}A_i$, es el evento en que todas las pr\'oximas $50$ misiones se completar\'an con \'exito. Probemos que $\mathbb{P}\Biggl(\bigcap_{i=1}^{50}A_i\Biggr) > 0$. Esto prueba que Jessica est\'a equivocada. Se debe notar  que la probabilidad de la ocurrencia simult\'anea de cualquier n\'umero de $A_i^c$ es distinto de cero.
+
+Adem\'as, consideremos un conjunto de $E$ consistiendo de $n (n \leq 50)$ de los $A_i^c$. Es razonable suponer que la probabilidad de la ocurrencia simult\'anea de los eventos en  $E$ es estrictamente menor que la probabilidad de la ocurrencia simult\'anea de los sucesos de cualquier subconjunto de $E$. Usando estos hechos, del principio de  inclusi\'on-exclusi\'on, tenemos:
+
+\[
+\mathbb{P}\Biggl(\bigcup_{i=1}^{50}A_i^c\Biggr) \leq \sum_{i =1}^{50}\mathbb{P}(A_i^c) = \sum_{i =1}^{50}\frac{1}{50} =1. 
+\]
+
+As\'i por la ley de Morgan,
+
+\[
+\mathbb{P}\Biggl(\bigcap_{i=1}^{50}A_i\Biggr) = 1- \mathbb{P}\Biggl(\bigcup_{i=1}^{50}A_i^c\Biggr) > 1 -1 > 0.  
+\]
+
+\item [Soluci\'on 11] Si $\mathbb{P}(A \cap B) = \mathbb{P}(A\cap C) = \mathbb{P}(B \cap C) = 0$. Entonces $\mathbb{P}(A \cap B \cap C) = 0$. Desde que $A \cap B \cap C \subseteq A \cap B$. Eso implica que:
+
+\[
+\mathbb{P}(A \cup B \cup C) = \mathbb{P}(A) + \mathbb{P}(B) + \mathbb{P}(C).
+\]
+
+Suponiendo la \'ultima igualdad, implica que: 
+
+\begin{equation}
+\mathbb{P}(A \cap B) + \mathbb{P}(B \cap C) + [\mathbb{P}(A \cap C) - \mathbb{P}(A\cap B \cap C)] = 0.
+\end{equation}
+
+Desde que $\mathbb{P}(A \cap C) - \mathbb{P}(A \cap B \cap C) \geq 0$, tenemos la suma de tres cantidades distintas de cero igual a $0$, as\'i cada una de ellas es igual a cero. Esto es:
+
+\begin{equation}
+\mathbb{P}(A \cap B) = 0 \quad \mathbb{P}(B \cap C) = 0, \quad \mathbb{P}(A \cap C) = \mathbb{P}(A \cap B \cap C).
+\end{equation}
+
+Reescribiendo (1) como :
+
+\[
+\mathbb{P}(A \cap B) + \mathbb{P}(A \cap C) + [\mathbb{P}(B \cap C) - \mathbb{P}(A\cap B \cap C)] = 0.
+\]
+
+el mismo argumento implica que,
+
+\begin{equation}
+\mathbb{P}(A \cap B) = 0 \quad \mathbb{P}(A \cap C) = 0, \quad \mathbb{P}(B \cap C) = \mathbb{P}(A \cap B \cap C).
+\end{equation}
+
+Comparando (2) y (3), tenemos:
+
+\[
+\mathbb{P}(A \cap B) = \mathbb{P}(B \cap C) = \mathbb{P}(A \cap C) = 0.
+\]
+
+\item [Soluci\'on 12] Haciendo los c\'alculos, encontramos:
+\begin{align*}
+ \PR(T \cap B) = 0.99 \cdot 0.02 = 0.0198\\
+ \PR(T \cap B^{c}) = 0.05 \cdot 0.98 = 0.0490
+\end{align*}
+
+As\'i $\PR(T) = \PR(T \cap B) + \PR(T \cap B^{c}) = 0.0198 + 0.0490 = 0.0688$.
+
+\item [Soluci\'on 13] Nos piden $\PR(B | T)$, de la definici\'on de probabilidad condicional y de las ecuaciones del problema anterior
+
+\begin{align*}
+\PR(T \cap B) =\PR(T|B)\cdot \PR(B)\\
+\PR(T \cap B^{c}) = \PR(T| B^{c})\cdot \PR(B^{c})\\
+\PR(T) = P(T|B)\cdot \PR(B) +  \PR(T| B^{c})\cdot \PR(B^{c})
+\end{align*}
+
+tenemos
+
+\[
+\PR(B|T) = \frac{\PR(T \cap  B)}{\PR(T)} = \frac{\PR(T|B)\cdot \PR(B)}{\PR(T|B)\cdot \PR(B) + \PR(T| B^{c})\cdot \PR(B^c)}
+\]
+
+As\'i con $\PR(B) = 0.02$ encontramos: 
+
+\[
+\PR(B|T) = \frac{0.70 \cdot 0.02}{0.70 \cdot 0.02 + 0.10\cdot(1 -0.02)} = 0.125
+\]
+ Si calculamos $\PR(B|T^c) = 0.0068$. Esas probabilidades reflejan que ese test no es buen test. Un test perfecto debe resultar con $\PR(B|T) = 1$ y $\PR(B|T^c) = 0$.
+ 
+\item [Soluci\'on 14] Tenemos de los c\'alculos anteriores que $\PR(T \cap B) = 0.0198$ y $\PR(T) = 0.0688$, as\'i: 
+
+\[
+\PR(B|T) = \frac{\PR(T \cap B)}{\PR(T)} =\frac{0.0198}{0.0688} = 0.2878.
+\]
+
+Adem\'as, $\PR(T^c) = 1 - 0.0688 = 0.9312$ y  $\PR(T^c | B) = 1 - \PR(T|B) = 0.01$. As\'i, $\PR(T \cap T^{c}) = 0.01 \cdot 0.02 = 0.0002$ y 
+
+\[
+\PR(B| T^c) = \frac{0.0002}{0.9312} = 0.00021.
+\]
+
+
+
+\item [Soluci\'on 15] En la primera parte, el evento $A$ tiene $3$ salidas, el evento $B$ tiene $11$ salidas y $A \cap B = \{(1,3),(3,1)\}$. As\'i encontramos que $\PR(B) = 11/36$ y $\PR(A \cap B) = 2/36$, tal que:
+
+\[
+\PR(A|B) = \frac{\PR(A \cap B)}{\PR(B)} = \frac{2/36}{11/36} = 2/11.
+\]
+Para la segunda parte, debido a que $\PR(A) = 3/36 = 1/12$ y esto no es igual a $2/11 = \PR(A|B)$ el evento $A$ y $B$ son dependientes.
+
+\item [Soluci\'on 16] Ejercicio 
+
+\item [Soluci\'on 17] Ejercicio
+
+\item [Soluci\'on 18] Ejercicio
+
+\item [Soluci\'on 19]  Hay $13$ espadas en la baraja y cada una de ellas tiene la probabilidad de $1/52$ de ser escogidas. As\'i $\PR(S_1) = 13/52 = 1/4$. Dado que la primera carta es una espada hay $13 - 1 = 12$ espadas en la baraja con $52 - 1 = 51$ cartas restantes. As\'i $\PR(S_2| S_1) = 12/51$. Si  la primera carta no es una espada hay $13$ espadas en la baraja de $51$ y as\'i $\PR(S_2|S_1^{c}) = 13/51$.
+
+Veamos el c\'alculo de $P(S_2)$, para ello usamos la probabilidad total (basado en $\Omega = S_1 \cap S_1^{c}$)
+
+\begin{align*}
+\PR(S_2 ) &= \PR(S_2 \cap S_1 ) + \PR(S_2 \cap S_1^c ) = \PR(S_2|S_1 )P(S_1) + \PR(S_2|S_1^c )\PR(S_1^c)\\
+ &=  \frac{12}{51}\cdot \frac{1}{4} + \frac{13}{51}\cdot\frac{3}{4} = \frac{12 + 39}{51 \cdot 4}  = \frac{1}{4}.
+\end{align*}
+
+
+\item [Soluci\'on 20] Definamos los siguiente eventos: B es el evento 'el punto $B$ se alcanza en el segundo paso',  $C$ es el evento 'el camino hacia  $C$ se elige en el primer paso'  y del mismo modo se define  $D$ y $E$. N\'otese que los eventos $C$, $D$, y $E$ son mutuamente excluyentes y que uno de ellos debe ocurrir. Por otra parte, s\'olo podemos llegar a $B$ si primero vamos por  $C$ o $D$. Para estos  c\'alculos se utiliza la ley de la probabilidad total,  condicionando   el resultado de la primera etapa:
+
+\begin{align*}
+\PR(B) &= \PR(B \cap C) + \PR(B \cap D) +  \PR(B \cap E)\\
+& = \PR(B|C)P(C) + \PR(B|D)P(D) + \PR(B|E)\PR(E)\\
+& = \frac{1}{3}\cdot \frac{1}{3} + \frac{1}{4}\cdot\frac{1}{3} + \frac{1}{3}\cdot 0 = \frac{7}{36}
+\end{align*}
+
+
+\item[Soluci\'on 21] El mejor enfoque para un problema como este es escribir la probabilidad condicional y luego ver si de alguna manera podemos combinar esto con $\PR(A) = 1/3$ para resolver el problema. Notamos que $\PR(B \cap A^{c}) = \PR(B|A^{c})\PR(A^{c})$ y que $\PR(A \cup B) = \PR(A) + \PR(B \cap A^{c})$. As\'i
+
+\[
+\PR(A \cup B) = \frac{1}{3} + \frac{1}{4}\cdot(1 -\frac{1}{3}) = \frac{1}{3} + \frac{1}{6} = \frac{1}{2}
+\]
+
+En el \'item, que sigue, de la probabilidad condicional, encontramos que $\PR(A^{c} \cap B^{c}) = \PR(A^{c}|B^{c})\PR(B^{c}) = \frac{1}{2}(1 -P(B))$. De las leyes de DeMorgan, se sabe que $\PR(A^{c} \cap B^{c}) = \PR((A\cup B)^c) = 1 -\PR(A \cup B) = 1/3$. Combinando esto produce una ecuaci\'on para $\PR(B): \frac{1}{2}(1 -\PR(B)) = 1/3$, desde el cu\'al, encontramos que $\PR(B) = 1/3$.
+\item[Soluci\'on 22] Nos piden $P(W)$. Usamos el teorema de la probabilidad total, descomponiendo $\Omega = F \cup F^c$. Tambi\'en $\PR(W| F) = 0.99$.
+
+\[
+\PR(W) = \PR(W \cap F) + \PR(W \cap F^{c}) = \PR(W|F)\PR(F) + \PR(W|F^{c})\PR(F^{c}) = 0.99\cdot 0.1 + 0.02 \cdot 0.9 = 0.099 + 0.018 = 0.117.
+\]
+
+En lo que sigue, necesitamos determinar $\Pr(F| W)$ y esto puede ser calculado usando la regla de Bayes. De los c\'alculos anteriores, conseguimos:
+
+\[
+\PR(F|W) = \frac{\PR(F \cap W)}{\PR(W)} = \frac{0.099}{0.117} = 0.846.
+\]
+\end{enumerate}
+\end{document} 
