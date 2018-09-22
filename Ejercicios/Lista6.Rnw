@@ -99,7 +99,7 @@ F(x) = \begin{cases}
 1 & \ x \geq 6.
 \end{cases}
 \]
-\item Sea $X$ un entero aleatorio, del conjunto $\{1, 2, \dots, N \}$. Encuentra $\mathbb{E}(X), \mathbb{V}(X)$ y la desviaci\'on est\'andar de $X$.
+\item Sea $X$ un entero aleatorio, del conjunto $\{1, 2, \dots, N \}$. Encuentra $\mathbb{E}(X), \text{Var}(X)$ y la desviaci\'on est\'andar de $X$.
 \item Para $n = 1, 2, 3, \dots$, sea $x_n = (-1)^n\sqrt{n}$. Sea $X$ una variable aleatoria discreta con un conjunto positivo de valores $A = \{x_n: n = 1, 2, 3, \dots \}$  y una funci \'on de masa de probabilidad 
 
 \[
