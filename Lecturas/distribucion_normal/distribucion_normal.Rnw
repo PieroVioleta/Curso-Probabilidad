@@ -1,0 +1,518 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\bb}[1]{\textbf{#1}}
+\DeclareMathOperator{\rank}{\textbf{rango}}
+\DeclareMathOperator{\proy}{\textbf{proy}}
+\DeclareMathOperator{\nulll}{\textbf{nul}}
+\DeclareMathOperator{\diag}{\textbf{diag}}
+\DeclareMathOperator{\col}{\textbf{col}}
+\DeclareMathOperator{\fila}{\textbf{fila}}
+\DeclareMathOperator{\dimm}{dim}
+\DeclareMathOperator{\Traz}{Tr}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{teo}{{Teorema}}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{lema}{{Lema}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.5\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Distribuci\'on normal\par
+\end{minipage}
+
+
+
+\section{Distribuci\'on normal}
+
+\vspace{0.2cm}
+
+La distribuci\'on normal (o gaussiana) juega un papel central en la teor\'ia de la probabilidad y en la  estad\'istica. Emp\'iricamente, muchas cantidades observables en el mundo real, como la altura, el peso, los grados y el error de medici\'on, a menudo est\'an bien aproximadas por la distribuci\'on normal. Adem\'as, el teorema del l\'imite central establece que, en condiciones muy generales, la distribuci\'on del promedio de un gran n\'umero de variables aleatorias independientes converge a la distribuci\'on normal.
+
+En esta notas mostraremos las propiedades b\'asicas de las variables aleatorias normales univariadas.
+
+\subsection{Distribuci\'on normal est\'andar}
+
+La distribuci\'on normal est\'andar, denotada como $N(0, 1)$, es el componente b\'asico de todas las distribuciones normales univariadas y multivariadas. 
+
+\vspace{0.2cm}
+
+Decimos que una variable aleatoria Z es  normal  est\'andar  si es   $N(0, 1)$. La distribuci\'on normal est\'andar es una distribuci\'on continua sobre los n\'umeros reales, con funci\'on de densidad:
+
+\[
+\phi(z) = \frac{1}{\sqrt{2\pi}}e^{-z^2/2},
+\]
+
+y una funci\'on de distribuci\'on:
+
+\[
+\Phi(z) = \frac{1}{\sqrt{2\pi}}\bigintsss_{-\infty}^{z}e^{-x^2/2}dx.
+\]
+
+
+\vspace{0.2cm}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.65]{N1.png}
+\end{figure}
+Si bien la funci\'on de distribuci\'on $\Phi(z)$ est\'a bien definida para cualquier $z$, no tiene una expresi\'on de forma cerrada. Los valores reales de la distribuci\'on normal est\'andar se pueden calcular num\'ericamente. 
+
+La distribuci\'on est\'a relacionada con lo que se conoce como la funci\'on de error en  estad\'istica, que com\'unmente se denota por:
+
+\[
+\text{erf}(z) = \frac{2}{\sqrt{2\pi}}\bigintsss_{0}^{z}e^{-x^2/2}dx.
+\]
+
+\vspace{0.2cm}
+
+Es simple verificar:
+
+\[
+\Phi(z) = \frac{1}{2} + \frac{1}{2}\text{erf}\biggl(\frac{z}{\sqrt{2}}\biggr).
+\]
+
+\vspace{0.2cm}
+
+Como se mencion\'o los valores reales de la distribuci\'on normal est\'andar se pueden calcular num\'ericamente, como se ve en la siguiente tabla:
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.65]{N2.png}
+\end{figure}
+
+Para $z < 0$ se usa $\Phi(z) = 1 -\Phi(-z)$.
+
+\vspace{0.2cm}
+
+Desde que la densidad de la distribuci\'on normal est\'andar Z es sim\'etrica con respecto a $z = 0$, se sigue que $\mathbb{E}(Z) = 0$. La varianza de Z puede ser calculado usando integraci\'on por partes (donde las partes usadas abajos son $u = x$ y $dv = xe^{x^2/2}dx$:
+
+\begin{align*}
+\text{Var}(Z) = \mathbb{E}(Z^2) &= \frac{1}{\sqrt{2\pi}}\bigintsss_{-\infty}^{\infty}x^2e^{-x^2/2}dx\\
+&= \frac{1}{\sqrt{2\pi}}\bigintsss_{-\infty}^{\infty}\biggl(x\biggr)\biggl(xe^{-x^2/2}\biggr)dx\\
+& = - \frac{1}{\sqrt{2\pi}}xe^{-x^2/2}\vert_{-\infty}^{\infty}+ \frac{1}{\sqrt{2\pi}}\bigintsss_{-\infty}^{\infty}e^{-x^2/2}dx = 1.
+\end{align*}
+
+
+En la \'ultima igualdad, el primer t\'ermino es 0, y ya hemos observado que el segundo t\'ermino es igual a 1.
+
+\subsection{Distribuci\'on normal univariada general}
+
+La distribuci\'on normal univariada  se caracteriza por dos par\'ametros $\mu$ y $\sigma$, que corresponden a la media y a la desviaci\'on est\'andar, y se denota por $N(\mu,\sigma^2)$. Ten en cuenta que usamos la varianza en lugar de la desviaci\'on est\'andar en la forma en que denotamos la distribuci\'on normal.
+
+Como antes, podemos decir que X es una variable aleatoria normal (con los par\'ametros $\mu$ y $\sigma$) para denotar que X es una variable aleatoria con una distribuci\'on normal.
+
+\vspace{0.2cm}
+
+La funci\'on de de densidad de una variable aleatoria normal $X \sim N(\mu, \sigma^2)$ es:
+
+\begin{align}
+f_X(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-((x - \mu)/\sigma)^2/2},
+\end{align}
+
+y su funci\'on de disribuci\'on es:
+
+\[
+F_X(x) = \frac{1}{\sqrt{2\pi}\sigma}\bigintss_{-\infty}^{x}e^{-((t - \mu)/\sigma)^2/2}dt.
+\]
+
+
+Estas expresiones generalizan las expresiones correspondientes para las variables aleatorias normales est\'andar, donde $\mu = 0$ y $\sigma = 1$.
+
+\vspace{0.2cm}
+
+En efecto, sea X una variable aleatoria normal con par\'ametros $\mu$ y $\sigma$ y sea $Z = (X -\mu)/\sigma$. Entonces:
+
+\[
+\mathbb{P}(Z \leq z) = \mathbb{P}(X \leq \sigma z + \mu)= \frac{1}{\sqrt{2\pi}\sigma}\bigintss_{-\infty}^{\sigma z + \mu}e^{-((t - \mu)/\sigma)^2/2}dt
+\]
+
+Sustituyendo $x = (t -\mu)/\sigma$ y usando $dt = \sigma dx$, podemos encontrar la densidad de la distribuci\'on normal,
+
+\[
+\mathbb{P}(Z \leq z) = \frac{1}{\sqrt{2\pi}}\bigintss_{-\infty}^{z}e^{-x^2/2}dx = \Phi(z).
+\]
+
+\vspace{0.2cm}
+
+Vemos que la distribuci\'on normal X es una transformaci\'on lineal de la distribuci\'on normal est\'andar. Es decir, si X es una variable aleatoria normal con los par\'ametros $\mu$ y $\sigma$, entonces $Z = (X - \mu)/\sigma$ es una variable aleatoria normal est\'andar (con media 0 y varianza 1) y de manera similar, si Z es un est\'andar normal variable aleatoria, entonces $X = \sigma Z + \mu$ es una variable aleatoria normal con los par\'ametros $\mu$ y $\sigma$.
+
+\vspace{0.2cm}
+
+Hemos mostrado lo siguiente:
+
+\begin{lema}
+\normalfont{Una variable aleatoria tiene una distribuci\'on normal si y solo si es una transformaci\'on lineal de una variable aleatoria normal est\'andar}.
+\end{lema}
+
+\vspace{0.2cm}
+
+Dado que una variable aleatoria X con una  distribuci\'on $N(\mu, \sigma^2)$ tiene la misma distribuci\'on que $\sigma z + \mu$, tenemos que $\mathbb{E}(X)=\mu$ y $\text{Var}(X) =\sigma^2$, donde $\mu$ y $\sigma$ son  la media y desviaci\'on est\'andar.
+
+\subsection{Ejemplo: Detecci\'on de se\~nales}
+
+Supongamos que tenemos un transmisor que est\'a enviando un bit a trav\'es de la codificaci\'on $S \in \{-1, +1\}$ y el canal de comunicaci\'on agrega ruido Y a la se\~nal, donde Y es una variable aleatoria normal con media 0 y desviaci\'on est\'andar $\sigma$. El receptor decodifica tomando el signo de la se\~nal recibida, $R = \text{sgn}(S + Y)$. (Aqu\'i $\text{sgn}$ es la funci\'on signo, donde $\text{sgn}(x) = 1$ si $x> 0$, $\text{sgn}(x) = -1$ si $x <0$  y por convenci\'on $\text{sgn}(0) = 0$.) 
+
+\vspace{0.2cm}
+
+Encontremos la probabilidad de que el  mensaje decodificado es diferente del mensaje original. Esa es la probabilidad de que $R \neq S$.
+
+\vspace{0.2cm}
+
+La probabilidad de un error cuando $S = 1$ es la probabilidad  que $Y \leq -1$:
+
+\[
+\mathbb{P}(Y \leq -1) = \mathbb{P}\biggl(\frac{Y -\mu}{\sigma} \leq \frac{-1 -\mu}{\sigma} \biggr) = \Phi\biggl(-\frac{1}{\sigma}\biggr).
+\]
+
+\vspace{0.2cm}
+
+De manera similar, la  probabilidad de un error cuando $S = -1$ es la probabilidad  que $Y \geq  -1$:
+
+\[
+\mathbb{P}(Y \geq 1) = 1- \mathbb{P}\biggl(\frac{Y -\mu}{\sigma} \leq \frac{1 -\mu}{\sigma} \biggr) = 1- \Phi\biggl(\frac{1}{\sigma}\biggr).
+\]
+
+\vspace{0.2cm}
+
+Por la simetr\'ia de la distribuci\'on normal alrededor de la media, $\Phi\biggl(-\frac{1}{\sigma}\biggr) = 1 -\Phi\biggl(\frac{1}{\sigma}\biggr)$ y el error total es: $2\biggl(1 - \Phi\biggl( \frac{1}{\sigma}\biggr)\biggr)$.
+
+\vspace{0.2cm}
+
+Podemos usar la tabla anterior para determinar los errores de probabilidad. Para $\sigma = 0.5, 1, 2$, encontramos $\Phi(2) = 0.9772, \Phi(1) = 0.8413$ y $\Phi(0.50) = 0.6915$. 
+
+\vspace{0.2cm}
+
+Los errores de probabilidades  son por tanto $0.0456, 0.3174$ y $0.6170$ respectivamente.
+
+\subsection{Funciones generadores momentos}
+
+A continuaci\'on calculemos la funci\'on generadores de momentos de la variable normal  $X \sim N(\mu, \sigma^2)$. En lo que sigue, sea $Z = (x -\mu)/\sigma$ y notemos que $\sigma dz = dx$.
+
+\begin{align*}
+M_{X}(t) &= \mathbb{E}(e^{tX})\\
+&= \frac{1}{\sqrt{2\pi}\sigma}\bigintss_{x= -\infty}^{\infty}e^{tx}e^{-(x -\mu)^2/(2\sigma^2)}dx\\
+&= \frac{1}{\sqrt{2\pi}\sigma}\bigintss_{z= -\infty}^{\infty}e^{t\sigma z + t\mu}e^{-z^2/2}\sigma dz\\
+&= \frac{1}{\sqrt{2\pi}}e^{\mu t}\bigintss_{z= -\infty}^{\infty}e^{-(z -t\sigma)^2/2 + (t\sigma)^2/2} dz\\
+&= \biggl(e^{t^2 \sigma^2/2 + \mu t} \biggr) \frac{1}{\sqrt{2\pi}}\bigintss_{z= -\infty}^{\infty}e^{-(z -t\sigma)^2/2} dz\\
+&= e^{t^2\sigma^2/2 + \mu t}.
+\end{align*}
+
+
+Aqu\'i en la \'ultima igualdad usamos el hecho de que:
+
+\[
+\frac{1}{\sqrt{2\pi}}\bigintss_{-\infty}^{\infty}e^{-(z -t\sigma)^2/2} dz = 1;
+\]
+
+Para ver esto, notemos que:
+
+\[
+\frac{1}{\sqrt{2\pi}}\bigintss_{-\infty}^{x}e^{-(z -t\sigma)^2/2} dz
+\]
+
+es la funci\'on de distribuci\'on de una variable aleatoria normal con media $t\sigma$ y desviaci\'on est\'andar $1$ y as\'i cuando $x$ converge al infinito la integral es $1$.
+
+\vspace{0.2cm}
+
+Podemos usar la funci\'on generadora  de momentos para verificar nuestro c\'alculo de la esperanza y la varianza de la distribuci\'on normal.
+
+\vspace{0.2cm}
+
+\[
+M^{'}_X(t) = (\mu + t\sigma^2)e^{t^2\sigma^2/2 +\mu t}
+\]
+
+y
+
+\[
+M^{''}_X(t) = (\mu + t\sigma^2)^2e^{t^2\sigma^2/2 +\mu t} + \sigma^2e^{t^2\sigma^2/2 + \mu t}.
+\]
+
+As\'i $\mathbb{E}(X) = M^{'}(0) = \mu,\  \mathbb{E}(X^2) = M^{''}(0) = \mu^2 + \sigma^2$ y adem\'as $\text{Var}(X) = \mathbb{E}(X^2) - \mathbb{E}(X)^2$.
+
+
+\vspace{0.2cm}
+
+Otra propiedad importante de la distribuci\'on normal es que una combinaci\'on lineal de variables aleatorias normales tiene una distribuci\'on normal:
+
+\begin{teo}
+\normalfont{Sean X e Y variables aleatorias independientes con distribuciones $N(\mu_1, \sigma_1^2)$ y $N(\mu_1, \sigma_2^2)$, respectivamente. Entonces X + Y se distribuye seg\'un la distribuci\'on normal $N(\mu_1+ \mu_2, \sigma_1^2 + \sigma_2^2)$}.
+\end{teo}
+
+\vspace{0.5cm}
+
+La distribuci\'on normal tambi\'en puede ser escrita de la siguiente forma: 
+
+\[
+f(x) =\sqrt{\frac{b}{\pi}}e^{-b(x - \mu)^2},
+\]
+
+Puedes indicar expl\'icitamente los par\'ametros que aparecen, escribiendo la  distribuci\'on como $f_{\mu, b}(x)$ o $f_{\mu, \sigma}(x)$. La distribuci\'on normal es continua y la distribuci\'on de probabilidad normal es por lo tanto, una densidad de probabilidad.
+
+\vspace{0.2cm}
+
+Las cantidades $\mu$ y $b$ (o $\mu$ y $\sigma$)  afectan la forma y la localizaci\'on de la curva. Trabajaremos principalmente con la \'ultima ecuaci\'on que describe la distribuci\'on de la variable normal, pero cualquier declaraci\'on que hagamos sobre $b$ se puede convertir en enunciados sobre $\sigma $ reemplazando $b$ con $1/2\sigma^2$.
+
+
+
+\subsection{Media}
+
+Consideramos el siguiente gr\'afico:
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.55]{N3.png}
+\end{figure}
+
+La figura representa con $b =2$ y $\mu =6$ y $b =2$ y $\mu =10$ dos distribuciones normales:
+
+\begin{align}
+f(x) =\sqrt{\frac{2}{\pi}}e^{-2(x-6)^2}\quad \text{y}\quad   f(x) =\sqrt{\frac{2}{\pi}}e^{-2(x -10)^2}
+\end{align}
+
+De las representaciones se deduce que $\mu$ es la ubicaci\'on del m\'aximo de la curva. Matem\'aticamente, esto es cierto porque el factor exponencial $e^{-b(x-\mu)^2}$ tiene un exponente que es cero o negativo (porque un cuadrado siempre es cero o positivo). Entonces, este factor exponencial siempre es menor o igual que 1. Su valor m\'aximo ocurre cuando el exponente es cero, es decir, cuando $x =\mu$. 
+
+\vspace{0.2cm}
+
+El pico est\'a por lo tanto ubicado en $x =\mu$. Si aumentamos $\mu$ (manteniendo b con el mismo valor), toda la curva simplemente se desplaza hacia la derecha, manteniendo la misma forma.
+
+\vspace{0.2cm}
+
+Como la curva es sim\'etrica alrededor del m\'aximo, $\mu$ es tambi\'en la media (o valor esperado) de la distribuci\'on: $\text{media} = \mu$.
+
+\subsection{Altura}
+
+Ahora consideremos b. La siguiente figura muestra las gr\'aficas de dos distribuciones normales, una con $b = 2$ y $\mu = 6$ y la otra con $b = 8$ y $\mu = 6$. Las dos funciones son:
+
+\begin{align}
+f(x) =\sqrt{\frac{2}{\pi}}e^{-2(x-6)^2}\quad   f(x) =\sqrt{\frac{8}{\pi}}e^{-8(x -16)^2}
+\end{align}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.55]{N4.png}
+\end{figure}
+
+Debes notar que las escalas en los ejes x e y en esta figura son diferentes a la figuta anterior. La primera funci\'on aqu\'i es la misma que la primera funci\'on en la figura anterior.
+
+\vspace{0.2cm}
+
+De las representaciones queda claro que $b$ afecta tanto la altura como el ancho de la curva. Veamos c\'omo se producen estos dos efectos.
+
+\vspace{0.2cm}
+
+El efecto sobre la altura es f\'acil de entender, porque la altura de la curva (el valor m\'aximo de la funci\'on) es simplemente $\sqrt{b/\pi}$. Esto es cierto porque cuando $x$ es igual a $\mu$ (que es la ubicaci\'on del m\'aximo), el factor $e^{-b(x-\mu)^2}$ es igual a 1, en cuyo caso el valor de $\sqrt{b/\pi}e^{-b(x-\mu)^2}$ es solo $\sqrt{b/\pi}$. (Por el mismo razonamiento,  la ecuaci\'on (1) da la altura en t\'erminos de $\sigma$ con $1/\sqrt{2\pi\sigma^2}$).
+
+\vspace{0.2cm}
+
+Observando las dos funciones en (3) en observamos  que la raz\'on de las alturas es $\sqrt{8/2} = 2$. Y este hecho lo observamos en la \'ultima figura.
+
+\vspace{0.2cm}
+
+Para resumir:
+
+\[
+\text{Altura} = \sqrt{\frac{b}{\pi}} = \sqrt{\frac{1}{2\pi\sigma^2}}.
+\]
+
+\subsection{Ancho en t\'erminos de b}
+
+Ahora para el ancho. Vemos que la segunda funci\'on en la anterior figura es m\'as alta y m\'as estrecha que la primera. (Pero tiene el mismo punto medio, porque no hemos cambiado $\mu$.) El factor por el cual se encoge en la direcci\'on horizontal parece ser aproximadamente $1/2$. Y de hecho, es exactamente $1/2$. Resulta que el ancho de una curva normal es proporcional a $1 /\sqrt{b}$. Esto significa que como aumentamos $b$ por un factor de $4$ al construir la segunda funci\'on, disminuimos el ancho en un factor de $1/\sqrt{4} = 1/2$. Vamos a mostrar ahora que el ancho es de hecho proporcional a $1/\sqrt{b}$.
+
+\vspace{0.2cm}
+
+Pero primero, ?`qu\'e queremos decir con ancho?. Un rect\'angulo vertical tiene un ancho definido, pero una curva normal no, porque los \texttt{lados} est\'an inclinados. Podr\'iamos definir arbitrariamente el ancho de la curva como la altura igual a la mitad de la altura m\'axima. O en lugar de la mitad, podr\'iamos decir un tercio, o un d\'ecimo.
+
+\vspace{0.2cm}
+
+Podemos definirlo como queramos, pero lo bueno es que, el resultado es \textit{proporcional a} $1/\sqrt{b}$ anterior seguir\'a siendo v\'alido, siempre que elijamos una definici\'on y nos apeguemos a ella para cualquier curva que observemos. Del mismo modo, si queremos trabajar con la ecuaci\'on (1) y como $1/\sqrt{b} \propto \sigma$, el ancho ser\'a proporcional a $\sigma$, independientemente de los detalles de nuestra definici\'on arbitraria.
+
+\vspace{0.2cm}
+
+La definici\'on que elegiremos aqu\'i es: El ancho de una curva es el ancho a la altura igual a $1/e$ (que es aproximadamente $0.37$) multiplicado por la altura m\'axima (que es $\sqrt{b/\pi}$). Esta elecci\'on $1/e$ es natural, porque los valores $x$ que corresponden a esta altura son f\'aciles de encontrar. El resutado es $\mu \pm 1/\sqrt{b}$, ya que la primera expresi\'on en (1) proporciona:
+
+\begin{align*}
+f(\mu \pm 1/\sqrt{b}) &= \sqrt{b/\pi}e^{-b[(\mu \pm 1/\sqrt{b}) -\mu]^2}\\
+&=\sqrt{b/\pi}e^{-b(\pm 1/\sqrt{b})^2}\\
+&= \sqrt{b/\pi}e^{-b/b}\\
+&= \sqrt{\frac{b}{\pi}}\cdot\frac{1}{e}
+\end{align*}
+
+\vspace{0.2cm}
+
+Como la diferencia entre $\mu + 1/\sqrt{b}$ y $\mu - 1/\sqrt{b}$ es igual a $2/\sqrt{b}$, el ancho de la curva normal (seg\'un nuestra definici\'on arbitraria) es $2/\sqrt{b}$. Entonces $1/\sqrt{b}$ es la mitad del ancho, que llamaremos 'ancho medio'. (El t\'ermino 'ancho medio' tambi\'en puede referirse al ancho total de la curva a la mitad de la altura m\'axima). Nuevamente, cualquier otra definici\'on de  ancho tambi\'en dar\'ia $\sqrt{b}$ en el denominador. Esa es la parte importante. El $2$ en el numerador no tiene mucha importancia.
+
+\vspace{0.2cm}
+
+
+\subsection{Ancho en t\'erminos de $\sigma$}
+
+Al trabajar con la ecuaci\'on (1), la definici\'on predeterminada del ancho es el ancho en la altura igual a $1/\sqrt{e}$ veces la altura m\'axima. Esta definici\'on (que es diferente de la definici\'on $1/e$ anterior) se usa porque los valores de $x$ que corresponden a esta altura son simplemente $x \pm \sigma$. Esto es cierto porque si colocamos $ x = \mu \pm \sigma$ en la ecuaci\'on (1), obtenemos:
+
+\begin{align*}
+f(\mu \pm \sigma) &= \sqrt{1/2\pi\sigma^2}e^{-[(\mu \pm \sigma)- \mu]^2/2\sigma^2}\\
+&=  \sqrt{1/2\pi\sigma^2}e^{-(\pm \sigma)^2/2\sigma^2}\\
+&= \sqrt{1/2\pi\sigma^2}e^{-1/2}\\
+&= \sqrt{\frac{1}{2\pi\sigma^2}}\cdot\frac{1}{\sqrt{e}}.
+\end{align*}
+
+\vspace{0.2cm}
+
+El factor de $1/\sqrt{e}$ aqu\'i es igual a $1/\sqrt{2.718} \approx 0.61$, que es m\'as grande que el factor $1/e \approx 0.37$  en nuestra definici\'on anterior. Esto es consistente con el hecho de que los puntos $x = \mu \pm \sigma$ (donde la altura es $1/\sqrt{e} \approx 0.61$ veces el m\'aximo) est\'an m\'as cerca del centro que los puntos $x = \mu \pm 1/\sqrt{b} = \mu  \pm \sqrt{2}\sigma$  (donde la altura es $1/e \approx 0.37$ veces el m\'aximo). El ancho medio y el resumen de todo lo anterior se muestra en la figura anterior, donde hemos elegido $\mu = 0$ por conveniencia.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.46]{N5.png}
+\end{figure}
+
+\vspace{0.2cm}
+
+Aunque los puntos $x = \mu \pm \sigma$ producen un buen valor de la distribuci\'on normal ($1/\sqrt{e}$ veces el m\'aximo), lo realmente bueno de los puntos $x = \mu \pm \sigma$ es que son una desviaci\'on est\'andar de la media $\mu$. Como se ha demostrado la desviaci\'on est\'andar  de la distribuci\'on normal dada por la ecuaci\'on (1) es simplemente $\sigma$. Esta es la raz\'on por la cual la expresi\'on de la ecuaci\'on (1) es  ampliamente utilizada. Y por la misma raz\'on, la gente generalmente elige (arbitrariamente) definir que el ancho medio de la curva normal sea $\sigma$ en lugar del ancho medio $1/\sqrt{b} = \sqrt{2}\sigma$ que encontramos anteriormente. 
+
+\vspace{0.2cm}
+
+Es decir, est\'an definiendo el ancho mirando d\'onde la funci\'on  es $1/\sqrt{e}$ veces el m\'aximo, en lugar de $1/e$ veces el m\'aximo. Como notamos antes, cualquier definici\'on de este tipo est\'a bien; es una cuesti\'on de preferencia personal.  El punto cr\'itico es que el ancho es proporcional a $\sigma$ (o $1/\sqrt{b}$). El factor num\'erico exacto involucrado es solo una cuesti\'on de definici\'on.
+
+
+
+\vspace{0.3cm}
+
+Se puede mostrar num\'ericamente que alrededor del $68\%$ del \'area total (probabilidad) bajo la curva normal se encuentra entre los puntos $\mu \pm \sigma$. En otras palabras, se tiene un $68\%$ de posibilidades de obtener un valor de $x$ que est\'e dentro de una desviaci\'on est\'andar de la media $\mu$.
+
+\vspace{0.2cm}
+
+Usamos la palabra 'num\'ericamente', porque aunque las \'areas debajo de las curvas (o las sumas discretas) para todas las otras distribuciones que se ha mencionado se pueden calcular en forma cerrada, esto no es cierto para la distribuci\'on normal. Por lo tanto, cuando encuentres el \'area bajo la curva normal, siempre deber\'as especificar los puntos finales num\'ericos de tu intervalo y luego puede usar una computadora para calcular el \'area (num\'ericamente, con la precisi\'on que desee).
+
+\vspace{0.2cm}
+
+Tambi\'en se puede mostrar que el porcentaje del \'area total que est\'a dentro de dos desviaciones est\'andar desde $\mu$ (es decir, entre los puntos $\mu \pm 2\sigma$) es aproximadamente $95\%$. Y el porcentaje dentro de tres desviaciones est\'andar de $\mu$ es aproximadamente $99.7\%$. Estos porcentajes son consistentes con una inspecci\'on visual de las \'areas sombreadas en la siguiente figura:
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.56]{N6.png}
+\end{figure}
+
+\vspace{0.2cm}
+
+
+Los porcentajes se acercan r\'apidamente al $100\%$. El porcentaje dentro de cinco desviaciones est\'andar de $\mu$ es aproximadamente $99.99994\%$.
+\vspace{0.2cm}
+
+
+Usando la funci\'on generadora de momentos tambi\'en podemos obtener una desviaci\'on grande ligada a una variable aleatoria normal.
+
+
+\begin{teo}
+\normalfont{Sea X una distribuci\'on normal $N(\mu, \sigma^2)$, entonces
+
+\[
+\mathbb{P}\biggl(\biggl\vert \frac{X -\mu}{\sigma}\biggr\vert \geq a \biggr) \leq 2e^{-a^2/2}.
+\]
+
+\vspace{0.2cm}
+
+Sea $Z = (X -\mu)/\sigma$, entonces por propiedad  Z tiene una distribuci\'on $N(0,1)$. Luego, para alg\'un $t > 0$,
+
+\begin{align*}
+\mathbb{P}(Z \geq a) &= \mathbb{P}(e^{tZ}\geq e^{ta})\\
+&\leq \frac{\mathbb{E}(e^{tZ})}{e^{a}}\\
+& e^{t^2/2 -ta}\\
+& e^{-a^2/2},
+\end{align*}
+
+donde la \'ultima desigualdad establecemos $t = a$. El caso $Z\leq a$ de manera similar devuelve el mismo l\'imite, lo que demuestra la afirmaci\'on.
+}
+\end{teo}
+
+
+\section{Propiedades }
+Hay varias propiedades de simetr\'ia importantes que se pueden deducir del PDF y CDF de la distribuci\'on normal est\'andar.
+
+\begin{enumerate}
+\item La funci\'on densidad  $\phi $ es una funci\'on  par.
+\item El \'area bajo la curva del PDF a la izquierda de $-2$, que es  $P(Z \leq 2) = \Phi(-2)$, por definici\'on, es igual al \'area a la derecha de $2$, que es $\mathbb{P}(Z \geq  2) = 1 -\Phi(2)$. En general, tenemos
+
+\[
+\Phi(z) =  1 -\Phi(-z)
+\]
+
+\item Si $Z \sim N(0,1)$ entonces $-Z \sim N(0,1)$.
+\end{enumerate}
+
+\vspace{0.2cm}
+
+Para hacer aproximaciones es \'util recordar la siguiente regla emp\'irica para tres probabilidades aproximadas
+
+\[
+\mathbb{P}(-1 \leq Z \leq 1) \approx 0.68, \ \mathbb{P}(-2 \leq Z \leq 2) \approx 0.95,\ \mathbb{P}(-3 \leq Z \leq 3) \approx 0.99,
+\]
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.6]{N7.png}
+\end{figure}
+
+\vspace{0.2cm}
+
+Podemos usar la simetr\'ia de la distribuci\'on normal est\'andar alrededor de $x = 0$ para hacer algunos c\'alculos.
+
+\vspace{0.2cm}
+
+\begin{ejemplo}
+\normalfont{Calculemos $\Phi(1)$},
+\end{ejemplo}
+
+Usando el resultado,$\mathbb{P}(-1 \leq Z \leq 1) \approx 0.68$,  $\Phi(1) = \mathbb{P}(Z \leq 1)$. 
+
+En la figura, las dos colas (en rojo) han combinado el \'area $1 -0.68 = 0.32$. Por simetr\'ia la cola izquierda tiene \'area $0.16$ (la mitad de $0.32$), as\'i que $\mathbb{P}(Z \leq  1) \approx 0.68 + 0.16 = 0.84$.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.6]{N8.png}
+\end{figure}
+
+
+
+
+\end{document}
