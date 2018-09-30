@@ -124,7 +124,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * Cuaderno-->[Análisis de datos cuantitativos](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/datos-cuantitativos.ipynb).
 
 ### Clase 13
- * [Notas de clase 13: Distribución normal](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/distribucion_normal/distribucion_normal.pdf).
+ * [Notas de clase 13: Distribución normal univariada](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/distribucion_normal/distribucion_normal.pdf).
  * Lectura-->[A classification scheme for types of randomness](http://www.statisticsblog.com/2012/02/a-classification-scheme-for-types-of-randomness/).
 
 ### Clase 14
