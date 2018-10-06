@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Distribuciones continuas \par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Lista de ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+\item El radio de una esfera es un n\'umero aleatorio entre $2$ y $4$. ?` Cu\'al es el valor esperado de su volumen?. ?` Cu\'al es la probabilidad de que su volumen sea a lo m\'as $36\pi$?.
+
+\item Un agricultor que tiene dos piezas de madera de longitud $a$ y $b$ $(a <b)$ decide construir un gallinero   en forma de tri\'angulo para sus pollos. El env\'ia a uno de sus hijos a cortar el pedazo m\'as largo y el muchacho, sin tomar ning\'un criterio,  hace un corte en la madera de longitud $b$, en un punto seleccionado al azar. ?` Cu\'ales son las posibilidades de que las dos piezas resultantes y la pieza de longitud $a$ se puedan utilizar para formar un gallinero  triangular?.
+
+\item Sea $\theta$ un n\'umero aleatorio entre $-\pi/2$ y $\pi/2$. Encuentra la funci\'on  densidad de probabilidad de $X = \tan \theta$.
+\item Sea $X$ un n\'umero aleatorio de $(0,1)$. Encuentra la funci\'on densidad de (a) $Y = -\ln(1 -X)$ y (b)$Z = X^n$.
+\item Sea $X$ una variable aleatoria uniforme en el intervalo $(0, 1 +\theta)$, donde $0 < \theta < 1$ es  un par\'ametro dado. Encuentra una funci\'on de $X$, $g(X)$, tal que $\mathbb{E}[g(X)] = \theta^2$.
+\item Sea $X$ una variable aleatoria continua con funci\'on de distribuci\'on $F$. Prueba que $F(X)$ est\'a distribuida uniformemente sobre $(0, 1)$.
+\item Sea $g$ una funci\'on de valor real no negativa en $\mathbb{R}$, que satisface la relaci\'on $\int_{-\infty}^{\infty}g(t)dt = 1$. Muestra que si, una variable aleatoria $X$, la variable aleatoria $Y = \int_{-\infty}^{X}g(t)dt$ es uniforme, entonces $g$ es la funci\'on densidad de $X$.
+\item El espacio muestral de un experimento es $S = (0,1)$ y para cada subconjunto $A$ de $S$, $\mathbb{P}(A) = \int_{A}dx$. Sea $X$ la variable aleatoria definida en $S$ por $X(\omega) = 5\omega -1$. Prueba que $X$ es una variable aleatoria uniforme sobre el intervalo $(-1,4)$.
+\item Sea $Y $ un n\'umero aleatorio de $(0,1)$. Sea $X$ el segundo d\'igito de $\sqrt{Y}$. Prueba que para $n = 0,1,\dots, 9$, $\mathbb{P}(X = n)$ crece cuando  $n$ crece. Esto es notable porque muestra que $\mathbb{P}(X = n), n = 1, 2, 3,\dots$ , no es constante. Es decir, $Y$ es uniforme, pero $X$ no lo es.
+\item Los clientes llegan a una oficina de correos a una tasa de Poisson de tres por minuto. ?`Cu\'al es la probabilidad de que el pr\'oximo cliente no llegue durante los pr\'oximos $3$ minutos?.
+\item Sea $X$ una variable aleatoria exponencial con media $1$. Halle la funci\'on  densidad de probabilidad de $Y = -\ln X$.
+\item Los hu\'espedes llegan a un hotel, de acuerdo a un proceso de Poisson, a raz\'on de cinco por hora. Supongamos que durante los \'ultimos $10$ minutos ning\'un hu\'esped ha llegado. ?`Cu\'al es la probabilidad de que (a) el siguiente llegue en menos de $24$ minutos; (b) desde la llegada del d\'ecimo a la llegada del und\'ecimo hu\'esped no toma m\'as de $2$ minutos?.
+\item Sea $X$ una variable aleatoria exponencial con par\'ametro $\lambda$. Encuentra:
+
+\[
+\mathbb{P}(\vert X -\mathbb{E}(X)\vert \geq 2\sigma_X).
+\]
+\item En una f\'abrica, una determinada m\'aquina funciona durante un per\'iodo que se distribuye exponencialmente con el par\'ametro $\lambda$. Luego se rompe y estar\'a en el taller de reparaciones por un per\'iodo, que tambi\'en est\'a distribuido exponencialmente con una media $1/\lambda$. Los tiempos de operaci\'on y reparaci\'on son independientes. Para esta m\'aquina, decimos que un cambio de \texttt{estado} se produce cada vez que se rompe, o cada vez que se fija. En un intervalo de tiempo de longitud $t$, encuentre la funci\'on de masa de probabilidad del n\'umero de veces que ocurre un cambio de estado.
+\item En la comunicaci\'on de datos, los mensajes suelen ser combinaciones de caracteres y cada car\'acter consta de un n\'umero de bits. Un bit es la unidad m\'as peque\~na de informaci\'on y son $1$ o $0$. Supongamos que $L$, la longitud de un car\'acter (en bits) es una variable aleatoria geom\'etrica con par\'ametro $p$. Si un emisor emite mensajes a una velocidad de $1000$ bits por segundo. ?`Cu\'al es la distribuci\'on de $T$, el tiempo que tarda el emisor en emitir un car\'acter?.
+
+\item Sea $X$, la vida \'util (en a\~nos) de un tubo de radio, exponencialmente distribuida con media $1/\lambda$. Prueba que $[X]$, la parte entera de $X$, que es el n\'umero completo de a\~nos que el tubo funciona, es una variable aleatoria geom\'etrica.
+
+\item Muestra que la funci\'on densidad  gamma con par\'ametros $(r, \lambda)$ tiene un \'unico m\'aximo en $(r -1)/\lambda$.
+\item Sea $X$ una variable aleatoria gamma  $(r, \lambda)$ . Encuentra la funci\'on de distribuci\'on de $cX$, donde $c$ es una constante positiva.
+
+\item Para $n = 0, 1, 2, 3,\dots$, calcula $\Gamma(n +1/2)$.
+\item Resuelve
+
+\begin{enumerate}
+\item Sea $Z$ una variable aleatoria normal est\'andar. Muestra que la variable aleatoria $Y = X^2$ es gamma y encuentra sus par\'ametros.
+\item Sea $X$ una variable aleatoria normal con media $\mu$ y una desviaci\'on est\'andar $\sigma$. Encuentra la funci\'on de distribuci\'on de $W = \biggl(\frac{X -\mu}{\mu} \biggr)^2$.
+\end{enumerate}
+\item Claudio ingresa a un banco que tiene $n$ cajeros. Todos los cajeros est\'an ocupados atendiendo a los clientes y todos los cajeros atienden exactamente una cola, con un cliente por delante de Claudioesperando ser atendidos. Si el tiempo de servicio de un cliente es exponencial con  par\'ametro $\lambda$, encuentra la distribuci\'on del tiempo de espera para Claudio en la cola.
+\end{enumerate}
+\end{document} 
