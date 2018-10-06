@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Propiedades de las distribuciones continuas\par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Lista de ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+\item  Sea $X$ una variable aleatoria continua con funci\'on densidad $f_X$ y el conjunto de valores posibles $A$. Para la funci\'on invertible $h : A \rightarrow \mathbb{R}$, sea $Y = h(X)$ una variable aleatoria con el conjunto de valores posibles $B = h(A) = \{ h(a): a \in A\}$. Supongamos  que la inversa de $y =h(x)$ es la funci\'on $x = h^{-1}(y)$, que es diferenciable para todos los valores de $y \in B$. Entonces, demuestra que, $f_Y$ es la funci\'on densidad de $Y$, es dada por:
+
+\[
+f_Y(y) = f_X(h^{-1}(y))\vert (h^{-1})^{'}(y) \vert, \ \ y\in B.
+\]
+
+\item Sea $X$ una variable aleatoria con funci\'on densidad.
+
+\[
+f_X(x) = \begin{cases}
+2e^{-2x}&\ \text{si}\ x > 0 \\
+0 & \text{en otros casos.}
+\end{cases}
+\]
+Usando el m\'etodo de las transformaciones, encuentra la funci\'on densidad de probabilidad de $Y = \sqrt{X}$.
+
+\item Sea $X$ una variable aleatoria continua con funci\'on densidad de probabilidad:
+
+\[
+f_X(x) = \begin{cases}
+4x^3  &\ \text{si}\ 0 < x \leq 1 \\
+0 & \text{en otros casos.}
+\end{cases}
+\]
+Usando el m\'etodo de las transformaciones, encuentra la funci\'on densidad de probabilidad de $Y = 1 -3X^2$.
+\item La funci\'on de masa de probabilidad de valor entero,  se define como
+
+\[
+\begin{cases}
+1/4, & x = -2 \\
+1/8, & x = -1 \\
+1/8, & x = 0, \\
+1/2, & x = 1, \\
+0, & \text{en otros casos}.
+\end{cases}
+\]
+
+Calcula $p_{X|B}(x)$, donde $B$ es el evento en que la variable aleatoria $X$ toma valores impares.
+\item Sea $X$ una variable aleatoria continua con funci\'on densidad de probabilidad dado por:
+
+\[
+f_X(x) = \begin{cases}
+(1/2)e^{-x/2} & \ \text{si}\ x \geq 0 \\
+0 & \ \text{en otros casos.} 
+\end{cases}
+\]
+
+Sea $B$ el evento $X < 1$, calcula $f_{X|X < 1}(x)$.
+
+\item Sea $X$ una variable aleatoria continua, cuya funci\'on de probabilidad es dada por:
+
+\[
+f_X(x) = \begin{cases}
+\alpha(1 + x)^{-3} & \  x \geq 0 \\
+0 & \ \text{en otros casos.} 
+\end{cases}
+\]
+
+Encuentra la densidad condicional $f_{X|0.25 \leq X \leq 0.5}(x)$. Verifica  que tu respuesta es correcta, integrando $f_{X|0.25 \leq X \leq 0.5}(x)$ con respecto a $x$ entre los l\'imites $0.25$ y $0.5$ y mostrando que el valor resultante es $1$.
+\end{enumerate}
+\end{document} 
