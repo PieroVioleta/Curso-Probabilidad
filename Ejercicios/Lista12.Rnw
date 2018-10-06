@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Distribuci\'on normal\par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Lista de ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+\item Supongamos que de todas las nubes que se siembran con yoduro de plata, el $58\%$ muestra un crecimiento espl\'endido. Si 60 nubes se siembran con yoduro de plata, ?`cu\'al es la probabilidad de que exactamente 35 muestren un crecimiento espl\'endido?.
+
+\item Las calificaciones en una prueba de rendimiento otorgada a 100,000 estudiantes se distribuyen normalmente con una media de 500 y una desviaci\'on est\'andar de 100. ?`Cu\'al debe ser la puntuaci\'on de un estudiante para ubicarlo entre el $10\%$ superior de todos los estudiantes?.
+
+\item La tasa de rendimiento anual de una acci\'on  espec\'ifica es una variable aleatoria normal con una media del $10\%$ y una desviaci\'on est\'andar del $12\%$. Una persona  compra 100 acciones a un precio de $\$60$ por acci\'on. ?`Cu\'al es la probabilidad de que despu\'es de un a\~no la  ganancia neta de esa inversi\'on sea de al menos $\$750?$ Ignora los costos de transacci\'on y suponga que no hay dividendo anual.
+
+\item Sea $Z$ una variable aleatoria est\'andar y $\alpha$ una constante. Encuentra el n\'umero $x$ que maximiza $\mathbb{P}(x < Z < x + \alpha)$.
+
+\item Supongamos que la distribuci\'on de la presi\'on arterial diast\'olica es normal para una persona seleccionada al azar en una determinada poblaci\'on que es normal con una media de 80 mmHg y una desviaci\'on est\'andar de 7mm Hg. Si las personas con presi\'on arterial diast\'olica de 95 o m\'as se consideran hipertensas y se considera que las personas con presi\'on arterial diast\'olica por encima de 89 y por debajo de 95 tienen hipertensi\'on leve, ?`qu\'e porcentaje de esa poblaci\'on tiene hipertensi\'on leve y qu\'e porcentaje es hipertenso?. Supongamos que en esa poblaci\'on nadie tiene presi\'on arterial sist\'olica anormal.
+
+\item Sea $X$ una variable aleatoria normal est\'andar. Calcula $\mathbb{E}(X \cos X)$, $\mathbb{E}(X \sin X)$ y $\mathbb{E}\biggl( \frac{X}{1 + X^2}\biggr)$.
+
+\item La cantidad de cereal en una caja es normal con una media de 16.5 onzas. Si se requiere que el empaquetador llene al menos el $90\%$ de las cajas de cereal con 16 onzas de cereal o m\'as, ?`cu\'al es la desviaci\'on est\'andar m\'as grande para la cantidad de cereal en una caja?.
+
+\item Supongamos que las puntuaciones en una determinada prueba de destreza manual son normales con media 12 y desviaci\'on est\'andar 3. Si ocho individuos seleccionados al azar toman la prueba, ?`cu\'al es la probabilidad de que ninguno obtenga una puntuaci\'on menor a 14?.
+
+\item Un n\'umero $t$ se dice que es la mediana de una variable aleatoria continua X si
+
+\[
+\mathbb{P}(X \leq t) = \mathbb{P}(X \geq t) = 1/2.
+\]
+
+Calcula la mediana de la variable aleatoria normal con par\'ametros $\mu$ y $\sigma^2$.
+
+\item Para examinar la precisi\'on de un algoritmo que selecciona n\'umeros aleatorios del conjunto $\{1, 2,\dots, 40\}$, se seleccionan 100,000 n\'umeros y hay 3500 unos. Dado que el n\'umero esperado de unidades es 2500, ?`es justo decir que este algoritmo no es exacto?
+
+\item La cantidad de refresco en una botella es una variable aleatoria normal. Supongamos que en el $7\%$ de las botellas que contienen este refresco hay menos de 15.5 onzas, y en el $10\%$ de ellas hay m\'as de 16.3 onzas. ?`Cu\'ales son la media y la desviaci\'on est\'andar de la cantidad de refresco en una botella seleccionada al azar?
+
+\item En un sitio arqueol\'ogico se encuentran 130 esqueletos y sus alturas se miden y se encuentran que son aproximadamente normales, con una media de 172 cent\'imetros y una varianza de 81 cent\'imetros. En un sitio cercano, se descubren cinco esqueletos y se encuentra que las alturas de exactamente tres de ellos est\'an por encima de 185 cent\'imetros. Basado en esta informaci\'on, ?`es razonable suponer que el segundo grupo de esqueletos pertenece a la misma familia que el primer grupo de esqueletos?.
+
+\end{enumerate}
+\end{document} 
