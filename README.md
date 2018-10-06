@@ -134,6 +134,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 
 ### Clase 15
  * Cuaderno -->[Ley de los grandes números y el teorema del límite central](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/GrandesNumeros_CLT.ipynb). 
+ * [Notas de clase 15: Teoremas límites](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/teoremas_limites/LLT-CLT.pdf).
   
 ### Clase 16
  * [Notas de clase 16: Variables aleatorias multivariadas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_multivariadas/variables_multivariadas.pdf).
