@@ -122,15 +122,19 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 ### Clase 12
  * [Notas de clase 12: Distribuciones continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/distribuciones_continuas/distribuciones_continuas.pdf).
  * Cuaderno-->[Análisis de datos cuantitativos](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/datos-cuantitativos.ipynb).
+ * [Lista de ejercicios 11](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista11.pdf).
 
 ### Clase 13
  * [Notas de clase 13: Distribución normal univariada](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/distribucion_normal/distribucion_normal.pdf).
  * Lectura-->[A classification scheme for types of randomness](http://www.statisticsblog.com/2012/02/a-classification-scheme-for-types-of-randomness/).
+ * [Lista de ejercicios 12](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista12.pdf).
+ 
 
 ### Clase 14
  * [Notas de clase 14:Propiedades de las variables aleatorias continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/propiedades_variables-aleatorias/propiedades_variables_aleatorias.pdf).
  * Lectura opcional-->[Probabilistic Bounds — A Primer](https://jeremykun.com/2013/04/15/probabilistic-bounds-a-primer/).
  * Cuaderno-->[Distribuciones probabilísticas](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/Cuaderno-distribuciones/Distribuciones-probabilidad.ipynb).
+ * [Lista de ejercicios 13](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista13.pdf).
 
 ### Clase 15
  * Cuaderno -->[Ley de los grandes números y el teorema del límite central](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/GrandesNumeros_CLT.ipynb). 
