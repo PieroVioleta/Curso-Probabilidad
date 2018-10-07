@@ -139,11 +139,13 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 ### Clase 15
  * Cuaderno -->[Ley de los grandes números y el teorema del límite central](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/GrandesNumeros_CLT.ipynb). 
  * [Notas de clase 15: Teoremas límites](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/teoremas_limites/LLT-CLT.pdf).
+ * [Lista de ejercicios 14](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista14.pdf).
   
 ### Clase 16
  * [Notas de clase 16: Variables aleatorias multivariadas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_multivariadas/variables_multivariadas.pdf).
  * Lectura opcional-->[Martingales and the Optional Stopping Theorem](https://jeremykun.com/2014/03/03/martingales-and-the-optional-stopping-theorem/).
  * [**Lectura de repaso: How to Dominate the Statistics Portion of Your Data Science Interview**](https://www.datascience.com/blog/statistics-data-science-interview).
+ * [Lista de ejercicios 15](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista15.pdf).
 
 ## Libros de referencia
 
