@@ -1,0 +1,75 @@
+\documentclass[a4paper,11pt]{report}
+\usepackage{anysize} % Soporte para el comando \marginsize
+\marginsize{1.2cm}{1.2cm}{1cm}{1cm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathpazo}
+\usepackage[latin1]{inputenc}
+\usepackage[english,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{multicol} 
+\columnsep=7mm
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\usepackage{times}
+
+\newcommand{\inner}[2]{\langle{#1},{#2}\rangle}
+
+\newcommand{\cabecera}[1]{\begin{figure}[h]
+		\begin{minipage}[c]{0.05\columnwidth}
+			\centering\includegraphics[width=2cm]{escudo.pdf}
+		\end{minipage}
+		\hfill{}
+		\begin{minipage}[c]{0.86\columnwidth}
+			\centering\flushleft {Universidad Nacional de Ingenier\'ia\\
+				Facultad de Ciencias\\
+				Escuela Profesional de Matem\'atica \hfill #1}
+		\end{minipage}
+	\end{figure}\vspace{-0.5cm}
+}
+
+
+\pagestyle{empty}
+\begin{document}
+	\cabecera{Ciclo 2018 - II}
+	
+	\begin{center}
+		{\Large \textbf{Pr\'actica calificada de C\'alculo de Probabilidades}}\\
+		{\Large \textbf{CM-	1H2}}
+	\end{center}
+	
+	\noindent
+	\rule{\textwidth}{0.6pt}
+	
+	
+	\vspace{0.3cm}
+	
+	\begin{enumerate}
+\item Escriba los espacios muestrales para cada uno de los siguientes experimentos.
+\begin{itemize}
+	\item En una f\'abrica se extraen $n$ art\'iculos producidos y se prueban para determinar si son defectuosos o no.{(1 pto.)}
+	\item En un punto de una carretera contamos el n\'umero de veh\'iculos que pasan durante un cierto lapso de tiempo.\hfill{(1 pto.)}
+	\item Se lanza un dado repetidamente y se cuenta el n\'umero de lanzamientos hasta que salga el 6 por
+	primera vez.\hfill{(1 pto.)}
+	\item En una f\'abrica de componentes electr\'onicos, se eligen $n$ componentes al azar y se conecta cada uno de ellos hasta que se da\~na, observando en cada caso el tiempo de duraci\'on.\hfill{(1 pto.)}
+\end{itemize}
+
+\item  Sea $\mathbb{P}$ una probabilidad definida en un espacio muestral $S$. Para eventos de $A$ de $S$ se define $\mathbb{Q}(A) = [\mathbb{P}(A)]^2$  y $\mathbb{R}(A) = \mathbb{P}(A)/2$. ?` Es $\mathbb{R}$ una probabilidad en S? ?` Por qu\'e si  o por qu\'e no? \hfill{(4 ptos)}.
+\item Find $P(B)$ in each case:
+\begin{itemize}
+	\item Events $A$ and $B$ are a  partition and $P(A)=3P(B)$. \hfill{(1 pto.)} 
+	\item For events $A$ and $B$, $P(A\cup B)=P(A)$ and $P(A\cap B)=0$.\hfill{(1 pto.)}
+	\item For events $A$ and $B$, $P(A\cup B)=P(A)-P(B)$.\hfill{(2 ptos.)}
+\end{itemize}
+\item Nueve personas saldr\'an de viaje en tres carros, con capacidad de dos, cuatro y cinco pasajeros, respectivamente. Si las nueve personas se reparten en todos lo carros, ?`cu\'al es la probabilidad de que los dos lugares vac\'ios queden en el carro con capacidad para cinco personas? \hfill{(4 ptos.)}
+
+
+\item A fair coin is flipped 10 times. What is the probability of obtaining exactly three heads?  \hfill{(4 ptos.)}
+	\end{enumerate}
+\end{document}
+
+		
