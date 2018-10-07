@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Desigualdades y teoremas l\'imites \par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Lista de ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+\item Sea X una variable aleatoria no negativa con $\mathbb{E}(X) = 5$ y $\mathbb{E}(X^2) = 42$. Encuentra una cota superior para $P(X \geq 11)$ usando (a) la desigualdad de Markov, (b) la desigualdad de Chebyshev.
+
+\item Supongamos que el promedio de accidentes en una intersecci\'on es de dos por d\'ia.
+
+\begin{enumerate}
+\item  Usa la desigualdad de Markov para encontrar una cota para la probabilidad de que al menos cinco accidentes ocurran ma\~nana.
+\item Utilizando la variable aleatoria de Poisson, calcula la probabilidad de que al menos cinco accidentes ocurran ma\~nana. Compara este valor con la cota obtenida en la parte (a).
+\item Sea que la variaci\'on de la cantidad de accidentes sea de dos por d\'ia. Utiliza la desigualdad de Chebyshev para encontrar una cota  en la probabilidad de que ma\~nana ocurran al menos cinco accidentes.
+\end{enumerate}
+
+\item El per\'iodo de espera desde el momento en que se solicita un libro hasta que se recibe es una variable aleatoria con una media de siete d\'ias y una desviaci\'on est\'andar de dos d\'ias. Si Jessica quiere estar segura al $95\%$ de que recibe un libro en una fecha determinada, ?`con cu\'anta anticipaci\'on debe ordenar el libro?.
+
+\item Para determinar $p$, la proporci\'on de tiempo que un operador de l\'inea a\'erea est\'a ocupado respondiendo a los clientes, un supervisor observa al operador en  momentos seleccionados al azar e independientemente de otros tiempos observados. Sea $X_i = 1$ si la vez que se observa al operador, \'el est\'a ocupado; sea $X_i = 0$ de lo contrario. Para valores grandes de $n$, si $(1/n)\sum_{i =1}^{n}X_i$ se toman como estimaciones de $p$, ?`para qu\'e valores de $n$ es el error de estimaci\'on a lo sumo $0.05$ con probabilidad $0.96$?.
+
+\item Sea X una variable aleatoria, muestra que para un $\alpha > 1$ y $t > 0$,
+
+\[
+\mathbb{P}\biggl( X \geq \frac{1}{t}\ln \alpha\biggr) \leq \frac{1}{\alpha}M_X(t).
+\]
+
+\item Supongamos que un \texttt{mono inmortal} est\'a escribiendo constantemente en un procesador de textos que no es rompible, dura para siempre y tiene memoria infinita. Supongamos que el teclado del procesador de textos tiene  $m - 1$ teclas, una barra espaciadora para espacios en blanco y teclas separadas para s\'imbolos diferentes. Si cada vez que el mono presiona uno de los $m$ s\'imbolos (incluida la barra espaciadora) al azar  y si al final de cada l\'inea y al final de cada p\'agina, el procesador de textos avanza a una nueva l\'inea y una nueva p\'agina. ?`Cu\'al es la probabilidad de que el mono finalmente produzca las obras completas de Shakespeare en orden cronol\'ogico y sin errores?.
+
+\item Supongamos que existen $N$ familias en la tierra y que el n\'umero m\'aximo de hijos que tiene una familia es $c$. Sea $\alpha_j, j = 0, 1,\dots, c, \sum_{j = 0}^{c}\alpha_j =  1$, la fracci\'on de familias con $j$ hijos. Determina la fracci\'on de los ni\~nos en el mundo que son de una familia con $k (k = 1, 2, \dots, c)$ ni\~nos.
+\item Sea $\{X_1, X_2, \dots\}$, una secuencia de variables aleatorias independientes, id\'enticamente distribuidas. En otras palabras, para todo $n$, sea $X_1, X_2, \dots, X_n$ una muestra aleatoria desde una distribuci\'on con media $\mu < \infty$. Sea $S_n = X_1 +X_2 + \cdots X_n, \overline{X}_n = S_n/n$. Muestra el siguiente resultado:
+
+\[
+\lim_{n \rightarrow \infty}\mathbb{P}\biggl(n(\mu -\epsilon) \leq S_n \leq n(\mu + \epsilon) )\biggr) = 1.
+\]
+
+\item Sea $X_1, X_2, \dots$, es una variable aleatoria positiva independiente, id\'enticamente distribuida, de media $2$. Sea $Y_1, Y _2, \dots$, es una variable aleatoria positiva independiente, id\'enticamente distribuida, de media $3$. Muestra que:
+
+\[
+\frac{X_1 +X_2 + \cdots + X_n}{Y_1 + Y_2 + \cdots + Y_n} \rightarrow \frac{2}{3},
+\]
+
+con probabilidad $1$. ?` Importa si los $X_i$ son independientes del $Y_j$?.
+
+\item La vida \'util de un tubo de TV (en a\~nos) es una variable aleatoria exponencial con una media de 10. ?`Cu\'al es la probabilidad de que el tiempo de vida promedio de una muestra aleatoria de 36 tubos de TV sea al menos 10.5?.
+
+\item Si se seleccionan 20 n\'umeros aleatorios independientemente del intervalo $(0, 1)$, ?`cu\'al es la probabilidad aproximada de que la suma de estos n\'umeros sea al menos ocho?.
+
+\item Supongamos que, cuando se invita a una fiesta, la probabilidad de que una persona asista con un invitado es $1/3$, si asiste solo $1/3$ y no asiste $1/3$. Una empresa ha invitado a  300 empleados y sus invitados a una fiesta de Navidad. ?`Cu\'al es la probabilidad de que asistan al menos 320?.
+
+\item Para las puntuaciones en una prueba de rendimiento dada a una cierta poblaci\'on de estudiantes, el valor esperado es 500 y la desviaci\'on est\'andar es 100. Sea $\overline{X}$  la media de las puntuaciones de una muestra aleatoria de 35 estudiantes. Estima $\mathbb{P}(460 <\overline{X} < 540)$.
+
+\item Un dado justo se tira 20 veces. ?`Cu\'al es la probabilidad aproximada de que la suma de los resultados est\'e entre 65 y 75?.
+
+\item Demuestra que para una variable aleatoria no negativa X con media $\mu$, tenemos que $\forall n, n\mathbb{P}(X \geq n\mu) \leq 1$.
+
+
+
+\end{enumerate}
+\end{document} 
