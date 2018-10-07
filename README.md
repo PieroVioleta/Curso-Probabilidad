@@ -47,6 +47,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 
 ### Clase 1
 
+* Lectura previa-->[Propiedades básicas de conjuntos](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/conjuntos.pdf).
 * [Notas de clase 1: Conceptos de probabilidad](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/probabilidad/probabilidad.pdf).
 * Repaso-->[Probability Spaces: An Illustrated Introduction](https://www.countbayesie.com/blog/2015/8/30/picture-guide-to-probability-spaces).
 * [Lista de ejercicios 1](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista1.pdf).
@@ -70,11 +71,12 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * [Notas de clase 4: Ley de la probabilidad total. Teorema de Bayes](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/bayes-probabilidad_total/bayes_probabilidad-total.pdf).
  * [Lista de ejercicios 4](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista4.pdf).
  * Repaso -->[Bayes Rule with Lego](https://www.countbayesie.com/blog/2015/2/18/bayes-theorem-with-lego).
- 
  * [**Lectura repaso: ¿Cómo funciona la inferencia bayesiana?**](https://datascience.com.co/c%C3%B3mo-funciona-la-inferencia-bayesiana-dc4ad29d4697).
  * [Seminario 1](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Seminarios/Seminario1/Seminario1.pdf)-->[Solución del seminario](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Seminarios/Seminario1/Solucionario-seminario1.pdf).
+ 
  ### Clase 5
  
+ * Lectura previa-->[Funciones](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/funciones.pdf).
  * Repaso -->[Random Variables and Expectation with Robots and Stuff!](https://www.countbayesie.com/blog/2015/2/20/random-variables-and-expectation).
  * [Notas de clase 5: Variables aleatorias discretas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_discretas/variables_discretas.pdf).
  * [Lista de ejercicios 5](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista5.pdf).
@@ -89,7 +91,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * Lectura-->[Should You Get Started in Data Science?](http://treycausey.com/getting_started.html).
  
  ### Clase 7
- 
+ * Lectura previa-->[Sumas elementales](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/sumas.pdf).
  * [Notas de clase 7: Funciones generadoras de probabilidad](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/funciones-generadoras/funcion_generadora_probabilidad.pdf).
  * Repaso-->[Moments of a Random Variable Explained](https://www.countbayesie.com/blog/2015/4/23/why-so-square-jensens-inequality-and-moments-of-a-random-variable).
  * [Lista de ejercicios 7](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista7.pdf).
@@ -110,6 +112,8 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * [Lista de ejercicios 8](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista8.pdf).
  
 ### Clase 10
+
+ * Lectura previa-->[Integración de Riemann](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/Integracion/integracion.pdf).
  * [Notas de clase 10: Variables continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_continuas/variables_continuas.pdf).
  * Lectura-->[A different way to view probability densities](http://www.statisticsblog.com/2010/06/a-different-way-to-view-probability-densities/).
  * [Lista de ejercicios 9](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista9.pdf).
@@ -149,6 +153,8 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  
 ### Clase 17
 
+ * Lectura previa-->[Álgebra Lineal]().
+
 
 ## Libros de referencia
 
@@ -169,6 +175,10 @@ Donde:
  - Exposición.
 
 En cada evaluación (práctica calificada, exámenes parciales, final y sustitutorio) de manera OBLIGATORIA al menos una de las preguntas será formulada en INGLÉS.
+
+* [Primera práctica calificada 1](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/PracticaCalificada1-CM1H2.pdf)-->[Solución]().
+* [Segunda práctica calificada 2](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/PracticaCalificada2-CM1H2.pdf)-->[Solución]().
+* [Tercera práctica calificada 3]()-->[Solución]().
 
 ## **Esquema de trabajo grupal para el curso CM-1H2**
 
