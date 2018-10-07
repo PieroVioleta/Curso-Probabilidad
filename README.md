@@ -176,9 +176,12 @@ Donde:
 
 En cada evaluación (práctica calificada, exámenes parciales, final y sustitutorio) de manera OBLIGATORIA al menos una de las preguntas será formulada en INGLÉS.
 
-* [Primera práctica calificada 1](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/PracticaCalificada1-CM1H2.pdf)-->[Solución]().
+* [Primera práctica calificada 1](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/PracticaCalificada1-CM1H2.pdf)-->[Solución](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/SolucionCalificada1-CM1H2.pdf).
 * [Segunda práctica calificada 2](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/PracticaCalificada2-CM1H2.pdf)-->[Solución]().
+* [Examen Parcial]()-->[Solucion]().
 * [Tercera práctica calificada 3]()-->[Solución]().
+* [Examen Final]()-->[Solucion]().
+* [Examen Sustitutorio]-->[Solución]().
 
 ## **Esquema de trabajo grupal para el curso CM-1H2**
 
