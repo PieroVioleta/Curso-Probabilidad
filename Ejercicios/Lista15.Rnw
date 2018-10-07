@@ -1,0 +1,214 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Variables aleatoria multivariadas\par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Lista de ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+\item Una peque\~na universidad tiene $90$ profesores  hombres y 30 profesores mujeres. Un comit\'e ad hoc de cinco es seleccionado al azar para escribir la visi\'on y la misi\'on de la universidad. Sea $X$ e $Y$ el n\'umero de hombres y mujeres en este comit\'e, respectivamente.
+
+\begin{enumerate}
+\item Encuentra la funci\'on masa de probabilidad de $X$ e $Y$.
+\item Encuentra las funciones masa de probabilidad marginal $p_X$ y $p_Y$ de las variables aleatorias $X$ e $Y$.
+\end{enumerate}
+\item Rodamos un dado equilibrado y sea el resultado dado denotado por  $X$. A continuaci\'on, lanzar una moneda  $X$ veces y sea  $Y$ que  denote el n\'umero de sellos. ?` Cu\'al es la funci\'on de masa de probabilidad conjunta de $X$ e $Y$  y las funciones de masa de probabilidad marginal de $X$ e $Y$?.
+
+
+\item Unos ladrones robaron cuatro animales al azar de una granja que ten\'ia siete ovejas, ocho cabras y cinco burros. Calcula la funci\'on de masa de probabilidad conjunta del n\'umero de ovejas y cabras robadas.
+
+\item Se lanzan dos dados. La suma de los resultados se denota por X y el valor absoluto de su diferencia por Y. Calcula la funci\'on de masa de probabilidad conjunta de X e Y y las funciones de masa de probabilidad marginal de X e Y.
+
+\item  Sea la funci\'on de masa de probabilidad conjunta de las variables aleatorias $X$ e $Y$, definida como:
+
+\[
+p_{X,Y}(x, y) = \begin{cases}
+\frac{1}{70}x(x +y)&\ \text{si}\ x =1,2,3\ \ y =3,4 \\
+0 & \text{en otros casos}.
+\end{cases}
+\]
+
+Encuentra $\mathbb{E}(X)$ e $\mathbb{E}(Y)$.
+
+
+\item La funci\'on de densidad de probabilidad conjunta de las variables aleatorias X e Y est\'a dada por:
+
+\[
+f(x, y) = \begin{cases}
+2 &  \text{Si}\ 0\leq y \leq x \leq 1 \\
+0 & \text{en otros casos.}
+\end{cases}
+\]
+
+\begin{enumerate}
+\item Encuentra las funciones de probabilidad marginal de X e Y.
+\item Calcula $\mathbb{E}(X)$ y $\mathbb{E}(Y)$.
+\item Calcula $\mathbb{P}(X < 1/2), \mathbb{P}(X < 2Y)$ y $\mathbb{P}(X =Y)$.
+\end{enumerate}
+
+\item La funci\'on de densidad de probabilidad conjunta de las variables aleatorias X e Y est\'a dada por:
+
+\[
+f(x, y) = \begin{cases}
+\lambda xy^2 &  0\leq x \leq y \leq 1 \\
+0 & \text{en otros casos.}
+\end{cases}
+\]
+
+\begin{enumerate}
+\item Determina el valor de $\lambda$.
+\item Encuentra las funciones de probabilidad marginal de X e Y.
+\item Calcula $\mathbb{E}(X)$ y $\mathbb{E}(Y)$.
+\end{enumerate}
+
+\item Para $\lambda > 0$, sea:
+
+\[
+F_{X}(x,y) = \begin{cases}
+1 - \lambda e^{-\lambda(x + y)}&\ \text{si}\ x > 0, \ y > 0 \\
+0  & \text{en otros casos}.
+\end{cases}
+\]
+
+Determina si $F$ es una funci\'on de distribuci\'on  de probabilidad conjunta de dos variables aleatorias $X$ e $Y$.
+\item Un c\'irculo de radio 1 est\'a inscrito en un cuadrado con lados de longitud 2. Se selecciona un punto al azar del cuadrado. ?`Cu\'al es la probabilidad de que est\'e dentro del c\'irculo? Ten en cuenta que al seleccionar un punto al azar del cuadrado, queremos decir que el punto se selecciona de manera que todos los subconjuntos de \'areas iguales del cuadrado tienen la misma probabilidad de contener el punto.
+
+\item Sean $X$ e $Y$ variables aleatorias con una funci\'on densidad de probabilidad conjunta:
+
+\[
+f_{X,Y}(x, y) = \begin{cases}
+\frac{3}{2}(x^2 + y^2)& \ \text{si}\ 0 < x < 1,\ 0 < y < 1 \\
+0 & \text{en otros casos}.
+\end{cases}
+\]
+
+Encuentra $\mathbb{E}(X^2 + Y^2)$.
+\item Las tiendas A y B, que pertenecen al mismo propietario, est\'an ubicadas en dos ciudades diferentes. Si la funci\'on  densidad de probabilidad del beneficio semanal de cada tienda, en miles de d\'olares, viene dada por:
+
+\[
+f(x) = \begin{cases}
+x/4 & \text{si}\ 1 < x < 3 \\
+0 & \text{en otros casos.}
+\end{cases}
+\]
+
+y el beneficio de una tienda es independiente de la otra, ?`cu\'al es la probabilidad de que la pr\'oxima semana una tienda gane al menos $\$500$ m\'as que la otra tienda?.
+\item Sea la funci\'on de masa de probabilidad conjunta de las variables aleatorias $X$ e $Y$ es dado por:
+
+\[
+p_{X,Y}(x, y) = \begin{cases}
+\frac{1}{7}x^2y& \ \text{si}\ (x, y) = (1,1), (1,2), (2,1)\\
+0 & \text{en otras partes}.
+\end{cases}
+\]
+
+?` Son $X$ e $Y$ independientes?.
+
+\item Sean $X$ e $Y$, variables aleatorias independientes, teniendo como  funci\'on de masa de probabilidad:
+
+\[
+p_X(x) = \frac{1}{2}\biggl(\frac{2}{3}\biggr)^x, \ \ x = 1, 2,3, \dots
+\]
+
+Encuentra $\mathbb{P}(X = 1, Y = 3)$ y $\mathbb{P}(X + Y = 3)$.
+
+\item ?`Cu\'al es la probabilidad de que haya exactamente dos ni\~nas entre las primeras siete y exactamente cuatro ni\~nas entre los primeros 15 beb\'es nacidos en un hospital en una semana determinada?. Supongamos que los eventos en que un ni\~no nacido es una ni\~na o un ni\~no son equiprobable.
+
+\item Sean X e Y dos variables aleatorias independientes con funciones de distribuci\'on F y G, respectivamente. Encuentra las funciones de distribuci\'on de $\max(X, Y)$ y $\min(X, Y)$.
+
+\item Sean X e Y dos puntos aleatorios independientes del intervalo $(0, 1)$. Calcula la funci\'on de distribuci\'on de probabilidad y la funci\'on de densidad de probabilidad de $\max (X, Y)/\min (X, Y)$.
+
+\item Si la funci\'on de masa de probabilidad conjunta de X e Y es dada por:
+
+\[
+p(x, y) = \begin{cases}
+\frac{1}{15}(x + y) & \text{si}\ x = 0, 1, 2,\ y =1, 2 \\
+0 & \text{en otros casos.}
+\end{cases}
+\]
+
+Encuentra $p_{X|Y}(x|y)$ y $\mathbb{P}(X = 0| Y=2)$.
+
+\item Mientras se lanza un dado equilibrado sucesivamente, se nota que los primeros 6 ocurrieron en el tercer lanzamiento. ?`Cu\'al es el n\'umero esperado de tiradas hasta el primer 1?.
+
+\item Primero, se selecciona aleatoriamente un punto Y del intervalo $(0, 1)$. Luego, otro punto X se elige al azar del intervalo $(0, Y)$. Encuentra la funci\'on de densidad de probabilidad de X.
+
+\item Sea la funci\'on densidad de probabilidad condicional de X, dado que $Y = y$, sea:
+
+\[
+f_{X|Y}(x|2) = \frac{x + y}{1 + y}e^{-x},\quad 0< x < \infty \quad 0 < y < \infty .
+\]
+
+Encuentra $\mathbb{P}(X < 1|Y =2)$.
+
+\item Las duraciones de las bater\'ias fabricadas por una determinada compa\~nia se distribuyen de manera id\'entica con las funciones de distribuci\'on de probabilidad y densidad de probabilidad $F$ y $f$, respectivamente. En t\'erminos de $F$, $f$ y $s$, encuentra el valor esperado de la vida \'util de una bater\'ia de $s$ horas de antiguedad.
+
+\item La funci\'on  densidad de probabilidad conjunta de X e Y est\'a dada por:
+
+\[
+f(x,y) = \begin{cases}
+ce^{-x}&\text{si}\ x \geq 0, \quad \vert y \vert < x \\
+0 & \text{en otros casos.}
+\end{cases}
+\]
+
+\begin{enumerate}
+\item Determina la constante $c$.
+\item Encuentra $f_{X|Y}(x|y)$ y $f_{Y|X}(y|x)$.
+\item Calcula $\mathbb{E}(Y |X =x)$ y $\text{Var}(Y| X =x)$.
+\end{enumerate}
+\end{enumerate}
+\end{document} 
