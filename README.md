@@ -93,12 +93,14 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * [Notas de clase 7: Funciones generadoras de probabilidad](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/funciones-generadoras/funcion_generadora_probabilidad.pdf).
  * Repaso-->[Moments of a Random Variable Explained](https://www.countbayesie.com/blog/2015/4/23/why-so-square-jensens-inequality-and-moments-of-a-random-variable).
  * [Lista de ejercicios 7](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista7.pdf).
+ * Cuaderno-->[Conceptos de probabilidades con Python](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/probabilidad.ipynb).
  
  
  ### Clase 8
  
  * [Notas de clase 8: Estimación](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/Estimacion.pdf).
  * Juego en probabilidad y R-->[Word games in probability and R](http://www.statisticsblog.com/2010/07/word-games-in-probability-and-r/).
+ * Cuaderno-->[Método de montecarlo en Python](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/Cuaderno-metodoMontecarlo/metodo-montecarlo.ipynb).
  
  ### Clase 9
  
@@ -106,8 +108,6 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  * Repaso-->[The 4 Characteristics of a Binomial Experiment](http://www.oxfordmathcenter.com/drupal7/node/256).
  * Lectura-->[What is a Poisson distribution? ](https://www.quora.com/What-is-a-Poisson-distribution-As-a-Poisson-distribution-essentially-predicts-the-outcome-of-events-from-the-past-data-of-events-can-any-random-past-data-that-overall-exhibits-a-weak-congruence-be-considered-a-Poisson-distribution).
  * [Lista de ejercicios 8](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista8.pdf).
- 
-* Cuaderno-->[Conceptos de probabilidades con Python](https://nbviewer.jupyter.org/github/C-Lara/Curso-Probabilidad/blob/master/probabilidad.ipynb).
  
 ### Clase 10
  * [Notas de clase 10: Variables continuas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/variables_continuas/variables_continuas.pdf).
