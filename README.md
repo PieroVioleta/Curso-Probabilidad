@@ -153,7 +153,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
  
 ### Clase 17
 
- * Lectura previa-->[Álgebra Lineal]().
+ * Lectura previa-->[Álgebra Lineal](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/Algebra_lineal/Algebra_lineal.pdf).
 
 
 ## Libros de referencia
