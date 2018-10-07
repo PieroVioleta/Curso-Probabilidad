@@ -1,0 +1,80 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage{anysize} % Soporte para el comando \marginsize
+\marginsize{1.2cm}{1.2cm}{1cm}{1cm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathpazo}
+\usepackage[latin1]{inputenc}
+\usepackage[english,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{multicol} 
+\columnsep=7mm
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\usepackage{times}
+
+\newcommand{\inner}[2]{\langle{#1},{#2}\rangle}
+
+\newcommand{\cabecera}[1]{\begin{figure}[h]
+		\begin{minipage}[c]{0.05\columnwidth}
+			\centering\includegraphics[width=2cm]{escudo.pdf}
+		\end{minipage}
+		\hfill{}
+		\begin{minipage}[c]{0.86\columnwidth}
+			\centering\flushleft {Universidad Nacional de Ingenier\'ia\\
+				Facultad de Ciencias\\
+				Escuela Profesional de Matem\'atica \hfill #1}
+		\end{minipage}
+	\end{figure}\vspace{-0.5cm}
+}
+
+
+\pagestyle{empty}
+\begin{document}
+	\cabecera{Ciclo 2018 - II}
+	
+	\begin{center}
+		{\Large \textbf{Pr\'actica calificada de C\'alculo de Probabilidades}}\\
+		{\Large \textbf{CM-	1H2}}
+	\end{center}
+	
+	\noindent
+	\rule{\textwidth}{0.6pt}
+	
+	
+	\vspace{0.3cm}
+	
+\begin{enumerate}
+\item En cierta industria qu\'imica, se sabe que el $5\%$ de todos los trabajadores est\'an expuestos a un nivel de concentraci\'on diaria alta (H) de un potencial carcin\'ogeno potencial (es decir, son miembros del Grupo H), que el $15\%$ de todos los trabajadores est\'an expuestos a un nivel de concentraci\'on diario intermedio (I) (es decir, son miembros del Grupo I), que el $20\%$ de todos los trabajadores est\'an expuestos a un nivel de concentraci\'on diario bajo (L) (es decir, son miembros del Grupo L) y que los restantes $60\%$ de todos los trabajadores no est\'an expuestos (U) a este potencial carcin\'ogeno (es decir, son miembros del Grupo U). Supongamos que cuatro trabajadores son elegidos al azar de una gran poblaci\'on de trabajadores de la industria qu\'imica.
+
+\begin{enumerate}
+	\item ?`Cu\'al es la probabilidad de que los cuatro trabajadores elegidos al azar sean miembros del mismo grupo?. \hfill{(2 pto.)} 
+	\item Dado que los cuatro trabajadores elegidos al azar est\'an expuestos a niveles no nulos de este carcin\'ogeno potencial, ?`cu\'al es la probabilidad de que exactamente dos de estos cuatro trabajadores sean miembros del Grupo H?. \hfill{(2 pto.)} 
+	\item Supongamos que C es el evento que un trabajador en esta industria qu\'imica desarrolla c\'ancer. Sea $\pi_{H} = \mathbb{P}(C|H) = 0.002$, la probabilidad condicional de que un trabajador del Grupo H desarrolle c\'ancer. De manera similar, sea $\pi_{I} = \mathbb{P}(C|I) = 0.001$, $\pi_{L}= \mathbb{P}(C|L) = 0.0001$, y $\pi_{U} = \mathbb{P}(C|U) = 0.00001$. Si un trabajador en esta industria qu\'imica desarrolla c\'ancer, ?`cu\'al es la probabilidad de que este trabajador sea miembro del Grupo H o del Grupo I?. \hfill{(2 pto.)} 
+\end{enumerate}
+\item Un experimento aleatorio en la realizaci\'on consecutiva de pruebas independientes, donde el resultado de cada prueba  es un \'exito $(E)$ con probabilidad $p$, o un no \'exito $(E^c)$ con probabilidad $1-p$.
+\begin{itemize}
+	\item Calcula la probabilidad de que ocurra al menos un \'exito en $n$ pruebas $(n\geq 1)$. \hfill{(1 pto.)} 
+	\item Si $p=0.99$, ?`cu\'antas pruebas deber\'ian realizarse para tener al menos un \'exito con probabilidade $0.9999?$ y ?`cu\'al es la probabilidad de que el primer \'exito en la $k$-\'esima prueba $(k\geq 1)$?\hfill{(1 pto.)}
+	\item ?`Cu\'al es la probabilidad de que ocurra $k$ \'exitos en $n$ pruebas $(k\leq n)$?.\hfill{(1 pto.)}
+	\item ?`Cu\'al es la probabilidad de que ocurran $k$ \'exitos en $n$ pruebas, de manera que ocurra el $k$-\'esimo \'exito en la $n$-\'esima prueba $(k\leq n)$?\hfill{(1 pto.)}
+\end{itemize}
+\item  Considera dos urnas (llamadas Urna 1 y Urna 2). La Urna 1 contiene 2 bolas blancas y 1 bola negra; la Urna 2 contiene 1 bola blanca y 2 bolas negras.
+Supongamos que una bola se extrae al azar de la Urna 1 y se coloca en la Urna 2; luego, las bolas se seleccionan una a la vez sin reemplazo desde la Urna 2 hasta que se obtenga una bola blanca. Sea  Y  que indica el n\'umero de bolas seleccionadas desde la Urna 2 hasta que se obtenga una bola blanca (por ejemplo, si la primera bola seleccionada de la Urna 2 es negra y la segunda es blanca, entonces Y = 2). Proporciona una f\'ormula, no una tabla, para la distribuci\'on de probabilidad $p_Y(y)$ de la variable aleatoria Y, y luego usa esta f\'ormula para encontrar el valor num\'erico para $\mathbb{E}(Y)$. \hfill{(4 ptos.)}
+\item A binary digit or bit is a zero or one. A computer assembly language can generate  independent random bits. Let X be the number of independent random bits to be  generated until both 0 and 1 are obtained. Find the probability mass function of  X. \hfill{(2 ptos.)}
+\item  Dada la variable aleatoria discreta $X$ tal que  $$f(x)=\mathbb{P}(X=x)=\frac{c3^x}{x!},\qquad x=0,1,2,3\cdots$$   es la funci\'on de masa de  probabilidad de $X$.
+\begin{itemize}
+	\item Encuentra el valor de la constante $c$. \hfill{(1 pto.)}
+	\item Encuentra la funci\'on de distribuci\'on acumulada de $X$. \hfill{(2 ptos.)}
+	\item Calcula $\mathbb{P}(X\geq 3)$.\hfill{(1 pto.)}
+\end{itemize} 
+
+
+	\end{enumerate}
+\end{document}
+
+		
