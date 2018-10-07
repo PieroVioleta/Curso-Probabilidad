@@ -36,6 +36,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 - [Funciones](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/funciones.pdf).
 - [Sumas](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/sumas.pdf).
 - [Cálculo integral](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/Integracion/integracion.pdf).
+- [Álgebra lineal](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/Algebra_lineal/Algebra_lineal.pdf).
 
 
 ### Cuaderno de Jupyter 
@@ -181,7 +182,7 @@ En cada evaluación (práctica calificada, exámenes parciales, final y sustitut
 * [Examen Parcial]()-->[Solucion]().
 * [Tercera práctica calificada 3]()-->[Solución]().
 * [Examen Final]()-->[Solucion]().
-* [Examen Sustitutorio]-->[Solución]().
+* [Examen Sustitutorio]()-->[Solución]().
 
 ## **Esquema de trabajo grupal para el curso CM-1H2**
 
