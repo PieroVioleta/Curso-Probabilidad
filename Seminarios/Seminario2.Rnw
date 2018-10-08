@@ -1,0 +1,124 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\newcommand{\PR}{\mathbb{P}}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Seminario 2\par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Lista de ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+
+\item En una loter\'ia, un jugador paga $\$1$ y selecciona cuatro n\'umeros distintos de $0$ a $9$. Luego, de una urna que contiene $10$ bolas id\'enticas numeradas de $0$ a $9$ se extraen cuatro bolas al azar y sin reemplazo. Si los n\'umeros de tres o cuatro de estas bolas coinciden con los n\'umeros del jugador, gana $\$5$ y $\$10$, respectivamente.
+
+De lo contrario, pierde. En promedio, ?`cu\'anto dinero gana el jugador por juego? (Ganancia = ganancia - p\'erdida.)
+\item Un hombre borracho tiene $n$ llaves, una de las cuales abre la puerta de su oficina. Intenta usar las llaves al azar, una por una, e independientemente. Calcula la media y la varianza de la cantidad de intentos necesarios para abrir la puerta si no se eliminan las llaves incorrectas (a), (b) se eliminan.
+
+
+\item Se puede permitir un veredicto mayoritario de 10 a 2 o m\'as en un juicio con jurado. Suponiendo que cada jurado tiene una probabilidad de $0.9$ de llegar a un veredicto de culpabilidad  y decide independientemente, ?`cu\'al es la probabilidad de que el jurado decida condenar?.
+
+\item Supongamos que dentro de un juego de servicio dado en el tenis, los puntos sucesivos forman  pruebas de Bernoulli con $p = \PR( \text{(Servidor gana)}> 1/2)$. Las reglas del tenis dicen que el juego de servicio termina tan pronto como uno de los jugadores haya ganado al menos cuatro puntos y est\'e al menos dos puntos por delante del otro. Encuentra las posibilidades de que el servidor gane el juego $4-0$, $4-1$ y $4-2$. Encuentra tambi\'en la posibilidad de que el juego alcance $3-3$ ('Deuce').
+
+Sea  $D$ la probabilidad de que el servidor gane el juego, si la puntuaci\'on ahora es Deuce. Demuestra que $D = p^2 + 2pqD$ y por lo tanto, deduzca que la probabilidad general de que el servidor gane el juego es $(p^4-16p^4q^4)/(p^4- q^4)$.
+
+\item Muestre que, como en la distribuci\'on binomial, las probabilidades sucesivas en una distribuci\'on de Poisson aumentan a un m\'aximo, luego disminuyen hacia cero. ?`Bajo qu\'e circunstancias hay una probabilidad m\'axima \'unica?.
+
+\item Modela el n\'umero de intentos que hace un carcelero para ubicar la llave en una celda, cuando tiene un manojo de $K$ llaves  y no tiene idea de cu\'al es la clave correcta. D\'e las respuestas para los casos en que (a) repasa l\'ogicamente las llaves, una a la vez, y (b) est\'a ebrio  y no tiene idea si ya prob\'o alguna llave en particular.
+
+\item Sean $P_1$ y $P_2$ dos distribuciones discretas sobre el mismo conjunto de resultados. Define $d(P_1, P_2) = \sup_A\vert P_1(A) - P_2(A)\vert $ como la distancia de variaci\'on total entre ellos, es decir, la mayor diferencia entre las probabilidades que $P_1$ y $P_2$ que se ajusta a un evento.
+
+Demuestra que $d(P_1, P_2) = \sum_{n \in \Sigma}\vert p_1(n) - p_2(n)\vert / 2$.
+
+Encuentra la distancia de variaci\'on total entre la distribuci\'on de $\text{Binomial}(3, 1/3)$ y la $\text{Poisson}(1)$.
+\item La distribuci\'on logar\'itmica se ha utilizado en ecolog\'ia para modelar con qu\'e frecuencia aparece una especie en particular en un h\'abitat. Su PGF es de la forma $c\log (1 - qz)$, donde c es una constante y $0 <q <1$. Encuentra $c$ en t\'erminos del par\'ametro $q$  y escribe una  expresi\'on de la probabilidad  de que una especie aparezca localizada $k$ veces.
+
+\item Supongamos que los autobuses llegan al azar, a una velocidad promedio $\lambda$, de modo que el tiempo de espera sigue una distribuci\'on exponencial. Demuestra que, condicional a que ya haya esperado un  tiempo T, sin la llegada  un bus, el tiempo restante que tiene que esperar es independiente de T.
+
+\item Para cada funci\'on f, decide si hay o no alguna constante k que hace que $f$ sea una funci\'on  densidad. Cuando se encuentre tal k, encuentra su valor, eval\'ua la probabilidad de obtener un valor entre $1$ y $2$  y la funci\'on de distribuci\'on $F (x)$.
+
+\begin{enumerate}
+\item $f(x) = kx$ en $0 < x < 2$.
+\item $f(x) = -k\sin(x)$ en $0 < x < \pi/2$.
+\item $f(x) k\cos(x)$ en $0 < x < 2$.
+\item $f(x) = k\vert x \vert$ en $-1 < x < 1$. 
+\end{enumerate}
+(En todos los casos $f(x) = 0$ fuera del rango indicado).
+
+\item Supongamos que la proporci\'on de veh\'iculos comerciales entre los usuarios del Humber Bridge var\'ia aleatoriamente de un d\'ia a otro, con una densidad $f(x) = cx (1 - x)^2$ en  $0 <x <1$, donde c es una constante. Muestra que $c = 12$, encuentra la funci\'on de distribuci\'on y haga un bosquejo de las funciones  densidad y distribuci\'on en $-1 <x <2$.
+
+?`En qu\'e fracci\'on de d\'ias es la proporci\'on de veh\'iculos comerciales entre $20\%$ y $50\%$?.
+
+\item Once caballos entran en una carrera. El Sr. C tarda exactamente 60 segundos en completar el curso. Cada uno de los otros diez caballos, independientemente, se toman m\'as de 60 segundos con probabilidad $p$, o menos de 60 segundos con probabilidad $1- p$. Escribe un modelo para la posici\'on del Sr. C en la carrera. Encuentra las posibilidades de que gane y de que se ubique (en los primeros tres). Encuentra el valor de $p$ que hace que los once caballos tengan la misma probabilidad de ganar. Para este valor de $p$, encuentra la posibilidad del  Sr. C. ?`Es una sorpresa que la \'ultima respuesta no sea  3/11?.
+
+\item Verifica que $f(x) = -\log (x)$ en $0 <x <1$ es una funci\'on densidad, y realiza un boceto del resultado. Escribe $A = (1/4, 3/4)$ y $B = (0, 1/2)$. Usa tu gr\'afico de la funci\'on  densidad para determinar cu\'al es m\'as grande, $\mathbb{P}(A)$ o $\mathbb{P}(A|B)$. Calcula ambos valores; Comprueba que tu evaluaci\'on fue correcta.
+
+\item Sea $X$ una variable aleatoria con funci\'on densidad de probabilidad:
+
+\[
+f(x ) = \frac{1}{\pi(1 +x^2)}, \quad -\infty < x < \infty.
+\]
+
+Prueba que $\mathbb{E}(\vert X \vert^{\alpha})$ converge si $0 < \alpha < 1$ y diverge si $\alpha \geq 1$.
+
+\item  Es requerido estimar $ J = \bigintss_{0}^{1}g(x) dx $ donde $0 \leq g(x) \leq 1$ para todo $x$. Sean $X$ y $Y$ variables aleatorias independientes  con funci\'on densidad com\'un $f(x) =1$ si $0 < x  < 1$, $f(x) = 0$ en otros casos. Sea $U = I_{\{Y \leq g(X)\}}$, la funci\'on indicador del evento que $Y \leq g(X)$ y sea $V = g(X)$, $W(X) = \frac{1}{2}\{g(X) +g(1 -X)\}$. 
+
+Muestra que $\mathbb{E}(U) = \mathbb{E}(V) = \mathbb{E}(W) = J$ y que $\text{Var}(W) \leq \text{Var}(V) \leq \text{Var}(U)$. Prueba que $W$ es el estimador m\'as eficiente de $J$.
+
+\item El departamento de matem\'aticas de una universidad env\'ia $8$ a $12$ profesores a la reuni\'on anual de la Sociedad Matem\'atica Latinoamericana, que dura cinco dias. El hotel en el que se celebra la conferencia ofrece una tarifa  de un dolar por dia por persona, si las reservas se realizan $4$5 o m\'as dias de antelaci\'on, pero cobra un cargo de cancelaci\'on de $2$ dolares por persona. El departamento no est\'a seguro de cu\'antos profesores ir\'an.
+
+Sin embargo, de la experiencia pasada se sabe que la probabilidad de la asistencia de $i$ profesores  es $1/5$ para $i = 8, 9, 10, 11$  y $12$. Si la tarifa regular del hotel es $2a$ dolares por dia por persona. ?` Deber\'ia hacer el departamento alguna reserva?si es as\'i, ?` cu\'antos?.
+
+\end{enumerate}
+\end{document} 
