@@ -1,0 +1,154 @@
+\documentclass[a4paper,9pt]{report}
+\usepackage{anysize} % Soporte para el comando \marginsize
+\marginsize{1.2cm}{1.2cm}{1cm}{1cm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathpazo}
+\usepackage[latin1]{inputenc}
+\usepackage[english,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{multicol} 
+\columnsep=7mm
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\usepackage{times}
+\usepackage{decimal}
+\newcommand{\inner}[2]{\langle{#1},{#2}\rangle}
+
+\newcommand{\cabecera}[1]{\begin{figure}[h]
+		\begin{minipage}[c]{0.05\columnwidth}
+			\centering\includegraphics[width=2cm]{escudo.pdf}
+		\end{minipage}
+		\hfill{}
+		\begin{minipage}[c]{0.86\columnwidth}
+			\centering\flushleft {Universidad Nacional de Ingenier\'ia\\
+				Facultad de Ciencias\\
+				Escuela Profesional de Matem\'atica \hfill #1}
+		\end{minipage}
+	\end{figure}\vspace{-0.5cm}
+}
+
+
+\pagestyle{empty}
+\begin{document}
+	\cabecera{Ciclo 2018 - II}
+	
+	\begin{center}
+		{\Large \textbf{Soluciones de la Pr\'actica calificada de C\'alculo de Probabilidades}}\\
+		{\Large \textbf{CM-	1H2}}
+	\end{center}
+	
+	\noindent
+	\rule{\textwidth}{0.6pt}
+	
+	
+	\vspace{0.3cm}
+\begin{enumerate}
+\item [] \textbf{Respuesta 1}
+\begin{enumerate}
+\item  $\mathbb{P}(\text{(los cuatro trabajadores elegidos al azar son miembros del mismo grupo)}) =  \\
+\mathbb{P}(\text{los cuatro trabajadores en el Grupo H}) + \mathbb{P}(\text{los cuatro trabajadores en el Grupo I})\\
+ + \mathbb{P}(\text{los cuatro trabajadores en el Grupo L}) +  \mathbb{P}(\text{los cuatro trabajadores en el Grupo U})\\
+  = (0.05)^4 + (0.15)^4 + (0.20)^4 + (0.60)^4 = 0.132.$
+ \item Sea A el evento que 'dos de los cuatro trabajadores son miembros del Grupo H', y que B sea el evento de que 'los cuatro trabajadores est\'an expuestos a niveles distintos de cero del potencial carcin\'ogeno'. Entonces, 
+ 
+ \[
+ \mathbb{P}(A|B)= \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \frac{C_2^4(0.05)^2(0.35)^2}{(0.40)^4} = 0.0718.
+ \]
+\item Sea B el caso de que un trabajador sea miembro del Grupo H o del Grupo I. Por lo tanto,
+
+\begin{align*}
+\mathbb{P}(B|C) &= \frac{\mathbb{P}(B \cap C)}{\mathbb{P}(C)} = \frac{\mathbb{P}[(H \cup I) \cap C]}{{\mathbb{P}(C)}} = \frac{\mathbb{P}(H \cap C) + \mathbb{P}(I \cap C)}{\mathbb{P}(C)} \\
+&=\frac{\mathbb{P}(C|H)\mathbb{P}(H) + \mathbb{P}(C|I)\mathbb{P}(I)}{\mathbb{P}(C)} = \frac{(0.002)(0.05)+ (0.001)(0.15)}{\mathbb{P}(C)} \\
+& = \frac{0.000250}{\mathbb{P}(C)}.
+\end{align*}
+
+Desde que $\mathbb{P}(C)=\mathbb{P}(C|H)\mathbb{P}(H)+\mathbb{P}(C|I)\mathbb{P}(I)+ \mathbb{P}(C|L)\mathbb{P}(L)+\mathbb{P}(C|U)\mathbb{P}(U) =(0.002)(0.05)+(0.001)(0.15)+(0.0001)(0.20)+(0.00001)(0.60)=0.000276.$ Luego se sigue que $\mathbb{P}(B|C) = 0.000250/0.000276=0.906$.
+\end{enumerate}
+\item [] \textbf{Respuesta 2}
+\begin{enumerate}
+\item Sean los eventos: '$E_i$': ocurre \'exito en la prueba $i$  y  "$E^c_j$": no ocurre \'exito en la prueba $j$; para todo  $i,j=1,2,\cdots, n$. 
+\begin{itemize}
+	\item Sea $A$ el evento 'ocurre al menos un \'exito en las $n$ pruebas', entonces $\displaystyle A=\bigcup_{i=1}^n E_i$ y
+	\begin{eqnarray*}
+		\mathbb{P}(A)&=&\mathbb{P}\bigg(\bigcup_{i=1}^n E_i\bigg)\\
+		&=& 1-\mathbb{P}\bigg(\bigcap_{i=1}^n E^c_i\bigg)\\
+		&=& 1-\prod_{i=1}^{n}\mathbb{P}(E_i^c)\\
+		&=& 1-\prod_{i=1}^{n}(1-p)\\
+		&=& 1-(1-p)^n.
+	\end{eqnarray*} 
+	\item Se tiene que $\mathbb{P}(A)=1-(1-p)^n=0.9999$, entonces $n=2$. Por otro lado, la probabilidad de que el primer \'exito se de en la $k$-\'esima prueba $(k\geq 1)$ es $\mathbb{P}(\text{1er \'exito en prueba k})=(1-p)^{k-1}p$.
+	\item Si $B$ es el evento 'ocurre $k$ \'exitos en $n$ pruebas', entonces, $B$ consiste de $C_k^n$ eventos que contienen cada uno, $k$ \'exitos ($E$) y $n-k$ no \'exitos ($E^c$), luego, $\mathbb{P}(B)=C_k^np^k(1-p)^{n-k}$. 
+	\item Sea $D$ el evento 'ocurren $k$ \'exitos  en $n$ pruebas, de manera que el $k$-\'esimo  \'exito se la $n$-\'esima prueba". El \'ultimo es un \'exito y aplicando el resultado anterior, $\mathbb{P}(D)=C_{k-1}^{n-1}p^k(1-p)^{n-k}$.
+\end{itemize}
+\end{enumerate}
+\item [] \textbf{Respuesta 3}
+
+Define los siguientes eventos: W, 'la bola blanca se coloca en la Urna 2' y  B  como 'la bola negra se pone en la urna 2'. Entonces,
+
+\begin{align*}
+\mathbb{P}(Y = 1) &= \mathbb{P}(Y = 1|W)\mathbb{P}(W) + \mathbb{P}(Y = 1|B)\mathbb{P}(B)\\
+&=\biggl(\frac{2}{4} \biggr) \biggl(\frac{2}{3} \biggr) + \biggl(\frac{1}{4}\biggr) \biggl(\frac{1}{3}\biggr) = 5/12; \\
+\mathbb{P}(Y = 2) &= \mathbb{P}(Y = 2|W)\mathbb{P}(W) + \mathbb{P}(Y = 2|B)\mathbb{P}(B)\\
+&=\biggl(\frac{2}{4} \biggr) \biggl(\frac{2}{3} \biggr) \biggl(\frac{2}{3} \biggr)  + \biggl(\frac{3}{4}\biggr) \biggl(\frac{1}{3}\biggr) \biggl(\frac{1}{3}\biggr) = 11/36; \\
+\mathbb{P}(Y = 3) &= \mathbb{P}(Y = 3|W)\mathbb{P}(W) + \mathbb{P}(Y = 3|B)\mathbb{P}(B)\\
+&=\biggl(\frac{2}{4} \biggr) \biggl(\frac{1}{3} \biggr) \biggl(\frac{2}{2} \biggr) \biggl(\frac{2}{3} \biggr)  + \biggl(\frac{3}{4}\biggr) \biggl(\frac{2}{3}\biggr) \biggl(\frac{1}{2}\biggr)\biggl(\frac{1}{3} \biggr)  = 7/36; \\
+\mathbb{P}(Y = 4) &= \mathbb{P}(Y = 4|W)\mathbb{P}(W) + \mathbb{P}(Y = 4|B)\mathbb{P}(B)\\
+&= ( 0 )\biggl(\frac{2}{3} \biggr) + \biggl(\frac{3}{4} \biggr) \biggl(\frac{2}{3} \biggr) \biggl(\frac{1}{2}\biggr)(1)\biggl(\frac{1}{3}\biggr) = 1/12 \\
+& = 1 -\mathbb{P}(Y =1) -\mathbb{P}(Y =2) - \mathbb{P}(Y =3).
+\end{align*}
+
+As\'i la distribuci\'on de probabilidad de Y es:
+
+\[
+p_Y(y) = \frac{(19 -4y)}{(36)} = \frac{19}{36} -\frac{y}{9},\quad y =1, 2, 3, 4.
+\]
+
+As\'i,
+
+\begin{align*}
+\mathbb{E}(Y) &= \sum_{y =1}^{4}y\biggl[ \frac{19}{36} -\frac{y}{9}\biggr] = \frac{19}{36}\sum_{y =1}^{4}y -\frac{1}{9}\sum_{y =1}^{4}y^2 \\
+&= \frac{19}{36}\biggl[\frac{4(5)}{2}\biggr] -  \frac{1}{9}\biggl[\frac{4(5)(9)}{6}\biggr] = 1.944.
+\end{align*}
+\item [] \textbf{Respuesta 4}
+
+The set of possible values of X is $\{2, 3, 4, \dots \}$. For $n \geq  2, X = n$ if and only if either all of the first $n - 1$ bits generated are 0 and the $n$th bit generated is $1$, or all of the first $n -1$ bits  generated are 1 and the $n$th bit generated is $0$. Therefore, by independence,
+
+\[
+\mathbb{P}(X = n) = \biggl( \frac{1}{2}\biggr)^{n -1}\cdot\frac{1}{2} + \biggl( \frac{1}{2}\biggr)^{n -1}\cdot\frac{1}{2} = \biggl( \frac{1}{2}\biggr)^{n}, \quad n \geq 2.
+\]
+
+
+\item [] \textbf{Respuesta 5}
+
+\begin{enumerate}
+\item  Para encontrar $c$ utilizaremos el siguiente resultado:
+$$\sum_{k=0}^{\infty}\frac{z^k}{k!}=e^z.$$
+	
+Luego, 
+
+$$\sum_{x=0}^{\infty}\frac{c3^x}{x!}=c\bigg(\sum_{x=0}^{\infty}\frac{3^x}{x!}\bigg)=ce^3=1\Rightarrow c=e^{-3}.$$
+
+\item Se tiene que $f(x)=\frac{e^{-3}3^x}{x!}$ para $x=0,1,2,\cdots.$ La funci\'on de distribuci\'on  acumulada de la variable aleatoria es, 
+	$F(x)=\left\{\begin{matrix}
+	0&,&\text{si }-\infty<x<0\\
+	\displaystyle \sum_{k=0}^{x}\frac{3^ke^{-3}}{k!}&,& \text{si }t\leq x< t+1.
+	\end{matrix}
+	\right.$
+	\item
+	\begin{eqnarray*}
+		\mathbb{P}(X\geq3)&=&1-\mathbb{P}(0\leq X\leq 2)\\
+		&=& 1-(f(0)+f(1)+f(2))\\
+		&=& 1-(e^{-3}+3e^{-3}+4.5e^{-3})\\
+		&=& 0.57681.
+	\end{eqnarray*}
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
+
+		
