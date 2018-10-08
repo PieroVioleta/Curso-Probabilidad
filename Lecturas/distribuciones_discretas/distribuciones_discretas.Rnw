@@ -201,7 +201,7 @@ Por independencia, esto sucede con la probabilidad binomial para $r- 1$ \'exitos
 \mathbb{P}(X =t) = \binom{t -1}{r -1}p^r(1 -p)^{t -r}\ \ (t \geq r).
 \]
 
-de esta manera la probabilidad es cero, cuando $t < r$. El caso especial $r = 1$ es llamada \texttt{distribuci\'on geom\'etrica}. Es decir, $X$ tiene una distribuci\'on geom\'etrica con par\'ametro $p \in (0,1)$, denotada  como $X \sim \mbox{Geom}(p)$, si
+de esta manera la probabilidad es cero, cuando $t < r$. El caso especial $r = 1$ es llamada \texttt{distribuci\'on geom\'etrica}. Es decir, $X$ tiene una distribuci\'on geom\'etrica con par\'ametro $p \in (0,1)$, denotada  como $X \sim \mbox{Geometrica}(p)$, si
 
 \[
 \mathbb{P}(X = k) = p(1 -p)^{k -1}, \ \ k \geq 1.
@@ -234,7 +234,7 @@ Adem\'as que se tiene:
  
 \vspace{0.2cm}
 
-La distribuci\'on \texttt{binomial negativa(r,p)} es la suma de $r$ de variables aleatorias  geom\'etricas independientes \texttt{Geom(p)}. Como la esperanza es un operador lineal positivo, se concluye que la media de \texttt{binomial negativa(r,p)} es $r$ veces la media que \texttt{Geom(p)} y la varianza de una suma independiente es la suma de varianza, as\'i:
+La distribuci\'on \texttt{binomial negativa(r,p)} es la suma de $r$ de variables aleatorias  geom\'etricas independientes \texttt{Geometrica(p)}. Como la esperanza es un operador lineal positivo, se concluye que la media de \texttt{binomial negativa(r,p)} es $r$ veces la media que \texttt{Geometrica(p)} y la varianza de una suma independiente es la suma de varianza, as\'i:
 
 \vspace{0.2cm}
 
