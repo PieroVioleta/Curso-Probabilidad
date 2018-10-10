@@ -1,0 +1,75 @@
+\documentclass[a4paper,11pt]{report}
+\usepackage{anysize} % Soporte para el comando \marginsize
+\marginsize{1.2cm}{1.2cm}{1cm}{1cm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathpazo}
+\usepackage[latin1]{inputenc}
+\usepackage[english,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{multicol} 
+\columnsep=7mm
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\usepackage{times}
+
+\newcommand{\inner}[2]{\langle{#1},{#2}\rangle}
+
+\newcommand{\cabecera}[1]{\begin{figure}[h]
+		\begin{minipage}[c]{0.05\columnwidth}
+			\centering\includegraphics[width=2cm]{escudo.pdf}
+		\end{minipage}
+		\hfill{}
+		\begin{minipage}[c]{0.86\columnwidth}
+			\centering\flushleft {Universidad Nacional de Ingenier\'ia\\
+				Facultad de Ciencias\\
+				Escuela Profesional de Matem\'atica \hfill #1}
+		\end{minipage}
+	\end{figure}\vspace{-0.5cm}
+}
+
+
+\pagestyle{empty}
+\begin{document}
+	\cabecera{Ciclo 2018 - II}
+	
+	\begin{center}
+		{\Large \textbf{Examen Parcial C\'alculo de Probabilidades}}\\
+		{\Large \textbf{CM-	1H2}}
+	\end{center}
+	
+	\noindent
+	\rule{\textwidth}{0.6pt}
+	
+	
+	\vspace{0.3cm}
+	
+\begin{enumerate}
+\item Los programas de computadoras son clasificados por la longitud del c\'odigo fuente y el tiempo de ejecuci\'on; los programas con m\'as de $150$ l\'ineas de c\'odigo fuente son llamados GRANDES (G) y los programas con $\leq$150 l\'ineas de  c\'odigo son llamados PEQUE\~NOS (Q). Asimismo, los programas  R\'APIDOS (R) son aquellos que se ejecutan en menos de $0.1$ segundos y los programas LENTOS (L) son aquellos que requieren al menos 0.1 segundos para ejecutarse. 
+	
+Al monitorear un programa ejecutado por una computadora, se observe la longitud del c\'odigo fuente y el tiempo de ejecuci\'on de este. Luego, se plantea un modelo de probabilidad para este experimento, el cual contiene la siguiente informaci\'on: $\mathbb{P}(QR)=0.5$, $\mathbb{P}(GR)=0.2$ y $\mathbb{P}(GL)=0.2$.
+	\begin{enumerate}
+		\item ?`Cu\'al es el espacio muestral para este experimento? \hfill{(1 pto.)}
+		\item ?`Cu\'al es la probabilidad de que un programa sea LENTO?\hfill{(2 pto.)} 
+		\item ?`Cu\'al es la probabilidad de que un programa sea GRANDE?\hfill{(1 pto.)}
+		\item ?`Cu\'al es la probabilidad de que un programa sea LENTO o GRANDE?\hfill{(1 pto.)}
+	\end{enumerate}
+\item Suppose that n random integers are selected from $\{1, 2, \dots, N\}$ with replacement. What is the expected value of the largest number selected? Show that for large $N$  the answer is approximately $nN/(n + 1)$. \hfill{(5 ptos.)}
+
+\item Supongamos que $n (\geq 3)$ monedas justas (o insesgadas) se lanzan simult\'aneamente. Dado que al menos $(n-1)$ monedas de las $n$ monedas muestran todas  caras o todas sellos, encuentra una expresi\'on expl\'icita (en funci\'on de $n$) para la probabilidad de que todas las $n$ monedas muestren todas  caras o todos  sellos.\hfill{(5 ptos.)}
+
+\item Dada la variable aleatoria discreta $X$ tal que $\displaystyle P_X(x)=C_x^4\big(\frac{1}{2}\big)^4 $.
+\begin{enumerate}
+	\item Encuentra la desviaci\'on est\'andar de $X$.\hfill{(3 ptos.)}
+	\item Calcula $\mathbb{P}(\mu_X-\sigma_X\leq X \leq \mu_X+\sigma_X)$\hfill{(2 ptos.)}
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}
+
+		
