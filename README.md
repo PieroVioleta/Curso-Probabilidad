@@ -155,6 +155,12 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 ### Clase 17
 
  * Lectura previa-->[Álgebra Lineal](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Repaso/Algebra_lineal/Algebra_lineal.pdf).
+ * [Lista de ejercicios 16]().
+ 
+### Clase 18
+
+* [Notas de clase 18: Distribución normal bivariada](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/normal_bivariada/normal_bivariada.pdf).
+* [Lista de ejercicios 17]().
 
 
 ## Libros de referencia
