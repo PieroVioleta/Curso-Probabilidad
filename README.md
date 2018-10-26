@@ -162,7 +162,7 @@ En esta sección se presentan algunas notas de temas que son importantes para el
 ### Clase 18
 
 * [Notas de clase 18: Distribución normal bivariada](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Lecturas/normal_bivariada/normal_bivariada.pdf).
-* [Lista de ejercicios 17]().
+* [Lista de ejercicios 17](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Ejercicios/Lista17.pdf).
 
 
 ## Libros de referencia
