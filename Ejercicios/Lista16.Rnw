@@ -1,0 +1,113 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{graphicx}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.35\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Correlaci\'on, covarianza\par
+\end{minipage}
+\vspace{0.5cm}
+
+%\maketitle
+\textbf{\Large{Lista de ejercicios}}
+%{\normalsize Los c\'odigos, se presentaran impresos,  o como un archivo con extensi\'on $.R$, mostrando ejemplos de su ejecuci\'on.}
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+\item Para las variables aleatorias $X$ e $Y$ con coeficiente de correlaci\'on $\rho(X,Y)$, prueba lo siguiente:
+\begin{enumerate}
+\item $-1 \leq \rho(X,Y) \leq 1$.
+\item Con probabilidad $1$, $\rho(X,Y) = 1$ si y solo si $Y = aX + b$ para las constantes $a, b$ con $a > 0$.
+\item Con probabilidad $1$, $\rho(X,Y) = -1$ si y solo si $Y = aX + b$ para las constantes $a, b$ con $a < 0$.
+\end{enumerate}
+\item Muestra que si $X$ e $Y$ son variables aleatorias continuas con una funci\'on de densidad de probabilidad conjunta,
+
+\[
+f(x, y) = \begin{cases}
+x + y & \text{si}\ 0 < x < 1, 0 < y < 1 \\
+0 & \text{en otros casos,}
+\end{cases}
+\]
+
+entonces $X$ e $Y$ no est\'an relacionados linealmente.
+\item Sea $X$ un n\'umero aleatorio desde el intervalo $(0,1)$ y $Y = X^2$. La funci\'on densidad de probabilidad de $X$ es,
+
+\[
+f(x) = \begin{cases}
+1 & \text{si}\ 0 < x < 1 \\
+0 & \text{en otros casos,}
+\end{cases}
+\]
+
+Calcula el coeficiente de correlaci\'on $\rho(X,Y)$.
+\item Un palo de longitud 1 se rompe en dos piezas en un punto aleatorio. Encuentra el coeficiente de correlaci\'on y la covarianza de estas piezas.
+
+\item Prueba que si $\text{cov}(X, Y) = 0$, entonces
+
+\[
+\rho(X +Y, X -Y) = \frac{\text{Var}(X) - \text{Var}(Y)}{\text{Var}(X) + \text{Var}(Y)}.
+\]
+\item Muestra que si la funci\'on densidad de probabilidad conjunta de $X$ e $Y$ es,
+
+\[
+f(x, y) = \begin{cases}
+\frac{1}{2}\sin(x + y) &\text{si}\ 0 \leq x \leq \frac{\pi}{2}, 0 \leq y \leq \frac{\pi}{2}\\
+0 & \text{en otros casos,}
+\end{cases}
+\]
+
+entonces no existe una relaci\'on lineal entre $X$ e $Y$.
+\item En una ciudad hay $n$ taxis. Una mujer toma uno de estos taxis todos los d\'ias al azar y con reemplazo. En promedio, ?`cu\'anto tiempo pasa antes de que ella pueda afirmar que ha estado en cada taxi en la ciudad?.
+
+\item Se lanzan dos dados. La suma de los resultados se denota por $X$ y el valor absoluto de su diferencia por $Y$. Calcula la covarianza de $X$ e $Y$. ?` $X$ e $Y$ no est\'an correlacionados?, ?`Son independientes?.
+
+\item ?`Cu\'al es el n\'umero esperado de d\'igitos aleatorios que se deben generar para obtener tres ceros consecutivos?.
+\item En t\'erminos de las medias, las varianzas y la covarianza de las variables aleatorias $X$ e Y, encuentre $\alpha$ y $\beta$ para que  $\mathbb{E}(Y - \alpha - \beta X)^2$ es m\'inimo. Este es el m\'etodo de m\'inimos cuadrado, esto es, la  'mejor' l\'inea $y = \alpha + \beta x$ a la distribuci\'on de $Y$.
+
+\end{enumerate}
+\end{document} 
