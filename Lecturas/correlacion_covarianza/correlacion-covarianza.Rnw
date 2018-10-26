@@ -1,0 +1,492 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{bigints}
+\usepackage[latin1]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath} 
+\usepackage{mathtools}
+%\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\geometry{verbose,tmargin=1.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{float}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\bb}[1]{\textbf{#1}}
+\DeclareMathOperator{\rank}{\textbf{rango}}
+\DeclareMathOperator{\proy}{\textbf{proy}}
+\DeclareMathOperator{\nulll}{\textbf{nul}}
+\DeclareMathOperator{\diag}{\textbf{diag}}
+\DeclareMathOperator{\col}{\textbf{col}}
+\DeclareMathOperator{\fila}{\textbf{fila}}
+\DeclareMathOperator{\dimm}{dim}
+\DeclareMathOperator{\Traz}{Tr}
+%\theoremstyle{definition}
+\everymath{\displaystyle}
+\newtheorem{ejemplo}{{Ejemplo }}[section]
+\newtheorem{teo}{{Teorema}}[section]
+\newtheorem{defi}{{Definici\'on}}[section]
+\newtheorem{pros}{{Proposici\'on}}[section]
+\newtheorem{cor}{{Corolario}}[section]
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+library(ggplot2)
+library(grid)
+#library(animation)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+%\title{\underline{\textbf{Notas de mat\'ematica}}}
+%\date{}
+%\maketitle
+\hspace*{0.5\linewidth}
+\begin{minipage}{0.6\linewidth}
+Curso: C\'alculo de probabilidades CM-1H2\par
+Correlaci\'on y Covarianza \par
+\end{minipage}
+
+
+\vspace {0.5cm}
+
+
+\section{Correlaci\'on}
+
+
+Considera un par de variables aleatorias X e Y. Por ejemplo, X podr\'ia ser la masa de un objeto medida en kilogramos, e Y podr\'ia ser la  masa del obejto medida en gramos o  X podr\'ia ser la estatura de una persona, e Y podr\'ia ser el tama\~no de su zapato, o  X podr\'ia ser el la colocaci\'on alfab\'etica de la segunda letra en el apellido de una persona ($A = 1, B = 2$, etc.), e Y podr\'ia ser su nivel de colesterol.
+
+\vspace{0.2cm}
+
+Uno de los principales problemas que abordar el concepto de correlaci\'on junto con la regresi\'on es el grado en que el conocimiento de X ayuda a predecir Y (o viceversa), o  manera equivalente cual es grado en que dos variables est\'an correlacionadas.
+
+\vspace{0.2cm}
+
+
+\subsection{Perfecta correlaci\'on}
+
+
+Un ejemplo de correlaci\'on perfecta es la masa de un objeto expresada en kilogramos o gramos. Si conocemos la masa X en kilogramos, entonces tambi\'en conocemos la masa Y en gramos. Simplemente necesitamos multiplicar por 1000. Es decir, Y = 1000X. Un kilogramo equivale a 1000 gramos, 2.73 kilogramos equivale a 2730 gramos, etc. El conocimiento de la masa en kilogramos nos permite establecer exactamente cu\'al es la masa en gramos. Lo contrario tambi\'en es cierto, por supuesto. El conocimiento de la masa en gramos nos permite establecer exactamente cu\'al es la masa en kilogramos. Simplemente dividimos  por 1000.) 
+
+\vspace{0.2cm}
+
+Si tomamos un grupo de objetos y determinamos sus masas en kilogramos y gramos, y luego dibujamos los resultados, obtendremos algo cque se muestra en la siguiente  figura. (Para el prop\'osito actual, asumiremos que cualquier error de medici\'on es insignificante). Todos los puntos se encuentran en una l\'inea recta. Esto es consecuencia de la perfecta correlaci\'on.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.4]{co1.png}
+\caption{La masa en gramos est\'a perfectamente correlacionada con la masa en kilogramos.}
+\end{figure}
+
+
+\subsection{Alguna correlaci\'on}
+
+Un ejemplo de correlaci\'on no nula pero imperfecta es el segundo ejemplo mencionado anteriormente, que involucra estatura y tama\~no de zapatos. (Los tama\~nos de zapatos para hombres y mujeres usan diferentes escalas, as\'i que veamos los tama\~nos para hombres aqu\'i. Adem\'as, algunos tama\~nos de fabricantes son grandes o peque\~nos, pero ignoramos ese problema). Ciertamente no esperamos una correlaci\'on perfecta entre la estatura y el tama\~no zapato, porque eso significar\'ia que podr\'iamos predecir exactamente el tama\~no del zapato de una persona seg\'un la estatura (o viceversa). 
+
+\vspace{0.2cm}
+
+Esto no es posible, por supuesto, porque todas las personas que miden seis pies de estatura ciertamente no tienen el mismo tama\~no de zapato. Adem\'as, no puede haber una correlaci\'on perfecta porque los tama\~nos de los zapatos usan una escala discreta, mientras que las estaturas son continuas.
+
+\vspace{0.2cm}
+
+?`Pero hay al menos alguna correlaci\'on? Es decir, ?`el conocimiento de la estatura de una persona nos permite adivinar mejor el tama\~no de su zapato, en comparaci\'on con nuestra suposici\'on si no tuvi\'eramos conocimiento de la estatura?.
+
+\vspace{0.2cm}
+
+En la siguiente figura se muestra un diagrama de dispersi\'on de algunos datos. (Se hizo  una muestra de ciertos  estudiantes anotando su estatura y el tama\~no de sus zapatos. La estatura  se mide en pulgadas. Como el tama\~no  de los hombres y mujeres usan escalas diferentes, solo se us\'o los datos de 26 estudiantes varones).
+
+\vspace{0.2cm}
+
+
+De los datos, el tama\~no promedio de  un zapato de las 26 personas es de $10.4$, mientras que el tama\~no promedio de zapato de una persona 6 pies es de $11.4$. Por lo tanto, si se desea hacer una estimaci\'on del tama\~no de un zapato de una persona de 6 pies, se podri\'a hacerlo  mejor si adivina el valor de $11.4$ en lugar de $10.4$. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.4]{co2.png}
+\caption{Un diagrama de dispersi\'on del tama\~no de un zapato frente a la altura (en pulgadas)}
+\end{figure}
+
+
+\subsection{Correlaci\'on cero}
+
+
+Un ejemplo de correlaci\'on cero es el tercer ejemplo mencionado anteriormente, que incluye la colocaci\'on alfab\'etica ($A = 1$, $B = 2$, etc.) de la segunda letra del apellido, junto con el nivel de colesterol. Es altamente dudoso que haya mucha correlaci\'on aqu\'i.
+
+
+\vspace{0.2cm}
+
+?`Qu\'e la segunda letra de un apellido, ayudar\'ia a predecir el nivel de colesterol?. En el mejor de los casos,  ciertos nombres (Murphy, Smith, Li, etc.) son comunes en ciertas etnias  y es indudable que diferentes etnias tienen niveles de colesterol ligeramente diferentes (en promedio) debido a genes y dietas diferentes. Pero en general  este efecto es peque\~o y se elimina por otros efectos. Entonces, por el bien del argumento, asumiremos que no hay correlaci\'on aqu\'i, cuando se considera esta pregunta. 
+
+\vspace{0.2cm}
+
+Sin embargo, este ejemplo deber\'ia convencerte de que peque\~nas correlaciones (o quiz\'as incluso grandes) pueden aparecer en situaciones en las que a primera vista es dif\'icil imaginar una correlaci\'on.
+
+
+
+\vspace{0.4cm}
+
+Los primeros dos de los ejemplos anteriores implican una correlaci\'on positiva; un aumento en $X$ corresponde a un aumento en $Y$ (en promedio). La l\'inea (o puntos en  general) de puntos en el diagrama de dispersi\'on tiene una pendiente ascendente. Tambi\'en es posible tener una correlaci\'on negativa, donde un aumento en $X$ corresponde a una disminuci\'on en $Y$ (en promedio).
+
+\vspace{0.2cm}
+
+La l\'inea (o puntos en general) de puntos en el diagrama de dispersi\'on tendr\'a una pendiente descendente. Un ejemplo de correlaci\'on negativa es la ingesta de vitamina C y la incidencia de escorbuto. Cuanta m\'as vitamina C tomes, menos probabilidades tendra\'s de tener escorbuto.
+
+\vspace{0.2cm}
+
+Ten en cuenta que la correlaci\'on no implica necesariamente la causalidad. En el caso de la vitamina C y el escorbuto, resulta que hay causalidad; tomar m\'as vitamina C ayuda a evitar que tengas escorbuto. Pero en el caso de la estatura y el tama\~no del zapato, no es que ser alto hace que tus pies sean m\'as grandes, m\'as que tener pies grandes te hace ser m\'as alto. (La situaci\'on es sim\'etrica, as\'i que si quiere argumentar la causalidad, ser\'a dif\'icil decir cu\'al est\'a causando cu\'al). En cambio, lo que est\'a sucediendo es que hay una tercera cosa, a saber, la gen\'etica (y la dieta tambi\'en), que hace que tanto la estatura  como el tama\~no de los pies sean m\'as grandes o m\'as peque\~nos (en promedio).
+
+\vspace{0.2cm}
+
+Otro ejemplo en este sentido consiste en la cantidad de veces que las personas en un pueblo determinado en un d\'ia determinado se ponen las gafas de sol, junto con la cantidad de veces que se aplican protector solar. Hay una correlaci\'on positiva entre estas dos cosas, pero ninguna de ellas causa la otra. En su lugar, ambos son causados por una tercera cosa: el sol!.
+
+\vspace{0.2cm}
+
+Trataremos solo la correlaci\'on lineal, aunque ciertamente hay ejemplos de correlaci\'on no lineal. Un ejemplo simple es la relaci\'on entre el \'area de un cuadrado y la longitud de su lado: $\text{\'area} = \text{(longitud del lado)}^2$. Esta relaci\'on es cuadr\'atica, no lineal. 
+
+\vspace{0.2cm}
+
+Otro ejemplo es la relaci\'on entre el ingreso laboral y la edad de una persona. Los ni\~nos de tres a\~nos no ganan mucho trabajando en un trabajo  y tampoco lo hacen los de $100$ a\~nos (generalmente). Por lo tanto, la gr\'afica del ingreso promedio en funci\'on de la edad debe comenzar en cero, luego aumentar a un m\'aximo y luego volver a cero.
+
+
+\section{Un modelo para la correlaci\'on}
+
+Ahora tratemos de entender la manera qen que se pueden correlacionar dos variables aleatorias. Esta comprensi\'on nos llevar\'a al coeficiente de correlaci\'on $\rho$.  Asumiremos en la presente discusi\'on que las dos variables aleatorias tienen distribuciones normales.
+
+\vspace{0.2cm}
+
+Este supuesto no es necesario, nuestros resultados matem\'aticos ser\'an v\'alidos para cualquier distribuci\'on. De hecho, cuando se trata de datos reales del mundo real, a menudo ocurre que una o ambas variables no est\'an normalmente distribuidas. Sin embargo, debido al teorema del l\'imite central, muchas variables aleatorias de la vida real se distribuyen de manera aproximadamente normal.
+
+\vspace{0.2cm}
+
+Consideramos una variable aleatoria distribuida normalmente con media cero y desviaci\'on est\'andar $\sigma_X$:
+
+\begin{equation}
+X : \mu = 0 \quad \sigma = \sigma_X
+\end{equation}
+
+\vspace{0.2cm}
+
+Hemos elegido la media igual  a cero solo para que nuestros c\'alculos sean m\'as sencillos. Todos los resultados se pueden generalizar para cualquier media.
+
+\vspace{0.2cm}
+
+Consideremos otra variable aleatoria Y que est\'a correlacionada (hasta cierto punto) con $X$. Con esto queremos decir que Y est\'a parcialmente determinada (de manera lineal) por $X$ y parcialmente determinada por otra variable aleatoria Z (que se supone que est\'a distribuida normalmente) que es independiente de $X$.  $Z$ puede a su vez ser la suma de muchas otras variables aleatorias, todas independientes de $X$. Estamos agrupando el efecto de todas estas variables en una variable $Z$. Podemos ser  cuantitativos acerca de la dependencia de $Y$ en $X$ y $Z$ escribiendo $Y$ como,
+
+\begin{equation}
+y = mX +Z
+\end{equation}
+
+\vspace{0.2cm}
+
+donde $m$ es un factor num\'erico. Para mantener las cosas simples, asumiremos que la media de $Z$ tambi\'en es cero. Entonces, si la desviaci\'on est\'andar de $Z$ es $\sigma_z$, tenemos
+
+\begin{equation}
+Z : \mu = 0 \quad \sigma = \sigma_Z
+\end{equation}
+
+\vspace{0.2cm}
+
+Debes tener en cuenta que si tomamos la media  de la ecuaci\'on (2), vemos que los diversos medias est\'an relacionados por,
+
+\vspace{0.2cm}
+
+\begin{equation}
+\mu_Y = m\mu_X  + \mu_Z
+\end{equation}
+
+\vspace{0.2cm}
+
+Ya que estamos asumiendo $\mu_X = \mu_Z = 0$ aqu\'i, implica que $\mu_y$ tambi\'en es igual a cero. En la ecuaci\'on  (2), estamos produciendo Y a partir de dos distribuciones conocidas (e independientes) X y Z. Para ser expl\'icitos, el significado de la ecuaci\'on(2) es el siguiente.
+
+\vspace{0.2cm}
+
+Elije un valor de $x$ de la variable aleatoria X y multiplica el resultado por $m$ para obtener mx. Luego elije un valor $z$ de la variable aleatoria $Z$ y agr\'eguelo a $mx$ para obtener $y = mx + z$. Este es el valor pedido de $y$. Podemos etiquetar este par ordenado de valores $(X, Y)$ como $(x_1, y_1)$. Luego repetimos el proceso con nuevos valores de $X$ y $Z$ para obtener un segundo par $(X, Y)$,  $(x_2, y_2)$. Y as\'i sucesivamente, para tantos pares como queramos.
+
+
+\vspace{0.2cm}
+
+Como ejemplo, Y podr\'ia ser el peso medido de un objeto, X podr\'ia ser el verdadero peso y Z podr\'ia ser el error introducido por el proceso de medici\'on (lectura de la escala, comportamiento de la escala en funci\'on de una ubicaci\'on ligeramente ladeada del objeto,  etc.). Es posible que estas variables no tengan distribuciones normales, pero, nuevamente, esa suposici\'on no es cr\'itica en nuestra discusi\'on. En este ejemplo, $m = 1$.
+
+\vspace{0.2cm}
+
+Debemos mencionar que aunque la ecuaci\'on (2) es el punto de partida para obtener la mayor\'ia de los resultados de correlaci\'on, pero  rara vez es el punto de partida en la pr\'actica. Es decir, rara vez se te dan las distribuciones $X$ y $Z$ subyacentes. En su lugar, siempre se le dan algunos datos  y necesitas calcular el coeficiente de correlaci\'on $\rho$. 
+
+\vspace{0.2cm}
+
+Para ver qu\'e tipo de correlaci\'on (2) produce entre $X$ e $Y$, consideremos dos casos especiales, para obtener una idea general de los efectos de $m$ y $Z$.
+
+
+\subsection{Correlaci\'on perfecta ($\sigma_Z = 0$)}
+
+Si la desviaci\'on est\'andar de $Z$ es $\sigma_z = 0$, entonces $Z$ siempre toma el valor $z = 0$, porque suponemos que la media de $Z$ es cero. As\'i que la ecuaci\'on (2) se reduce a $Y = mX$. Es decir, $Y$ es un n\'umero fijo $m$ veces $X$; todos los valores de $x$ e $y$ est\'an relacionados por $y = mx$.
+
+\vspace{0.2cm}
+
+
+Esto significa que todos los puntos $(x, y)$ en un diagrama de dispersi\'on se encuentran en una l\'inea recta $y = mx$, como se muestra en la siguiente figura  de  puntos aleatorios generados num\'ericamente a partir de una distribuci\'on normal $X$.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.4]{co3.png}
+\caption{Perfecta correlaci\'on}
+\end{figure}
+
+
+
+Hemos elegido arbitrariamente $m = 0.5$ y $\sigma_X = 1$. En el presente caso de una l\'inea recta, decimos que $X$ e $Y$ est\'an perfectamente correlacionados (o completamente). El valor de $Y$ est\'a completamente determinado por el valor de $X$. No hay una variable aleatoria adicional $Z$ para desordenar esta determinaci\'on completa.
+
+
+\vspace{0.2cm}
+
+En el caso donde $\sigma_Z$ es peque\~no pero no nulo, obtenemos una correlaci\'on fuerte pero no perfecta. La siguiente figura  muestra una gr\'afica de  puntos en el caso donde $\sigma_Z$ es igual a $(0.1)\sigma_X$.
+
+\vspace{0.2cm}
+
+
+Hemos elegido de nuevo $m = 0.5$ y $\sigma_X = 1$ (y por lo tanto, $\sigma_z = 0.1$). Hemos generado valores aleatorios de cada una de las distribuciones normales $X$ y $Z$ y luego formando $Y = mX + Z$. En el presente caso de $\sigma_z$ peque\~o, el conocimiento de $X$ es muy \'util para predecir $Y$, aunque no predice Y exactamente.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.4]{co4.png}
+\caption{Fuerte correlaci\'on}
+\end{figure}
+
+\subsection{Correlaci\'on cero ($m = 0$)}
+
+Si $m = 0$, entonces la ecuaci\'on (2) se reduce a $Y = Z$. Y dado que $Z$ es independiente de $X$, esto significa que $Y$ tambi\'en es independiente de $X$. La siguiente figura  muestra una gr\'afica de  puntos en el caso donde $m = 0$. Hemos elegido arbitrariamente $\sigma_X = 2$ y $\sigma_Z = 1$. Hemos generado los puntos seleccionando valores aleatorios de cada una de las distribuciones normales $X$ y $Z$ y luego estableciendo $Y$ igual a $Z$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.4]{co5.png}
+\caption{Correlaci\'on cero}
+\end{figure}
+
+\vspace{0.2cm}
+
+
+De la figura se observa  que $X$ e $Y$ no est\'an correlacionados completamente. La distribuci\'on para $Y$ es independiente del valor de $X$. Es decir, para cualquier valor dado de $X$, los valores de $Y$ se distribuyen normalmente alrededor de $Y = 0$, con la misma desviaci\'on est\'andar (que es igual a $\sigma_Z$). En otras palabras, la probabilidad (o m\'as bien, la densidad de probabilidad) de obtener un cierto valor de $Y$, dado un valor particular de $X$, es independiente del valor de $X$. Esta probabilidad viene dada por la distribuci\'on normal para $Z$, ya que $Y = Z$ en el presente caso donde $m = 0$.
+
+\vspace{0.2cm}
+
+Si imaginamos dibujar franjas sombreadas verticales en dos valores diferentes de $X$, como se muestra en la siguiente figura, entonces las distribuciones de los valores $Y$ en estas dos franjas son las siguientes. Igual, excepto por un factor de escala global. Este factor de escala es simplemente la probabilidad (o m\'as bien, la densidad de probabilidad) de obtener cada uno de los valores dados de $X$. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.4]{co6.png}
+\caption{Si $m = 0$, la distribuci\'on de los valores de $Y$ dentro de una franja vertical es independiente (aparte de un factor de escala global) de la ubicaci\'on de la franja.}
+\end{figure}
+
+
+Valores m\'as grandes de $\vert X\vert $ es menos probable, debido al factor$e^{-x^2/2\sigma^2_X}$ en la distribuci\'on normal. As\'i que hay menos puntos en la franja derecha. Pero dado un valor de $X$, la distribuci\'on de probabilidad para $Y$ (en este caso $m = 0$) es simplemente la distribuci\'on de probabilidad para $Z$, que es independiente de $X$.
+
+\vspace{0.2cm}
+
+En el caso de que $m$ sea peque\~no pero distinto de cero, obtenemos una correlaci\'on d\'ebil. La siguiente figura muestra una gr\'afica de puntos en el caso en que $m = 0.2$ y nuevamente con $\sigma_X = 2$ y $\sigma_Z = 1$. En este caso, el conocimiento de $X$ ayuda un poco a predecir el valor de $Y$. No ayuda mucho en la regi\'on cercana al origen, el gr\'afico no muestra mucha inclinaci\'on (parece b\'asicamente la misma que figura de cero correlaci\'on cerca del origen). Pero para valores m\'as grandes de $X$, hay un sesgo claro en los valores de $Y$. M\'as puntos se encuentran sobre el eje $X$ en el lado derecho de la gr\'afica y m\'as puntos se encuentran debajo del eje $X$ en el lado izquierdo.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.4]{co7.png}
+\caption{Correlaci\'on d\'ebil}
+\end{figure}
+
+
+\subsection{Anotaciones}
+
+\begin{enumerate}
+\item Todos los diagramas de dispersi\'on anteriores se centran en el origen porque asumimos que las medias de $X$ y $Z$ son cero, lo que implica que la media de $Y$ es cero. Si $Z$ en su lugar tuviera un valor medio distinto de cero $\mu_Z$, entonces la mancha de puntos se desplazar\'ia hacia arriba en $\mu_Z$. Si $X$ tuviera una media $\mu_X$ distinta de cero, entonces la mancha de puntos  se desplazar\'ia hacia la derecha en $\mu_X$ y tambi\'en por $m\mu_X$.
+\item En las discusiones anteriores, tratamos a $X$ como la variable independiente y a $Y$ como la variable dependiente, y analizamos en qu\'e medida $X$ determin\'o $Y$. Sin embargo, si alguien te da uno de los diagramas de dispersi\'on anteriores, podr\'ias razonablemente inclinar tu cabeza hacia un lado y considerar que $X$ es una 'funci\'on' de $Y$  y luego observar en qu\'e medida $Y$ determina $X$.
+
+\item Notamos en la \texttt{Figure 6}  que la distribuci\'on relativa de los valores de $Y$ dentro de una franja vertical es independiente de la ubicaci\'on de la franja. Este hecho se mantiene no solo en la \texttt{Figure 6} donde hay una correlaci\'on cero, sino tambi\'en (en un sentido ligeramente modificado) en el caso de una correlaci\'on distinta de cero, incluso cuando hay una correlaci\'on fuerte como en la \texttt{Figure 4}. Aunque podr\'ia parecer que la dispersi\'on (la desviaci\'on est\'andar) de los valores de $Y$ se reduce en las colas de la gr\'afica en la  \texttt{Figure 4}, la dispersi\'on es de hecho la misma para todos los valores de $X$. La expresi\'on $Y = mX + Z$ dice que para cualquier valor dado de $X$, los valores de $Y$ se centran en $mX$ (en lugar de cero; esta es la ligera modificaci\'on mencionada anteriormente) y tienen la misma desviaci\'on est\'andar de $\sigma_Z$ alrededor de este valor. La propagaci\'on parece ser mayor en el medio del gr\'afico, pero solo porque hay m\'as puntos all\'i.
+\end{enumerate}
+
+\section{Coeficiente de correlaci\'on}
+
+Ahora mostraremos c\'omo producir el coeficiente de correlaci\'on $\rho$ a partir de cantidades asociadas con el lado derecho de la ecuaci\'on (2), a saber $m$, $\sigma_x$, y $\sigma_z$. Para hacer esto, necesitaremos determinar la desviaci\'on est\'andar de $Y = mX + Z$. Sabemos que $mX$ tiene una desviaci\'on est\'andar $m\sigma_X$ y $Z$ tiene una desviaci\'on est\'andar de $\sigma_Z$. Y sabemos  que la desviaci\'on est\'andar de la suma de dos variables independientes (como $X$ y $Z$ son) se obtiene sumando las dos desviaciones est\'andar en cuadratura. (Las variables no necesitan ser normales para que esto sea cierto). Por lo tanto, $Y$ se escribe mediante \footnote{En estas notas se usar\'a $r$ o $\rho$ para indicar el coeficiente de correlaci\'on}:
+
+\begin{equation}
+Y:\mu =0, \quad \sigma_Y = \sqrt{m^2\sigma^2_X + \sigma^2_Z}.
+\end{equation}
+
+\vspace{0.2cm}
+
+El valor $\mu =0 $ sigue de la ecuaci\'on (4), ya que asumimos que $\mu_X = \mu_Z = 0$. Revisemos algunos casos limitantes de la ecuaci\'on (5). En un extremo donde $\sigma_z = 0$ (correlaci\'on completa entre $X$ e $Y$), tenemos $\sigma_Y= m\sigma_X$. 
+
+\vspace{0.2cm}
+
+Para  valores generales de $m$ y $\sigma_z$, definimos el coeficiente de correlaci\'on $\rho$ como la fracci\'on de $\sigma_T$ que se puede atribuir a $X$ (suponiendo un modelo lineal). Dado que la parte de $\sigma_Y$ que se puede atribuir a $X$ es $m\sigma_X$, esta fracci\'on es,
+
+\begin{equation}
+r = \rho  = \frac{m\sigma_X}{\sigma_Y} = \frac{m\sigma_X}{ \sqrt{m^2\sigma^2_X + \sigma^2_Z}}
+\end{equation}
+
+\vspace{0.2cm}
+
+De manera equivalente, $\rho^2$ es igual a la fracci\'on de la varianza de $Y$ que se puede atribuir a $X$. El uso de la expresi\'on para $\rho$ en la ecuaci\'on anterior requiere conocimiento de $m$, junto con $\sigma_x$ y $\sigma_Y$ o $\sigma_Z$. Si tenemos $m$, las distribuciones $X$ y $Z$ subyacentes que conforman $Y$, entonces podemos usar la ecuaci\'on anterior para encontrar $\rho$. Pero como se mencion\'o anteriormente, generalmente solo nos dan una colecci\'on de puntos de datos en el plano $x-y$, sin que nos den las distribuciones de $X$ y $Z$ exactas. ?`Como encontramos $\rho$ en ese caso?
+
+\section{Covarianza}
+
+Para encontrar $\rho$ si se nos da una colecci\'on de puntos de datos, necesitamos definir la covarianza de dos variables aleatorias. 
+
+\vspace{0.2cm}
+
+La \texttt{covarianza} de las variables aleatorias $X$ y $Y$ es la cantidad denotada por $cov(X,Y)$ y es dada por:
+
+\vspace{0.2cm}
+
+\begin{equation}
+cov(X,Y) = \mathbb{E}([X -\mathbb{E}(X)][Y -\mathbb{E}(Y)]) = \mathbb{E}(XY) -\mathbb{E}(X)\mathbb{E}(Y)
+\end{equation}
+
+\vspace{0.2cm}
+
+siempre que las  esperanzas existan.
+
+
+\vspace{0.2cm}
+
+Podemos agregar algunas propiedades m\'as, de la varianza y covarianza:
+
+\vspace{0.2cm}
+
+\begin{itemize}
+\item $\text{Var}(X +Y) = \text{Var}(X) + 2cov(X,Y) + \text{Var}(Y)$
+\item Si $X$ y $Y$ son independientes : $cov(X,Y) = 0$ y $\text{Var}(X + Y) = \text{Var}(X) + \text{Var}(Y)$.
+\end{itemize}
+
+
+\vspace{0.2cm}
+
+La covarianza se utiliza a menudo como una medida de la dependencia de $X$ e $Y$  y la raz\'on de esto es que $cov(X, Y$) es un s\'olo un  n\'umero (en lugar de un objeto complicado como la funci\'on densidad conjunta) que contiene informaci\'on \'util sobre el comportamiento conjunto  de $X$ e $Y$. 
+
+\vspace{0.2cm}
+
+Por ejemplo, si $cov(X, Y)> 0$, entonces $X-\mathbb{E}(X)$ y  $Y-\mathbb{E}(Y)$ pueden tener una buena chance (en alg\'un sentido) de tener el mismo signo.
+
+\vspace{0.2cm}
+
+La principal desventaja de la covarianza como medida de dependencia de $X$ e $Y$ es que no es invariante en la escala: Si $X$ y $Y$ esta\'an medidas en pulgadas y $U$ y $V$ tienen las misma medida en cent\'imetros (tal que $U = \alpha X$ y $V = \alpha Y$, donde $\alpha \sim 2.54$), entonces $cov(U,V) \sim 6cov(X,Y)$ a pesar del hecho de que el par $(X,Y)$ y $(U,V)$ miden la misma cantidad.
+
+\vspace{0.2cm}
+
+Para tratar con esta \texttt{reescala} en  la covarianza  se define lo siguiente:
+
+\vspace{0.2cm}
+
+\texttt{El coeficiente de correlaci\'on} de las variables aleatorias $X$ y $Y$ es la cantidad $\rho(X,Y)$ definida por:
+
+\vspace{0.2cm}
+
+\begin{equation}
+\rho(X,Y) = \dfrac{cov(X ,Y)}{\sqrt{\text{Var}(X)\text{Var}(Y)}} = \dfrac{cov(X ,Y)}{\sigma_X \sigma_Y}.
+\end{equation}
+
+\vspace{0.2cm}
+
+siempre que la \'ultima cantidad exista y $\text{Var}(X)\text{Var}(Y) \neq 0$.
+
+\vspace{0.2cm}
+
+$\text{cov}(x, y)$ tambi\'en se puede definir para un conjunto de puntos de datos. Es solo que en lugar de hablar sobre el valor esperado de $XY$ (asumiendo que las medias son cero), hablamos sobre el valor promedio de los productos $x_iy_i$, donde se toma el promedio de todos los puntos de datos $(x_i, y_i)$ . Si tenemos $n$ puntos $(x_i, y_i)$, entonces la covarianza en el caso general de medias distintas de cero es
+
+\begin{equation}
+\text{cov}(x,y) = \frac{1}{n}\sum(x_i -\overline{x})(y_i -\overline{y}) \quad \text{para puntos datos}
+\end{equation}
+
+\subsection{Anotaciones}
+
+\begin{enumerate}
+\item El coeficiente de correlaci\'on $\rho$ es independiente de las medias de $X$, $Y$ y $Z$. Esto sigue  del hecho de que ninguna de las cantidades $m$, $\sigma_X$, $\sigma_Y$, $\sigma_Z$, o $\text{cov(X, Y)}$ depende de las medias. Cambiar las medias simplemente desplaza toda la mancha de puntos alrededor del plano $X-Y$.
+
+\item La \texttt{ecuaci\'on 8} es sim\'etrica en $X$ e $Y$. Esto significa que si cambiamos el valor independiente
+y las variables dependientes en un diagrama de dispersi\'on e imaginamos que $X$ es parcialmente dependiente de $Y$ (en lugar de que Y sea parcialmente dependiente de X), entonces el coeficiente de correlaci\'on es el mismo. Esto no es terriblemente obvio, dada la falta de simetr\'ia en la relaci\'on en la \texttt{ecuaci\'on 2}, donde $Z$ es independiente de $X$, no $Y$. 
+
+\section{Ejemplos con varios valores del coeficiente de correlaci\'on}
+
+La figura  muestra ejemplos de gr\'aficos de dispersi\'on para seis valores diferentes de $r$. Todos los gr\'aficos tienen $\sigma_X = 2$ y $\sigma_Y = 1$ y hay alrededor de $1000$ puntos en cada uno. Ten en cuenta que se necesita una $r$ considerable para obtener un diagrama de dispersi\'on que se ve significativamente diferente del caso $r = 0$. La gr\'afica de $r = 0.3$ se ve aproximadamente igual. Las gr\'aficas en esta figura le dan un sentido visual de lo que significa un $r$ en particular, por lo que debes tenerlo en cuenta cada vez que se le te un valor de $r$. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.4]{co8.png}
+\caption{Gr\'aficos de dispersi\'on para varios valores del coeficiente de correlaci\'on $r$.}
+\end{figure}
+
+\vspace{0.2cm}
+
+?`Qu\'e se considera un valor 'bueno' o 'alto' de $r$? Bueno, eso depende de los datos con los que est\'es tratando. Si eres un cient\'ifico social y encuentra una correlaci\'on de $r = 0.7$ entre una determinada caracter\'istica y por ejemplo, el n\'umero de meses que una persona ha estado desempleada, ese es un resultado muy importante. Acabas de encontrar una caracter\'istica que ayuda sustancialmente a predecir la duraci\'on del desempleo.
+
+\vspace{0.2cm}
+
+(Pero ten en cuenta que la correlaci\'on no implica necesariamente una causaci\'on. Aunque has encontrado algo que ayuda a predecir, puede que no sirva para explicar). Sin embargo, si eres un f\'isico y encuentras una correlaci\'on de $r= 0.7$ entre la distancia $d$ que un objeto cae (en el vac\'io, se cae del reposo) y el cuadrado del tiempo de ca\'ida $t$, entonces ese es un resultado terrible. Algo ha salido gravemente mal, porque los puntos de datos deben (al menos hasta peque\~nos errores experimentales) estar en la l\'inea recta dada por $d = (g/2)t^2$, donde $g$ es la aceleraci\'on debida a la gravedad.
+
+\vspace{0.2cm}
+
+Todos gr\'aficos  en la \texttt{figure 8} tienen valores positivos de $r$. Las gr\'aficas para valores negativos se ven iguales, excepto que las manchas de puntos tienen pendiente hacia abajo. Por ejemplo, en la siguiente figura se muestra un diagrama de dispersi\'on con $r = -0.7$. Como $r$ es negativo implica que $m$ lo es tambi\'en, entonces la \texttt{ecuaci\'on 2} nos dice que un aumento en $X$ produce una disminuci\'on en $Y$ (en promedio). De ah\'i la pendiente negativa.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.4]{co9.png}
+\caption{Gr\'afico  de dispersi\'on con correlaci\'on negativa.}
+\end{figure}
+
+\vspace{0.2cm}
+
+En las figuras 3 a la 7, los tres par\'ametros especificados que se usaron para generar num\'ericamente los gr\'aficos fueron:
+
+\begin{equation}
+\sigma_X,\quad \sigma_Z, \quad m,
+\end{equation}
+
+mientras que las figuras 8 y 9, los  par\'ametros especificados fueron:
+
+\begin{equation}
+\sigma_X,\quad \sigma_Y,  \quad r.
+\end{equation}
+
+\vspace{0.2cm}
+
+Ambos conjuntos de par\'ametros contienen la misma informaci\'on, expresada de diferentes maneras (aunque ambos conjuntos contienen $\sigma_X$). Es f\'acil ir de un conjunto a otro. Dado el conjunto en la ecuaci\'on (10), los valores $\sigma_Y$ y $r$ en la ecuaci\'on (11) se puede encontrar a trav\'es de la ecuaci\'on (6):
+
+\begin{equation}
+\sigma_Y = \sqrt{m^2\sigma^2_X + \sigma^2_Z} \quad \text{y}\quad r = \frac{m\sigma_X}{\sqrt{m^2\sigma^2_X + \sigma^2_Z}}
+\end{equation}
+
+\vspace{0.2cm}
+
+Por ejemplo, la \texttt{figure 7} se gener\'o a partir de los par\'ametros $m = 0.2$, $\sigma_X = 2$, y $\sigma_Z = 1$. As\'i que puedes mostrar r\'apidamente que la ecuaci\'on  (12) da $\sigma_y = 1.08$ y $r= 0.37$.
+
+\vspace{0.2cm}
+
+Para ir al otro lado, la expresi\'on anterior para $\sigma_Y$ puede reescribirse como $\sigma^2_Z = \sigma^2_Y - m^2\sigma^2_X$. Pero la ecuaci\'on (6)  nos dice que $m^2\sigma^2_X = r^2\sigma^2_Y$, entonces obtenemos $\sigma^2_Z = (1 - r^2)\sigma^2_Y$. Por lo tanto, dado el conjunto de par\'ametros en la ecuaci\'on (11), los valores de $\sigma_Z$ y $m$ en la ecuaci\'on (10) se puede calcular a trav\'es de,
+
+\begin{equation}
+\sigma_Z = \sigma_Y\sqrt{1 - r^2}\quad \text{y}\quad m = \frac{r\sigma_Y}{\sigma_X}
+\end{equation}
+
+\vspace{0.2cm}
+
+Por ejemplo $r = 0.3$ en la \texttt{figure 8} fue generado desde los par\'ametros $r= 0.3$, $\sigma_X = 2$ y $\sigma_Y = 1$. As\'i que la ecuaci\'on (13), produce $\sigma_Z = 0.95$ y $m = 0.15$.
+
+\vspace{0.2cm}
+
+Generalmente se describen los  diagramas de dispersi\'on en t\'erminos de $r$ (y $\sigma_X$ y $\sigma_Y$) en lugar de $m$ (y $\sigma_X$ y $\sigma_Z$). Pero siempre se  puede alternar entre $r$ y $m$ usando las ecuaciones (12) y (13). Sin embargo, de ninguna manera estamos terminados con $m$. Esta cantidad es extremadamente importante, ya que es la pendiente de la \textbf{l\'inea de regresi\'on}.
+\end{enumerate}
+
+
+\end{document}
