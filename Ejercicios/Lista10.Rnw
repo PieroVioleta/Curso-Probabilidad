@@ -60,7 +60,6 @@ Momentos\par
 
 \begin{enumerate}
 \item Sea $X$ una variable aleatoria con funci\'on de masa de probabilidad $p(i) = 1/5, i =1,2,\dots, 5$, cero en otros casos. Encuentra $\mathbb{M}_{X}(t)$.
-\item Sea $X$ una variable con funci\
 \item  Sea X una variable aleatoria discreta. Sea $0 < s < r$. Demuestra que si existe el r- \'esimo momento absoluto de $X$, entonces tambi\'en existe el momento absoluto de orden $s$ de $X$.
 
 \item Sea $X$ una variable aleatoria que toma valores enteros no negativos y es asociado con una transformada de la forma:
