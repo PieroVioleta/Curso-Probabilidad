@@ -187,8 +187,8 @@ En cada evaluación (práctica calificada, exámenes parciales, final y sustitut
 
 * [Primera práctica calificada 1](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/PracticaCalificada1-CM1H2.pdf)-->[Solución](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/SolucionCalificada1-CM1H2.pdf).
 * [Segunda práctica calificada 2](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/PracticaCalificada2-CM1H2.pdf)-->[Solución](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/SolucionCalificada2-CM1H2.pdf).
-* [Examen Parcial](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/ExamenParcial-CM1H2.pdf)-->[Solución]().
-* [Tercera práctica calificada 3]()-->[Solución](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/SolucionExamenParcial-CM274.pdf).
+* [Examen Parcial](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/ExamenParcial-CM1H2.pdf)-->[Solución](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/SolucionExamenParcial-CM274.pdf).
+* [Tercera práctica calificada 3](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/PracticaCalificada3-CM1H2.pdf)-->[Solución](https://github.com/C-Lara/Curso-Probabilidad/blob/master/Evaluaciones/SolucionCalificada3-CM1H2.pdf).
 * [Examen Final]()-->[Solución]().
 * [Examen Sustitutorio]()-->[Solución]().
 
