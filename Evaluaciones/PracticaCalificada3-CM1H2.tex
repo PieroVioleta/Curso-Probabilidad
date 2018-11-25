@@ -1,0 +1,78 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage{anysize} % Soporte para el comando \marginsize
+\marginsize{1.2cm}{1.2cm}{1cm}{1cm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathpazo}
+\usepackage[latin1]{inputenc}
+\usepackage[english,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{multicol} 
+\columnsep=7mm
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\usepackage{times}
+
+\newcommand{\inner}[2]{\langle{#1},{#2}\rangle}
+
+\newcommand{\cabecera}[1]{\begin{figure}[h]
+		\begin{minipage}[c]{0.05\columnwidth}
+			\centering\includegraphics[width=2cm]{escudo.pdf}
+		\end{minipage}
+		\hfill{}
+		\begin{minipage}[c]{0.86\columnwidth}
+			\centering\flushleft {Universidad Nacional de Ingenier\'ia\\
+				Facultad de Ciencias\\
+				Escuela Profesional de Matem\'atica \hfill #1}
+		\end{minipage}
+	\end{figure}\vspace{-0.5cm}
+}
+
+
+\pagestyle{empty}
+\begin{document}
+	\cabecera{Ciclo 2018 - II}
+	
+	\begin{center}
+		{\Large \textbf{Pr\'actica calificada de C\'alculo de Probabilidades}}\\
+		{\Large \textbf{CM-	1H2}}
+	\end{center}
+	
+	\noindent
+	\rule{\textwidth}{0.6pt}
+	
+	
+	\vspace{0.3cm}
+	
+\begin{enumerate}
+\item Sea $X$ una variable aleatoria con distribuci\'on binomial $\text{Binomial}(n,p)$. Si fijamos $\lambda=np$ (constante) para luego hacer $n\to\infty$ y $p\to0$, comprueba entonces que la distribuci\'on binomial se aproxima a la distribuci\'on de Poisson con par\'ametro $\lambda$. \hfill{(4 ptos.)}
+\item Decir si son verdaderas o falsas las siguientes afirmaciones. En caso de que sean verdaderas demostrarlo y en caso de que sean falsas dar un contraejemplo. 
+\begin{enumerate}
+\item Para cualquier variable aleatoria $X$  se verifica que $\forall a,b\in\mathbb{R}$ se tiene que
+	$$\mathbb{P}(a<X\leq b)=\mathbb{P}(a<X< b)=\mathbb{P}(a\leq X\leq b)=\mathbb{P}(a\leq X< b).\eqno{\text{(1 pto.)}}$$
+\item Si $X$ es una variable aleatoria discreta o continua entonces se verifica, si $a < b < c$, que $\mathbb{P}(a \leq  X \leq c) = \mathbb{P}(a \leq  X \leq b)+ \mathbb{P}(b \leq  X \leq c)$.\hfill{(1 pto.)}
+\item Las condiciones sobre $f(x)$ en el caso de las variables aleatorias discretas de que se cumple  $0 \leq f (x) \leq 1$ y que $\displaystyle\sum_x f(x) = 1$ se traduce en el caso de las variables aleatorias continuas de que  $f(x)$  cumple  que $0 \leq f (x) \leq 1$ y que $\int f(x)dx = 1$.\hfill{(1 pto.)}
+\item Sea $X$ una variable aleatoria  con funci\'on de densidad dada por
+	$$f(x)=\left\{ \begin{matrix}\frac{x}{2}&\text{si }0<x<2\\
+	0&\text{en otros casos}\end{matrix}\right.$$
+	entonces su funci\'on de distribuci\'on viene dada por
+	$$F(x)=\left\{ \begin{matrix}\frac{x^2}{4}&\text{si }0<x<2\\
+	0&\text{en otros casos}\end{matrix}\right.\eqno{\text{(1 pto.)}}$$
+\end{enumerate}
+\item Suppose that an aircraft engine will fail in flight with probability $1 -p$ independently of the plane's other engines. Also suppose that a plane can complete the
+journey successfully if at least half of its engines do not fail.
+
+\begin{enumerate}
+\item Is it true that a four-engine plane is always preferable to a two-engine plane?. Explain. \hfill{(2 ptos.)}
+\item Is it true that a five-engine plane is always preferable to a three-engine plane?Explain. \hfill{(2 ptos.)}
+\end{enumerate}
+\item Supongamos que $n$ pasas se mezclan completamente en una masa para galletas. Si elaboramos $k$ galletas de pasas de uva de igual tama\~no a partir de esta mezcla, ?`cu\'al es la probabilidad de que una galleta dada contenga al menos una pasa?. \hfill{(4 ptos.)}
+\item Let $f$ be the probability density function of a random variable $X$. In terms of $f$ , calculate the probability density function of $X^2$. \hfill{(4 ptos.)}
+\end{enumerate}
+\end{document}
+
+		
