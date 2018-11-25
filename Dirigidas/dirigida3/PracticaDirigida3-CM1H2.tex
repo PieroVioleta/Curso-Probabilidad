@@ -1,0 +1,284 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage{anysize} % Soporte para el comando \marginsize
+\marginsize{1.2cm}{1.2cm}{1cm}{1cm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathpazo}
+\usepackage[latin1]{inputenc}
+\usepackage[english,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{multicol} 
+\columnsep=7mm
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{bigints}
+\usepackage{enumitem}
+
+\usepackage{times}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\normal}{\triangleleft \,}
+\newcommand{\tx}{\textrm}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\e}{\rightarrow}
+\newcommand{\bi}{\Leftrightarrow}
+\newcommand{\com}{\mathbb{N} \bi}
+\newcommand{\fu}{f:\N \e \R}
+\newcommand{\ba}{\backslash}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\calP}{\mathcal{P}}
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calL}{\mathcal{L}}
+
+\newcommand{\ovl}{\overline}
+\newcommand{\ora}{\overrightarrow}
+\newcommand{\ola}{\overleftarrow}
+\newcommand{\olra}{\overleftrightarrow}
+\newcommand{\ula}{\underleftarrow}
+\newcommand{\ura}{\underrightarrow}
+
+\newcommand{\inner}[2]{\langle{#1},{#2}\rangle}
+\newcommand{\cabecera}[1]{\begin{figure}[h]
+ \begin{minipage}[c]{0.05\columnwidth}
+\centering\includegraphics[width=2cm]{escudo.pdf}
+\end{minipage}
+\hfill{}
+\begin{minipage}[c]{0.86\columnwidth}
+\centering\flushleft {Universidad Nacional de Ingenier\'ia\\
+Facultad de Ciencias\\
+Escuela Profesional de Matem\'atica \hfill #1}
+\end{minipage}
+\end{figure}\vspace{-0.5cm}
+}
+
+
+\pagestyle{empty}
+\begin{document}
+\cabecera{Ciclo 2018 - II}
+
+\begin{center}
+{\Large \textbf{Pr\'actica dirigida de C\'alculo de Probabilidades}}\\
+{\Large \textbf{CM-	1H2}}
+\end{center}
+
+\noindent
+\rule{\textwidth}{0.6pt}
+
+\vspace{0.5cm}
+
+\textbf{Distribuciones discretas}
+
+\begin{enumerate}
+\item Un agente de bienes ra\'ices afirma que s\'olo el $30\%$ de las casas en un determinado vecindario se valoran en menos de $200.000$ soles. Una muestra aleatoria de $20$ casas de esa vecindad es seleccionada y evaluada. Los resultados en (miles de soles) son los siguientes:
+
+\begin{verbatim}
+285 156 202 306 276 562 415
+245 185 143 186 377 225 192
+510 222 264 198 168 363
+\end{verbatim}
+Bas\'andose en estos datos, ?`es aceptable la afirmaci\'on del agente inmobiliario?.
+\item Si en el lanzamiento  de un dado, el evento de obtener $4$ o $6$ se llama \'exito y el evento de obtener $1, 2, 3$, o $5$ se llama  fracaso, entonces:
+
+\[
+X = \begin{cases}
+1 &\ \text{si}\ 4, 6\ \text{es obtenido}\\
+0 &\ \text{en otros casos}
+\end{cases}
+\]
+es una variable de Bernoulli con param\'etro $p =1/3$. Calcula la funci\'on de masa de probabilidad de $X$.
+\item En un restaurante de comida r\'apida $25\%$ de las \'ordenes para beber es una bebida peque\~na, $35\%$ una mediana y $40\%$ una grande. Sea $X=1$ si escoge aleatoriamente una orden de una bebida peque\~na y sea $X=0$ en cualquier otro caso. Sea $Y= 1$ si la orden de la bebida mediana y $Y=0$ en cualquier otro caso. Sea $Z =1$ si la orden es una bebida peque\~na o media y $Z =0$ para  cualquier otro caso.
+\begin{itemize}
+	\item Sea $\mathbb{P}_X$ la probabilidad de \'exito de $X$. Determina $\mathbb{P}_X$. 
+	\item Sea $\mathbb{P}_Y$ la probabilidad de \'exito de $Y$. Determina $\mathbb{P}_Y$.
+	\item Sea $\mathbb{P}_Z$ la probabilidad de \'exito de $Z$. Determina $P_Z$. 
+	\item ?`Es posible que $X$ y $Y$ sean iguales a 1?.
+	\item ?`Es $Z=X+Y$? explica tu respuesta. 
+\end{itemize} 
+\item Sea $X$ una variable binomial con param\'etros $n$ y $p$. Entonces $p_X(x)$, la funci\'on de masa de probabilidad de $X$ es:
+
+\[
+p_X(x) = \mathbb{P}(X =x) = \begin{cases}
+\binom{n}{x}p^x(1 -p)^{n -x} & \ \text{si}\ x = 0,1,2, \dots, n\\
+0 &\ \text{en otros casos.}
+\end{cases}
+\]
+\item Supongamos que, en una muestra aleatoria particular de $n$ personas, k est\'an contra el aborto. Demuestra que $\mathbb{P}(X = k)$ es el m\'aximo para $\hat{p} = k/n$. Es decir, $\hat{p}$ es el valor de $p$ que hace que el resultado $X = k$ m\'as probable.
+\item En el conjunto $\{x: 0 \leq x \leq 1\}$, $100$ n\'umeros son seleccionados aleatoriamente y redondeada a tres lugares decimales. ?` Cu\'al es la probabilidad de que al menos uno de ellos es $0.345$?.
+
+\item Sea $X$ una variable aleatoria Binomial de param\'etros $n$ y $p$. Prueba que:
+
+\[
+\mathbb{E}(X^2) = \sum_{x =1}^{n}x^2\binom{n}{x}p^x(1 -p)^{n -x} = n^2p^2 -np^2 + np.
+\]
+\item  Para averiguar el tama\~o $N$ de una poblaci\'on de tortugas se utiliza el m\'etodo siguiente  de captura-marcaje-recaptura. Se capturan $k$ tortugas, se les marca y se les reincorpora a  su poblaci\'on. Un tiempo despu\'es se realizan $n$ avistamientos independientes de los que $X$ es  el n\'umero de ellos que est\'an marcados.
+\begin{itemize}
+\item Obtiene una expresi\'on para la probabilidad de que $X = m$. 
+\item Si $k = 4$ y $m = 1$, demuestra que la probabilidad es m\'axima cuando $N = 4n$. 
+\item Si $N = 12$, $k = 4$ y $n = 3$, ?`cu\'al es la probabilidad de que tres tortugas observadas est\'en marcados si sabemos que al menos uno de ellos lo est\'a?. 
+\end{itemize}
+\item En una caja hay $5$ tri\'angulos, 3 c\'irculos y 2 rect\'angulos. Realizando extracciones con reemplazamiento, se piden las siguientes probabilidades:
+\begin{itemize}
+	\item Al realizar 8 extracciones, se obtengan en $4$ ocasiones un c\'irculo.
+	\item  Se necesiten 8 extracciones para obtener $4$ c\'irculos.
+	\item Que aparezca el primer círculo en la $8$ extracci\'on.
+	\item Al realizar $8$ extracciones aparezcan $3$ tri\'angulos, $3$ círculos y $2$ rect\'angulos.
+	\item Al realizar $6$ extracciones sin remplazamiento aparezcan en $2$ ocasiones un c\'irculo.
+\end{itemize}
+\item Supongamos que $X$ es una variable de Poisson con $\mathbb{P}(X = 1) = \mathbb{P}(X = 3)$. Encuentra $\mathbb{P}(X =5)$.
+\item Una alumna trae cada d\'ia a la Universidad una tableta de chocolate de 16 cm., y de  cuando en cuando le da un mordisco y se come la mitad de lo que le queda. Asumiendo  que esta golosa apetencia aparece en la ma\~nana siguiendo una distribuci\'on de Poisson de  media un mordisco por hora:
+\begin{itemize}
+	\item Calcula la distribuci\'on del tiempo que transcurre hasta que aparece la primera  mordida. 
+	\item ?`Cuantos cent\'imetros de chocolate esperas que le quede tras las cinco horas de clases? 
+	\item ?`Qu\'e probabilidad hay de que soporte una hora de clase sin morder su tableta? 
+	\item  Si un d\'ia, entre las 9:00 y las 14:00 horas, la ha mordido en cuatro ocasiones, ¿que probabilidad hay de que lo haya hecho durante las tres primeras horas de clase?.
+\end{itemize} 
+\item  Los mensajes que llegan a una computadora utilizada como servidor lo hacen de  acuerdo con una distribuci\'on de Poisson con una tasa promedio de 0.1 mensajes por  minuto. 
+\begin{itemize}
+	\item ?`Cu\'al es la probabilidad de que lleguen como mucho 2 mensajes en una hora?  
+	\item Determina el intervalo de tiempo necesario para que la probabilidad de que no llegue  ningún mensaje  durante ese lapso de tiempo  sea $0.8$. 
+\end{itemize}
+\end{enumerate}
+\vspace{0.5cm}
+
+\textbf{Variables aleatorias continuas}
+
+\begin{enumerate}
+\item El radio de una esfera es un n\'umero aleatorio entre $2$ y $4$. ?` Cu\'al es el valor esperado de su volumen?. ?` Cu\'al es la probabilidad de que su volumen sea a lo m\'as $36\pi$?.
+
+\item Un agricultor que tiene dos piezas de madera de longitud $a$ y $b$ $(a <b)$ decide construir un gallinero   en forma de tri\'angulo para sus pollos. El env\'ia a uno de sus hijos a cortar el pedazo m\'as largo y el muchacho, sin tomar ning\'un criterio,  hace un corte en la madera de longitud $b$, en un punto seleccionado al azar. ?` Cu\'ales son las posibilidades de que las dos piezas resultantes y la pieza de longitud $a$ se puedan utilizar para formar un gallinero  triangular?.
+
+\item Sea $\theta$ un n\'umero aleatorio entre $-\pi/2$ y $\pi/2$. Encuentra la funci\'on  densidad de probabilidad de $X = \tan \theta$.
+\item Considera la funci\'on densidad de gamma con par\'ametros $\alpha$ y $\lambda$,
+
+\[
+\frac{\lambda e^{-\lambda t}(\lambda t)^{\alpha -1}}{\Gamma(\alpha)}.
+\]
+
+donde $\Gamma(\alpha)$ es de la forma $\Gamma(\alpha) = \bigintss_{0}^{\infty}e^{-x}x^{\alpha - 1}dx $. Prueba:
+
+\begin{itemize}
+	\item $\Gamma(1) =  1$
+	\item $\Gamma(\alpha ) = (\alpha - 1)\Gamma(\alpha - 1)$
+	\item $\Gamma(k) = (k - 1)!$ si $k$ es entero.
+	\item $\Gamma(\frac{1}{2}) = \sqrt{\pi}$.
+\end{itemize}
+\item Sea $\phi(z) = \frac{1}{\sqrt{2\pi}}e^{-z^2/2}, z \in \mathbb{R}$. Se puede usar las coordenadas polares para mostrar que $\bigintss_{-\infty}^{\infty} \phi(z) dz = 1$, realizando los siguientes pasos:
+
+\begin{enumerate}
+	\item Muestra que es suficiente probar $\bigintss_{0}^{\infty}e^{-z^2/2} dz = \sqrt{\pi/2}$,
+	\item Verifica que $\biggl[\bigintss_{0}^{\infty}e^{-z^2/2} dz\biggr]^2 = \bigintss_{0}^{\infty}e^{-u^2/2} du\bigintss_{0}^{\infty}e^{-v^2/2} dv$. As\'i muestra que $\bigintss_{t = 0}^{\infty}\bigintss_{s = 0}^{\infty}e^{-(u^2 + v^2)/2} dudv = \frac{1}{2}\pi$,
+	\item En la doble integral encontrada en el \'item anterior, usa las sustituciones $ u = r\cos(\theta), v = r\sin(\theta), 0 < r < \infty$ y $0 < \theta < 2\pi$. Entonces reescribe $\bigintss_{t = 0}^{\infty}\bigintss_{s = 0}^{\infty}e^{-(u^2 + v^2)/2} dudv = \bigintss_{\theta = 0}^{2\pi}\biggl[\bigintss_{r = 0}^{\infty}e^{-r^2/2} rdr \biggr]d\theta$,
+	\item Evalua para mostrar que $\bigintss_{r = 0}^{\infty}e^{-r^2/2} rdr  =1$,
+	\item ?` La parte (c) implica   a la parte (b)?.
+\end{enumerate}
+\item La variable aleatoria $X$ es llamada \texttt{doble exponencial distribuida} si su funci\'on densidad es dada por:
+
+\[
+f(x) =ce^{-\vert x\vert},\quad -\infty < x < \infty
+\]
+\begin{enumerate}
+	\item Encuentra el valor de $c$.
+	\item Prueba  que $\mathbb{E}(X^{2n}) = (2n)!$ y $\mathbb{E}(X^{2n +1}) = 0$.
+\end{enumerate}
+
+\item Sea $X$ una variable aleatoria con funci\'on densidad de probabilidad:
+
+\[
+f(x) = \frac{1}{2}e^{-\vert x \vert}, \ \ -\infty < x < \infty.
+\]
+
+Calcula $\text{Var}(X)$.
+
+\item  Una variable aleatoria $X$ con funci\'on densidad:
+
+\[
+f(x) = \frac{1}{1 +x^2}, \ \ -\infty < x < \infty,
+\]
+
+es llamada una variable aleatoria de Cauchy.
+
+\begin{enumerate}
+	\item Encuentra el valor de $c$.
+	\item Muestra que el valor de $\mathbb{E}(X)$ no existe.
+\end{enumerate}
+\item Sea $X$ una variable aleatoria con funci\'on densidad de probabilidad:
+
+\[
+f(x ) = \frac{1}{\pi(1 +x^2)}, \quad -\infty < x < \infty.
+\]
+
+Prueba que $\mathbb{E}(\vert X \vert^{\alpha})$ converge si $0 < \alpha < 1$ y diverge si $\alpha \geq 1$.
+\item  Sea $X$ una variable aleatoria continua con funci\'on densidad $f_X$ y el conjunto de valores posibles $A$. Para la funci\'on invertible $h : A \rightarrow \mathbb{R}$, sea $Y = h(X)$ una variable aleatoria con el conjunto de valores posibles $B = h(A) = \{ h(a): a \in A\}$. Supongamos  que la inversa de $y =h(x)$ es la funci\'on $x = h^{-1}(y)$, que es diferenciable para todos los valores de $y \in B$. Entonces, demuestra que, $f_Y$ es la funci\'on densidad de $Y$, es dada por:
+
+\[
+f_Y(y) = f_X(h^{-1}(y))\vert (h^{-1})^{'}(y) \vert, \ \ y\in B.
+\]
+
+\item Sea $X$ una variable aleatoria con funci\'on densidad.
+
+\[
+f_X(x) = \begin{cases}
+2e^{-2x}&\ \text{si}\ x > 0 \\
+0 & \text{en otros casos.}
+\end{cases}
+\]
+Usando el m\'etodo de las transformaciones, encuentra la funci\'on densidad de probabilidad de $Y = \sqrt{X}$.
+
+\item Sea $X$ una variable aleatoria continua con funci\'on densidad de probabilidad:
+
+\[
+f_X(x) = \begin{cases}
+4x^3  &\ \text{si}\ 0 < x \leq 1 \\
+0 & \text{en otros casos.}
+\end{cases}
+\]
+Usando el m\'etodo de las transformaciones, encuentra la funci\'on densidad de probabilidad de $Y = 1 -3X^2$.
+\end{enumerate}
+
+
+\vspace{0.5cm}
+
+\textbf{Distribuciones continuas}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+	
+\item Sea $X$ una variable aleatoria uniforme en el intervalo $(0, 1 +\theta)$, donde $0 < \theta < 1$ es  un par\'ametro dado. Encuentra una funci\'on de $X$, $g(X)$, tal que $\mathbb{E}[g(X)] = \theta^2$.
+
+\item El espacio muestral de un experimento es $S = (0,1)$ y para cada subconjunto $A$ de $S$, $\mathbb{P}(A) = \int_{A}dx$. Sea $X$ la variable aleatoria definida en $S$ por $X(\omega) = 5\omega -1$. Prueba que $X$ es una variable aleatoria uniforme sobre el intervalo $(-1,4)$.
+\item Sea $X$ una variable aleatoria exponencial con media $1$. Halle la funci\'on  densidad de probabilidad de $Y = -\ln X$.
+\item Los hu\'espedes llegan a un hotel, de acuerdo a un proceso de Poisson, a raz\'on de cinco por hora. Supongamos que durante los \'ultimos $10$ minutos ning\'un hu\'esped ha llegado. ?`Cu\'al es la probabilidad de que (a) el siguiente llegue en menos de $24$ minutos; (b) desde la llegada del d\'ecimo a la llegada del und\'ecimo hu\'esped no toma m\'as de $2$ minutos?.
+\item Sea $X$ una variable aleatoria exponencial con par\'ametro $\lambda$. Encuentra:
+
+\[
+\mathbb{P}(\vert X -\mathbb{E}(X)\vert \geq 2\sigma_X).
+\]
+\item Supongamos que de todas las nubes que se siembran con yoduro de plata, el $58\%$ muestra un crecimiento espl\'endido. Si 60 nubes se siembran con yoduro de plata, ?`cu\'al es la probabilidad de que exactamente 35 muestren un crecimiento espl\'endido?.
+
+\item Las calificaciones en una prueba de rendimiento otorgada a 100,000 estudiantes se distribuyen normalmente con una media de 500 y una desviaci\'on est\'andar de 100. ?`Cu\'al debe ser la puntuaci\'on de un estudiante para ubicarlo entre el $10\%$ superior de todos los estudiantes?.
+
+\item La tasa de rendimiento anual de una acci\'on  espec\'ifica es una variable aleatoria normal con una media del $10\%$ y una desviaci\'on est\'andar del $12\%$. Una persona  compra 100 acciones a un precio de $\$60$ por acci\'on. ?`Cu\'al es la probabilidad de que despu\'es de un a\~no la  ganancia neta de esa inversi\'on sea de al menos $\$750?$ Ignora los costos de transacci\'on y suponga que no hay dividendo anual.
+
+\item Sea $Z$ una variable aleatoria est\'andar y $\alpha$ una constante. Encuentra el n\'umero $x$ que maximiza $\mathbb{P}(x < Z < x + \alpha)$.
+
+\item Supongamos que la distribuci\'on de la presi\'on arterial diast\'olica es normal para una persona seleccionada al azar en una determinada poblaci\'on que es normal con una media de 80 mmHg y una desviaci\'on est\'andar de 7mm Hg. Si las personas con presi\'on arterial diast\'olica de 95 o m\'as se consideran hipertensas y se considera que las personas con presi\'on arterial diast\'olica por encima de 89 y por debajo de 95 tienen hipertensi\'on leve, ?`qu\'e porcentaje de esa poblaci\'on tiene hipertensi\'on leve y qu\'e porcentaje es hipertenso?. Supongamos que en esa poblaci\'on nadie tiene presi\'on arterial sist\'olica anormal.
+\item  Un individuo lanza un dardo a una diana. La distancia $d$ entre el punto central de la diana y el punto obtenido en el lanzamiento del dardo se distribuye como una normal de media $10$ y varianza $4$. Si el individuo consigue la puntuación m\'axima cuando la distancia $d$ es menor que $8$.
+\begin{itemize}
+	\item  Calcular la probabilidad de que en 50 lanzamientos obtenga la puntuación m\'axima al menos una vez.  (binomial)
+	\item Calcular la probabilidad de que obtenga la primera puntuaci\'on m\'axima en el segundo lanzamiento. (geom\'etrica)
+	\item Calcular la probabilidad de que se necesiten 10 lanzamientos para obtener tres puntuaciones máximas (binomial negativa)
+	\item Calcular el n\'umero medio de lanzamientos para obtener tres puntuaciones m\'aximas 	(binomial negativa)
+\end{itemize} 
+\item Muestra que la funci\'on densidad  gamma con par\'ametros $(r, \lambda)$ tiene un \'unico m\'aximo en $(r -1)/\lambda$.
+\item Sea $X$ una variable aleatoria gamma  $(r, \lambda)$ . Encuentra la funci\'on de distribuci\'on de $cX$, donde $c$ es una constante positiva.
+
+\end{enumerate}
+
+\end{document}
