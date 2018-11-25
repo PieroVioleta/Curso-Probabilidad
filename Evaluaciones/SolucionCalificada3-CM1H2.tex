@@ -1,0 +1,170 @@
+\documentclass[a4paper,9pt]{report}
+\usepackage{anysize} % Soporte para el comando \marginsize
+\marginsize{1.2cm}{1.2cm}{1cm}{1cm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathpazo}
+\usepackage[latin1]{inputenc}
+\usepackage[english,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{multicol} 
+\columnsep=7mm
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\usepackage{times}
+\usepackage{decimal}
+\newcommand{\inner}[2]{\langle{#1},{#2}\rangle}
+
+\newcommand{\cabecera}[1]{\begin{figure}[h]
+		\begin{minipage}[c]{0.05\columnwidth}
+			\centering\includegraphics[width=2cm]{escudo.pdf}
+		\end{minipage}
+		\hfill{}
+		\begin{minipage}[c]{0.86\columnwidth}
+			\centering\flushleft {Universidad Nacional de Ingenier\'ia\\
+				Facultad de Ciencias\\
+				Escuela Profesional de Matem\'atica \hfill #1}
+		\end{minipage}
+	\end{figure}\vspace{-0.5cm}
+}
+
+\pagestyle{empty}
+\begin{document}
+	\cabecera{Ciclo 2018 - II}
+	
+	\begin{center}
+		{\Large \textbf{Soluciones de la Pr\'actica calificada de C\'alculo de Probabilidades}}\\
+		{\Large \textbf{CM-	1H2}}
+	\end{center}
+	
+	\noindent
+	\rule{\textwidth}{0.6pt}
+	
+	
+	\vspace{0.3cm}
+\begin{enumerate}
+\item [] \textbf{Respuesta 1}
+Se tiene que:
+
+$$\mathbb{P}(X=x)={n \choose x}p^x(1-p)^{n-x}=\frac{n(n-1)(n-2)\cdots(n-x+1)}{x!}p^x(1-p)^{n-x}.$$ Sustituyendo $p=\frac{\lambda}{n}$, se tiene que
+\begin{eqnarray*}
+	\mathbb{P}(X=x)&=& \frac{n(n-1)(n-2)\cdots(n-x+1)}{x!}\bigg(\frac{\lambda}{n}\bigg)^x\bigg(1-\frac{\lambda}{n}\bigg)^{n-x}\\
+	\mathbb{P}(X=x)&=& \frac{\lambda^x}{x!}\bigg[ (1)\bigg(1- \frac{1}{n}\bigg) \bigg(1- \frac{2}{n}\bigg)\cdots\bigg(1- \frac{x-1}{n}\bigg) \bigg] \bigg(1- \frac{\lambda}{n}\bigg)^n \bigg(1- \frac{\lambda}{n}\bigg)^{-x}-.
+\end{eqnarray*}
+Por otro lado, fijando el valor de $\lambda=np$ (constante) y haciendo $n\to +\infty$, se tiene que
+\begin{eqnarray*}
+	\lim_{n\to+\infty}\bigg(1-\frac{i}{n}\bigg) &=& 1,\quad \text{ para todo }i=1,2,\cdots,(x-1)\\ \lim_{n\to+\infty}\bigg(1-\frac{\lambda}{n}\bigg)^n &=& e^{-\lambda}\\
+	\lim_{n\to+\infty}\bigg(1-\frac{\lambda}{n}\bigg)^{-x} &=& 1.
+\end{eqnarray*}
+Luego, $\displaystyle \lim_{n\to\infty} {n \choose x}p^x(1-p)^{n-x} = \frac{e^{-\lambda}\lambda ^x}{x!}$.
+\item [] \textbf{Respuesta 2}
+\begin{enumerate}
+	\item Es falsa.\\
+En general se verifica que 
+\begin{eqnarray*}
+	\mathbb{P}(a< X\leq b)&=& F(b)-F(a),\\
+	\mathbb{P}(a\leq X\leq b)&=& F(b)-F(a)+\mathbb{P}(X=a),\\
+	\mathbb{P}(a< X<b)&=& F(b)-F(a)+\mathbb{P}(X=b),\\
+	\mathbb{P}(a\leq X<b)&=& F(b)-F(a)+\mathbb{P}(X=b)+\mathbb{P}(X=a).
+\end{eqnarray*}
+Si adem\'as $X$ es variable aleatoria continua, se tiene que $\mathbb{P}(X=a)=0$ y por tanto, en ese caso:
+
+$$\mathbb{P}(a<X\leq b)=\mathbb{P}(a<X< b)=\mathbb{P}(a\leq X\leq b)=\mathbb{P}(\leq X< b).$$
+\item Es falsa.\\
+En general se tiene que 
+\begin{eqnarray*}
+	\mathbb{P}(a\leq X\leq b)+\mathbb{P}(b\leq X\leq c)&=& F(b)-F(a)+\mathbb{P}(X=a)+F(c)-F(b)+\mathbb{P}(X=b),\\
+	&=& F(c)-F(a)+\mathbb{P}(X=a)+P(X=b),\\
+	&=& \mathbb{P}(a\leq X \leq c)+\mathbb{P}(X=b).
+\end{eqnarray*}
+Se observa que en el caso de que $X$ sea una variable aleatoria continua, s\'i se verifica que 
+$$\mathbb{P}(a\leq X\leq c)=\mathbb{P}(a\leq X\leq b)+\mathbb{P}(b\leq X\leq c).$$
+\item Es falsa.\\
+Las condiciones sobre $f(x)$ en variables aleatorias  continuas son $f(x)\geq0$ y que $\displaystyle \int_{-\infty}^{\infty}f(x)dx=1$. se observa que $f(x)$ puede ser superior a 1 ya que $f(x)$ no es una probabilidad.
+\item  Es falsa.\\
+Directamente se observa que la funci\'on  de distribuci\'on $F(x)$ dada no cumple con las propiedades para ser funci\'on de distribuci\'on
+\begin{itemize}
+	\item $F(+\infty)\neq 1$,
+	\item $F(x)$ no es continua por derecha,
+	\item $F(x)$ no es monotona no decreciente.
+\end{itemize}
+Por otro lado, para determinar $\displaystyle F(x)=\int_{-\infty}^{x}f(t)dt$ se tiene que 
+$$F(x)=\int_{-\infty}^{x}f(t)dt=\left\{\begin{matrix} 
+\displaystyle\int_{-\infty}^{x}0dt & x<0\\
+\displaystyle\int_{-\infty}^{0}0dt+\int_{0}^{x}\frac{1}{2}dt& 0\leq x<2 \\
+\displaystyle\int_{-\infty}^{0}0dt+\int_{0}^{2}\frac{1}{2}dt+\int_{2}^{x}0dt& 2\leq x
+\end{matrix}  \right. $$ 
+por lo que
+$$F(x)=\left\{\begin{matrix} 
+0 & x<0\\
+\frac{1}{4}x^2& 0\leq x<2 \\
+1& 2\leq x.
+\end{matrix}  \right. $$ 
+Efectivamente, esta si cumple con todas las propiedades para ser una funci\'on de distribuci\'on. 
+\end{enumerate}
+\item [] \textbf{Respuesta 3}
+\begin{itemize}
+	\item El el avi\'on de cuatro motores es preferible a un avi\'on de dos motores si y solo si
+	
+\[
+1 -\binom{4}{0}p^{0}(1 - p)^{4} -\binom{4}{1}p(1 - p)^{3} > 1 -\binom{2}{0}p^{0}(1 - p)^{2}
+\]
+
+Esta desigualdad da $p> 2/3$. Por lo tanto, un avi\'on de cuatro motores es preferible si y solo si $p> 2/3$. Si $p=2/3$, no hay diferencia.
+
+\item Un avi\'on de cinco motores es preferible a un avi\'on de tres motores si y solo si
+
+\[
+1 -\binom{5}{5}p^{5}(1 - p)^{0} + \binom{5}{4}p^{4}(1 - p) + \binom{5}{3}p^{3}(1 - p)^{2} > \binom{3}{2}p^{2}(1 - p) + p^3.
+\]
+
+Al simplificar esta desigualdad, obtenemos $3(p - 1)^{2}(2p - 1) \geq 0$, lo que implica que es preferible un plano de cinco motores si y solo si $2p - 1 \geq  0$. 
+
+Es decir, para $p> 1/2$, es preferible un avi\'on de cinco motores; para $p <1/2$, es preferible un avi\'on de tres motores; para $p = 1/2$ no hace ninguna diferencia.
+\end{itemize}
+
+\item [] \textbf{Respuesta 4}
+
+Dado que las pasas se mezclan en la masa, la probabilidad de que una galleta determinada contenga alguna pasa  es $p = 1/k$. Si para las pasas el evento de terminar en una galleta dada es considerado un \'exito, entonces $X$, el n\'umero de pasas en la galleta dada, es una variable aleatoria binomial. 
+
+Para valores grandes de $k$, $p = 1/k$ es pequeño. Si $n$ tambi\'en es grande pero $n/k$ tiene un valor moderado, es razonable suponer que $X$ es aproximadamente Poisson. Por lo tanto,
+
+\[
+\mathbb{P}(X = i) = \frac{\lambda^i e^{-\lambda}}{i!},
+\]
+
+donde $\lambda = np = n/k$. Por tanto la probabilidad que una galleta dada contenga al menos una pasa es,
+
+\[
+\mathbb{P}(X \neq 0) = 1 -\mathbb{P}(X = 0) = 1 -e^{-n/k}.
+\]
+
+Para problemas del mundo real, es importante saber que en la mayor\'ia de los casos, los ejemplos num\'ericos muestran que, incluso para valores peque\~nos de $n$, las propiedades entre las probabilidades binomiales y las de Poisson son sorprendentemente buenas.
+
+
+\item [] \textbf{Respuesta 5}
+
+\begin{enumerate}
+\item Sea $G$ y $g$ la funci\'on de distribuci\'on y densidad de $X^2$, respectivamente. Para $t \geq 0$,
+
+\[
+G(t) = \mathbb{P}(X^2 \leq t) = \mathbb{P}(-\sqrt{t} < X < \sqrt{t} ) = F(\sqrt{t}) - F(-\sqrt{t}).
+\]
+
+As\'i
+
+\[
+g(t) = G^{'}(t) = \frac{1}{2\sqrt{t}}f(\sqrt{t}) + \frac{1}{2\sqrt{t}}f(-\sqrt{t}) = \frac{1}{2\sqrt{t}}[f(\sqrt{t}) + f(-\sqrt{t})],\ t\geq 0.
+\]
+
+Para $t < 0, g(t) = 0$.b
+
+\end{enumerate}
+\end{enumerate}
+\end{document}
+
+		
